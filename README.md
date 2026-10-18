@@ -3,7 +3,7 @@
 # 🧵 CSSP Garments Trading 🧵
 
 ### Student Name: Lagman • Leyble • Pacleb  
-**Course & Section: BSIT 1-Y2-4**
+**Course & Section: BSIT 2-Y2-3**
 
 ---
 
