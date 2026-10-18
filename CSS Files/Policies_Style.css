@@ -1,0 +1,338 @@
+.shipping-page, .privacy-page, .terms-page {
+    padding: 100px 5%;
+    text-align: center;
+    background-color: var(--bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header > * {
+    position: relative;
+    z-index: 1;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 48px 48px;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-subtitle {
+    display: inline-block;
+    font-size: 15px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--red);
+    margin-bottom: 10px;
+    font-family: 'Creato Display', sans-serif;
+}
+
+.page-title {
+  font-size: 80px;
+  font-family: 'Bebas Neue Custom', sans-serif;
+  color: var(--text);
+}
+
+.shipping-block, .privacy-card, .terms-card {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    background-color: var(--surface) !important;
+    padding: 50px 40px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+}
+
+.shipping-block-title, .privacy-card-title, .terms-card-title  {
+    font-family: 'Bebas Neue Custom', sans-serif;
+    font-size: 1.8rem;
+    color: var(--navy);
+    margin-bottom: 18px;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+[data-theme="dark"] .shipping-block-title {
+    color: var(--yellow);
+}
+
+[data-theme="dark"] .privacy-card-title {
+    color: var(--yellow);
+}
+
+[data-theme="dark"] .terms-card-title {
+    color: var(--yellow);
+}
+
+.shipping-block-text, .privacy-card-text, .terms-card-text {
+    font-size: 1.05rem;
+    line-height: 2;
+    color: var(--text);
+    text-align: left;
+}
+
+.shipping-block-text b, .privacy-card-text b, .terms-card-text b {
+    color: var(--red);
+}
+
+.shipping-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    margin-bottom: 80px;
+    align-items: stretch;
+}
+
+.shipping-card {
+    background-color: var(--surface) !important;
+    padding: 50px 40px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+}
+
+.shipping-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--navy);
+}
+
+[data-theme="dark"] .shipping-card:hover {
+    border-color: var(--yellow);
+}
+
+.shipping-card-icon {
+    font-size: 3rem;
+    color: var(--navy);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+[data-theme="dark"] .shipping-card-icon {
+    color: var(--yellow);
+}
+
+.shipping-card-title {
+    font-family: 'Bebas Neue Custom', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: var(--text);
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.shipping-card-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.shipping-list {
+    border-top: 1px solid var(--border);
+    padding-top: 25px;
+    margin-top: auto;
+}
+
+.shipping-list li {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    text-align: left;
+    position: relative;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.shipping-note {
+    font-size: 0.9rem;
+    color: var(--red);
+    display: block;
+    margin-top: 12px;
+    line-height: 1.5;
+}
+
+.shipping-details {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* SHIPPING TICKER */
+.section-ticker2 {
+    background-color: var(--red);
+    overflow: hidden;
+    padding: 16px 0;
+    white-space: nowrap;
+}
+
+.ticker2-track2 {
+    display: inline-flex;
+    gap: 48px;
+    animation: ticker 25s linear infinite;
+}
+
+.ticker2-track2 span {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--white); 
+    flex-shrink: 0;
+}
+
+.ticker2-track2 span i { 
+    margin-right: 8px; 
+}
+
+/* PRIVACY TICKER */
+.section-ticker3 {
+    background-color: var(--green);
+    overflow: hidden;
+    padding: 16px 0;
+    white-space: nowrap;
+}
+
+.ticker2-track3 {
+    display: inline-flex;
+    gap: 48px;
+    animation: ticker 25s linear infinite;
+}
+
+.ticker2-track3 span {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--white); 
+    flex-shrink: 0;
+}
+
+.ticker2-track3 span i { 
+    margin-right: 8px; 
+}
+
+/* responsiveness = tablet and mobile */
+@media (max-width: 1024px) {
+    .page-subtitle {
+        font-size: 14px;
+    }
+
+    .page-title {
+        font-size: 70px;
+    }
+    
+    .shipping-grid {
+        gap: 20px;
+    }
+
+    .shipping-card {
+        padding: 40px 30px;
+        margin-bottom: 20px;
+    }
+
+    .shipping-block, .privacy-card, .terms-card {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-subtitle {
+        font-size: 13px;
+    }
+
+    .page-title {
+        font-size: 50px;
+    }
+
+    .shipping-grid {
+        gap: 16px;
+    }
+
+    .shipping-card {
+        padding: 30px 20px;
+    }
+
+    .shipping-card-icon {
+        font-size: 2.5rem;
+        margin-bottom: 18px;
+    }
+
+    .shipping-block, .privacy-card, .terms-card {
+        padding: 30px 20px;
+    }
+
+    .shipping-block-text, .privacy-card-text, .terms-card-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-subtitle {
+        font-size: 12px;
+    }
+
+    .page-title {
+        font-size: 44px;
+    }
+
+    .shipping-grid {
+        gap: 12px;
+    }
+
+    .shipping-card {
+        padding: 24px 16px;
+    }
+    
+    .shipping-card-title {
+        font-size: 1.8rem;
+    }
+
+    .shipping-card-icon {
+        font-size: 2rem;
+    }
+
+    .shipping-card-text {
+        font-size: 0.95rem;
+    }
+
+    .shipping-list li {
+        font-size: 0.85rem;
+    }
+
+    .shipping-block, .privacy-card, .terms-card {
+        padding: 24px 16px;
+    }
+
+    .shipping-block-title, .privacy-card-title, .terms-card-title {
+        font-size: 1.4rem;
+    }
+
+    .shipping-block-text, .privacy-card-text, .terms-card-text {
+        font-size: 0.95rem;
+    }
+}
