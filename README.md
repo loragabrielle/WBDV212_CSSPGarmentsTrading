@@ -1,1 +1,49 @@
-# WBDV212_CSSPGarmentsTrading
+<div align="center">
+
+# 🧵 CSSP Garments Trading 🧵
+
+### Student Name: Lagman • Leyble • Pacleb  
+**Course & Section: BSIT 1-Y2-4**
+
+---
+
+</div>
+
+## Project Description:
+**CSSP Garments Trading** is a modern retail website designed to showcase high-quality garments focused on durability, comfort, and style. It provides users with a smooth and engaging browsing experience where they can explore products, learn about the brand, and easily connect with the business.
+
+---
+
+## Features Implemented:
+  - Responsive Website Design  
+  - Dark Mode Functionality  
+  - Mobile-Friendly Layout  
+  - Product Section
+  - Cart Section 
+  - About Us Section  
+  - Contact Us / Inquiry Section
+  - Policies Section
+
+---
+
+## Website Preview: 
+
+### Home Page
+![Home](Assets/README/Website-Preview-Index.png)
+
+### Products Page
+![Products](Assets/README/Website-Preview-Product.png)
+
+### Cart Page
+![Cart](Assets/README/Website-Preview-Cart.png)
+
+### About Us Page
+![About Us](Assets/README/Website-Preview-AboutUs.png)
+
+### Contact Us/Inquiry Page
+![Contac Us](Assets/README/Website-Preview-ContactUs.png) 
+
+### Policies Page
+![Policies](Assets/README/Website-Preview-Policies.png)
+
+
