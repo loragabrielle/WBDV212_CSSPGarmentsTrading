@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSSP Garments Trading</title>
+
+        <link rel="icon" type="image/png" href="Assets/logo-light-text.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./CSS Files/Cart_Style.css">
+
+        <!-- fontawesome for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+        <script src="https://kit.fontawesome.com/493ae0299a.js" crossorigin="anonymous"></script>
+        
+        <!-- jspdf for pdf generation -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    </head>
+
+    <body>
+        <!-- toast notification -->
+        <div id="toastContainer"></div>
+
+        <!-- PRE-HEADER TICKER -->
+        <div class="pre-header">
+            <div class="ticker-track" id="tickerTrack">
+                <span><i class="fa-solid fa-ship"></i> National Delivery: 3 Days</span>
+                <span><i class="fa-solid fa-map-location-dot"></i> Provincial Delivery: 5 Days</span>
+                <span><i class="fa-solid fa-globe"></i> International Shipping: 1 Week</span>
+                <span><i class="fa-solid fa-headset"></i> Customer Service: 7AM – 7PM</span>
+                <span><i class="fa-solid fa-shield-halved"></i> 100% Secure Checkout</span>
+                <span><i class="fa-solid fa-box-open"></i> Welcome Offer: Free Shipping</span>
+
+                <span><i class="fa-solid fa-percent"></i> Save 10% with code CSSP10</span>
+                <span><i class="fa-solid fa-tags"></i> FREESHIP (Free Delivery)</span>
+                <span><i class="fa-solid fa-gift"></i> Claims: FREESHIP for Free Delivery • CSSP10 for 10% Off</span>
+            </div>
+        </div>
+    
+        <!-- HEADER / NAVIGATION BAR-->
+        <header class="site-header" id="siteHeader">
+            <div class="header-inner">
+            
+                <!-- logo -->
+                <a href="index.html" class="logo-wrap" aria-label="CSSP Garments Trading homepage">
+                    <div class="logo-icon">
+                        <img src="Assets/logo-light-text.png" class="logo-img light-logo" alt="CSSP Garments Trading logo, light version">
+                        <img src="Assets/logo-dark-text.png" class="logo-img dark-logo" alt="CSSP Garments Trading logo, dark version">
+                    </div>
+                    <div class="logo-text">CSSP<span>Garments&nbsp;Trading</span></div>
+                </a>
+
+                <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+                    <ul class="nav-list">
+                        
+                        <!-- products mega menu -->
+                        <li class="nav-item has-mega" id="navProducts">
+                            <a href="#" class="nav-link" id="navProductsBtn" aria-haspopup="true" aria-expanded="false">Products <i class="fa-solid fa-chevron-down nav-caret"></i></a>
+                            <div class="mega-menu" id="megaProducts" aria-hidden="true">
+                                <div class="mega-inner">
+                            
+                                    <div class="mega-col">
+                                        <p class="mega-label">Uniforms</p>
+                                        <div class="mega-feature-card">
+                                            <img src="./Assets/UNIFORM_MEGA MENU.png" alt="Maritime and culinary uniform range including coveralls and chef tops" />
+                                            <p>Maritime &amp; Culinary Uniforms</p>
+                                            <a href="products.html#uniforms" class="btn-sm">Gear Up</a>
+                                        </div>
+                                    </div> 
+                                        
+                                    <div class="mega-divider"></div>
+                                        
+                                    <div class="mega-col">
+                                        <p class="mega-label">Safety Footwear</p>
+                                        <div class="mega-feature-card">
+                                            <img src="./Assets/SAFETYFOOTWEAR_MEGA MENU.png" alt="Steel-toe safety shoe for deck and industrial use" />
+                                            <p>Steel-toe Safety Shoe</p>
+                                            <a href="products.html#safety-footwears" class="btn-sm">Secure Step</a>
+                                        </div>
+                                    </div> 
+                                </div> 
+                            </div>  
+                        </li> 
+                    
+                        <!-- about us mega menu -->
+                        <li class="nav-item has-mega" id="navAbout">
+                            <a href="#" class="nav-link" id="navAboutBtn" aria-haspopup="true" aria-expanded="false">About Us <i class="fa-solid fa-chevron-down nav-caret"></i></a>
+                            <div class="mega-menu" id="megaAbout" aria-hidden="true">
+                                <div class="mega-inner">
+                                    <div class="mega-col">
+                                        <p class="mega-label">Company</p>
+                                        <a href="./aboutus.html#history" class="mega-item text-only"><i class="fa-solid fa-anchor"></i> Our Story</a>
+                                        <a href="./aboutus.html#people" class="mega-item text-only"><i class="fa-solid fa-users"></i> Our Team</a>
+                                        <a href="./aboutus.html#tailor" class="mega-item text-only"><i class="fa-solid fa-house"></i> Location</a>
+                                    </div>
+
+                                    <div class="mega-divider"></div>
+
+                                    <div class="mega-col">
+                                        <p class="mega-label">Support</p>
+                                        <a href="./index.html#faq" class="mega-item text-only"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+                                        <a href="./contacts.html" class="mega-item text-only"><i class="fa-solid fa-envelope"></i> Contact Us</a>
+                                        <a href="./policies.html" class="mega-item text-only"><i class="fa-solid fa-file-contract"></i> Policies</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            
+                <!-- upper-right-side icon group -->
+                <div class="header-actions">
+            
+                    <!-- currency switcher -->
+                    <div class="currency-switcher" id="currencySwitcher">
+                        <button class="currency-btn" id="currencyBtn" aria-label="Change currency" aria-expanded="false">
+                            <i class="fa-solid fa-coins"></i>
+                            <span id="activeCurrency">PHP</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <ul class="currency-dropdown" id="currencyDropdown">
+                            <li data-currency="PHP" data-symbol="₱">🇵🇭 PHP</li>
+                            <li data-currency="USD" data-symbol="$">🇺🇸 USD</li>
+                            <li data-currency="GBP" data-symbol="€">🇬🇧 GBP</li>
+                        </ul>
+                    </div>
+            
+                    <!-- search icon -->
+                    <button class="icon-btn" id="searchToggle" title="Search" aria-label="Toggle search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+            
+                    <!-- light/dark mode toggle -->
+                    <button class="theme-toggle" id="themeToggle" title="Toggle Theme" aria-label="Toggle colour theme">
+                        <i class="fa-solid fa-sun" id="themeIcon"></i>
+                    </button>
+            
+                    <!-- hamburger (mobile only) -->
+                    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        
+            <!-- search bar (hidden until toggled) -->
+            <div class="search-bar" id="searchBar" role="search">
+                <input type="search" id="searchInput" placeholder="Search uniforms, PPE, safety shoes…" autocomplete="off" aria-label="Search products">
+                <button aria-label="Submit search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <div class="search-results" id="searchResults" aria-live="polite"></div>
+            </div>
+        </header>
+
+        <!-- HERO SECTION -->
+        <section class="hero-product">
+                <div class="hero-content">
+                    <span class="hero-label-product">READY FOR THE WAVE</span>
+                    <h1 class="hero-title"><span>MADE TO STAND THE SEA.</span></h1>
+                    <p class="hero-desc-product">Nothing stands in your way.
+                                                Equip yourself with professional maritime gear designed for performance and durability.
+                                                Built to last through every voyage and every challenge at sea.</p>
+                    <a href="./products.html" class="btn-ghost hero-cta"><i class="fa-solid fa-arrow-left"></i>Explore the Shop</i>
+                    </a>
+                </div>
+        </section>
+
+        <!-- INFINITE TICKER 1 -->
+        <div class="section-ticker">
+            <div class="ticker2-track">
+                <span><i class="fa-solid fa-helmet-safety"></i> Safety-first construction</span>
+                <span><i class="fa-solid fa-cloud-showers-heavy"></i> All-weather resilience</span>
+                <span><i class="fa-solid fa-shield-halved"></i> PPE Standards</span>
+                <span><i class="fa-solid fa-water"></i> Built for the Sea</span>
+                <span><i class="fa-solid fa-ship"></i> Trusted by Crews</span>
+                <span><i class="fa-solid fa-link"></i> Triple-needle stitching</span>
+                <span><i class="fa-solid fa-hand-sparkles"></i> Easy-care maintenance</span>
+                <span><i class="fa-solid fa-anchor"></i> Maritime Grade</span>
+                <span><i class="fa-solid fa-shield-halved"></i> PPE Standards</span>
+                <span><i class="fa-solid fa-water"></i> Built for the Sea</span>
+                <span><i class="fa-solid fa-infinity"></i> Extended wear-life</span>
+                <span><i class="fa-solid fa-lock"></i> Secure-fit fasteners</span>
+            </div>
+        </div>
+
+            <!-- HERO AREA= -->
+            <div id="emptyCart" class="empty-cart" style="display: none;">
+                <i class="fa-solid fa-shopping-cart"></i>
+                <h3>Your cart is currently empty</h3>
+                <p>Browse our collection of premium uniforms and add your first item.</p>
+                <a href="./products.html" class="btn-primary">
+                    Shop Our Collection
+                </a>
+            </div>
+
+            <div id="cartContent" class="cart-content">
+                <div>
+                    <!-- cart selection header -->
+                    <div class="cart-header">
+                        <div class="select-all-wrapper">
+                            <input type="checkbox" id="selectAll" class="cart-checkbox" onchange="toggleSelectAll()">
+                            <label for="selectAll" class="select-all-label">Select All</label>
+                        </div>
+                        <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+                            <div style="color: var(--text-muted); font-size: 0.9rem;">
+                                <span id="selectedCount">0</span> item(s) selected
+                            </div>
+                            <div id="bulkActions" style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+                                <button class="btn-sm icon-btn" type="button" onclick="deleteSelectedItems()" id="deleteSelectedBtn" disabled title="Delete selected items" style="background:var(--red); color:#fff;">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CART ITEMS -->
+                    <div class="cart-items" id="cartItemsList">
+                        <!-- cart items will be rendered here -->
+                    </div>
+                </div>
+                
+                <div class="cart-summary">
+                    <h3>Order Summary</h3>
+                    <div id="selectedItemsList" style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border);">
+                        <!-- selected items will be rendered here -->
+                    </div>
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotalAmount">₱0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Selected Items:</span>
+                        <span id="totalItems">0</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total:</span>
+                        <span id="totalAmount">₱0.00</span>
+                    </div>
+                    <button class="btn-primary checkout-btn" onclick="openCheckout()">
+                        <i class="fa-solid fa-lock"></i>
+                        Proceed to Checkout
+                    </button>
+                    <a href="./products.html" class="btn-ghost" style="margin-top: 12px; text-align: center;">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Continue Shopping
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+        <!-- CHECKOUT MODAL -->
+        <div class="checkout-modal" id="checkoutModal">
+            <div class="checkout-box">
+                <div class="checkout-header">
+                    <h2>Checkout</h2>
+                    <button class="close-checkout" onclick="closeCheckout()">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <div class="checkout-content">
+                    <!-- step 1: customer information + shipping address -->
+                    <div class="checkout-step active" id="step1">
+                        <h3 style="margin-bottom: 24px; font-size: 1.5rem;">Customer Information</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>First Name *</label>
+                                <input type="text" id="firstName" placeholder="Enter first name">
+                                <div class="error-text" id="firstNameError"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Last Name *</label>
+                                <input type="text" id="lastName" placeholder="Enter last name">
+                                <div class="error-text" id="lastNameError"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email Address *</label>
+                            <input type="email" id="customerEmail" placeholder="your.email@example.com">
+                            <div class="error-text" id="emailError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Phone Number *</label>
+                            <div class="phone-input-group">
+                                <select id="phoneCountry">
+                                    <option value="Philippines">🇵🇭 Philippines</option>
+                                    <option value="USA">🇺🇸 USA</option>
+                                    <option value="UK">🇬🇧 UK</option>
+                                </select>
+                                <input type="tel" id="customerPhone" placeholder="Enter phone number" maxlength="11">
+                            </div>
+                            <div class="error-text" id="phoneError"></div>
+                        </div>
+
+                        <h3 style="margin: 28px 0 20px; font-size: 1.5rem;">Shipping Address</h3>
+
+                        <div class="form-group">
+                            <label>Country *</label>
+                            <select id="country" onchange="loadCountryData()">
+                                <option value="">Select country</option>
+                            </select>
+                            <div class="error-text" id="countryError"></div>
+                        </div>
+
+                        <!-- PH Region Dropdown (shown only for PH) -->
+                        <div class="form-group" id="regionGroup" style="display:none;">
+                            <label>Region *</label>
+                            <div class="searchable-input">
+                                <input type="text" id="regionSearch" placeholder="Type to search region..." autocomplete="off">
+                                <div class="search-dropdown" id="regionDropdown"></div>
+                            </div>
+                            <div class="error-text" id="regionError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label id="cityLabel">City *</label>
+                            <div class="searchable-input">
+                                <input type="text" id="citySearch" placeholder="Type to search city..." autocomplete="off">
+                                <div class="search-dropdown" id="cityDropdown"></div>
+                            </div>
+                            <input type="hidden" id="cityValue">
+                            <input type="hidden" id="cityCodeValue">
+                            <div class="error-text" id="cityError"></div>
+                        </div>
+
+                        <div class="form-group" id="barangayGroup" style="display: none;">
+                            <label>Barangay *</label>
+                            <div class="searchable-input">
+                                <input type="text" id="barangaySearch" placeholder="Type to search barangay..." autocomplete="off">
+                                <div class="search-dropdown" id="barangayDropdown"></div>
+                            </div>
+                            <input type="hidden" id="barangayValue">
+                            <input type="hidden" id="barangayCodeValue">
+                            <div class="error-text" id="barangayError"></div>
+                        </div>
+
+                        <input type="hidden" id="regionValue">
+                        <input type="hidden" id="postalValue">
+
+                        <div class="form-group">
+                            <label>Street Address *</label>
+                            <textarea id="streetAddress" placeholder="House number, building name, street name, landmark, apartment/unit number"></textarea>
+                            <div class="error-text" id="addressError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Postal/Zip Code</label>
+                            <input type="text" id="postalCode" placeholder="Auto-filled from city selection" readonly style="background: var(--bg-alt); cursor: not-allowed; opacity: 0.8;">
+                            <small style="color: var(--text-muted); font-size: 0.8rem; margin-top: 4px; display:block;">Automatically filled based on selected city.</small>
+                        </div>
+
+                        <div class="checkout-actions">
+                            <button class="btn-ghost" onclick="closeCheckout()">Cancel</button>
+                            <button class="btn-primary" id="step1NextBtn" onclick="goToStep2()">
+                                Next
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- step 2: cart + shipping selection -->
+                    <div class="checkout-step" id="step2">
+                        <h3 style="margin-bottom: 8px; font-size: 1.5rem;">Cart &amp; Shipping</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;">Review your items and choose a shipping method.</p>
+
+                        <!-- modal notice -->
+                        <div class="shipping-notice-card">
+                            <div class="notice-content">
+                                <i class="fa-solid fa-info-circle"></i>
+                                <div>
+                                    <strong>Shipping Rates Notice</strong>
+                                    <p>Shipping rates are currently fixed sample prices and may change in the future. 
+                                        We apologize for the inconvenience as coverage is still limited in <b>Philippines</b>.
+                                        We are working to improve and expand nationwide coverage soon.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- cart items in checkout -->
+                        <h3 style="margin: 20px 0 14px; font-size: 1.2rem;">Order Items</h3>
+                        <div id="checkoutItemsList" style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px;"></div>
+
+                        <!-- shipping method -->
+                        <h3 style="margin: 8px 0 16px; font-size: 1.2rem;">Shipping Method</h3>
+
+                        <!-- destination type -->
+                        <div class="form-group">
+                            <label>Destination *</label>
+                            <div class="shipping-options" style="grid-template-columns: 1fr 1fr; margin-bottom: 0;">
+                                <div class="shipping-option" id="destNational" onclick="selectDestination('national')">
+                                    <div class="shipping-option-title"><i class="fa-solid fa-map-marker-alt"></i> Philippines</div>
+                                    <div class="shipping-option-price" style="font-size: 0.8rem; opacity: 0.8;">Within Philippines</div>
+                                </div>
+                                <div class="shipping-option" id="destInternational" onclick="selectDestination('international')">
+                                    <div class="shipping-option-title"><i class="fa-solid fa-globe"></i> International</div>
+                                    <div class="shipping-option-price" style="font-size: 0.8rem; opacity: 0.8;">Outside Philippines</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- delivery type -->
+                        <div class="form-group" id="deliveryTypeGroup" style="display:none; margin-top: 16px;">
+                            <label>Delivery Type *</label>
+                            <div class="shipping-options" id="shippingOptionsList">
+                            </div>
+                        </div>
+                        <div class="error-text" id="shippingError"></div>
+
+                        <!-- voucher -->
+                        <div class="voucher-section" style="margin: 20px 0;">
+                            <label style="font-weight: 600; margin-bottom: 12px; display: block;">Discount Code</label>
+                            <div class="voucher-input-group">
+                                <input type="text" id="voucherCode" class="voucher-input" placeholder="Enter voucher code" autocomplete="off" />
+                                <button class="btn-primary" onclick="applyVoucher()">Apply</button>
+                            </div>
+                            <div class="voucher-applied" id="voucherApplied">
+                                <span><i class="fa-solid fa-check-circle"></i> <span id="voucherName"></span> applied</span>
+                                <button onclick="removeVoucher()"><i class="fa-solid fa-times"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- ORDER SUMMARY -->
+                        <h3 style="margin: 8px 0 14px; font-size: 1.2rem;">Order Summary</h3>
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span id="checkoutSubtotal">₱0.00</span>
+                        </div>
+                        <div class="summary-row" id="discountRow" style="display: none;">
+                            <span>Voucher Discount:</span>
+                            <span id="discountAmount" style="color: var(--green);">-₱0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping:</span>
+                            <span id="checkoutShipping">—</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total:</span>
+                            <span id="checkoutTotal">₱0.00</span>
+                        </div>
+
+                        <!-- PAYMENT METHOD -->
+                        <h3 style="margin: 28px 0 16px; font-size: 1.2rem;">Payment Method</h3>
+                        <div class="payment-methods" id="paymentMethodsGroup">
+                            <div class="payment-method" id="methodCard" data-method="card" onclick="selectPayment('card')" onkeydown="handlePaymentKey(event,'card')" tabindex="0" role="button" aria-label="Credit / Debit Card">
+                                <i class="fa-solid fa-credit-card"></i>
+                                <div>Credit / Debit Card</div>
+                            </div>
+                            <div class="payment-method" id="methodPayPal" data-method="paypal" onclick="selectPayment('paypal')" onkeydown="handlePaymentKey(event,'paypal')" tabindex="0" role="button" aria-label="PayPal">
+                                <i class="fa-brands fa-paypal"></i>
+                                <div>PayPal</div>
+                            </div>
+                            <div class="payment-method" id="methodGCash" data-method="gcash" onclick="selectPayment('gcash')" onkeydown="handlePaymentKey(event,'gcash')" tabindex="0" role="button" aria-label="GCash" style="display:none;">
+                                <i class="fa-solid fa-wallet"></i>
+                                <div>GCash</div>
+                            </div>
+                            <div class="payment-method" id="methodCOD" data-method="cod" onclick="selectPayment('cod')" onkeydown="handlePaymentKey(event,'cod')" tabindex="0" role="button" aria-label="Cash on Delivery" style="display:none;">
+                                <i class="fa-solid fa-money-bill-wave"></i>
+                                <div>Cash on Delivery (COD)</div>
+                            </div>
+                        </div>
+                        <div class="error-text" id="paymentError"></div>
+
+                        <div class="card-fields" id="cardFields">
+                            <div class="form-group">
+                                <label>Cardholder Name</label>
+                                <input type="text" id="cardName" placeholder="Name on card">
+                            </div>
+                            <div class="form-group">
+                                <label>Card Number</label>
+                                <input type="password" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="16">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Expiry Date</label>
+                                    <input type="password" id="cardExpiry" placeholder="MM/YY" maxlength="5">
+                                </div>
+                                <div class="form-group">
+                                    <label>CVV</label>
+                                    <input type="password" id="cardCVV" placeholder="123" maxlength="3">
+                                </div>
+                            </div>
+                            <label class="card-visibility-toggle">
+                                <input type="checkbox" id="showCardDetails" onchange="toggleCardVisibility()">
+                                Show card details
+                            </label>
+                        </div>
+
+                        <div class="form-group policy-control-group" style="margin-top: 16px;">
+                            <label class="policy-control">
+                                <span class="policy-checkbox">
+                                    <input type="checkbox" id="agreePolicy" />
+                                    <span class="checkbox-mark"></span>
+                                </span>
+                                <span class="policy-text">
+                                    I agree to the <a href="policies.html" class="policy-link">Shipping Policy</a>, <a href="policies.html" class="policy-link">Terms & Conditions</a>, and <a href="policies.html" class="policy-link">Privacy Policy</a>.
+                                </span>
+                            </label>
+                            <div class="error-text" id="agreeError"></div>
+                        </div>
+                        <div class="checkout-actions">
+                            <button class="btn-ghost" onclick="goToStep1()">
+                                <i class="fa-solid fa-arrow-left"></i>
+                                Back
+                            </button>
+                            <button class="btn-primary" id="placeOrderBtn" onclick="processPayment()" disabled>
+                                Place Order
+                                <i class="fa-solid fa-check"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- step 3: order confirmation -->
+                    <div class="checkout-step" id="step3">
+                        <div class="order-confirmation">
+                            <div class="confirmation-icon">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <h3>Order Placed Successfully!</h3>
+                            <div class="order-id">Order ID: <span id="orderIdDisplay"></span></div>
+                            <div class="email-confirmation">
+                                A receipt has been sent to <strong id="confirmationEmail"></strong>
+                            </div>
+
+                            <div class="receipt-details" id="receiptDetails">
+                                <!-- Receipt will be populated here -->
+                            </div>
+
+                            <div class="tracking-animation">
+                                <h4 style="margin-bottom: 20px; text-align: center;">Order Tracking</h4>
+                                <div class="tracking-steps">
+                                    <div class="tracking-line">
+                                        <div class="tracking-line-fill" id="trackingProgress"></div>
+                                    </div>
+                                    <div class="tracking-step" id="track1">
+                                        <div class="tracking-dot">
+                                            <i class="fa-solid fa-check"></i>
+                                        </div>
+                                        <div class="tracking-label">Order Placed</div>
+                                    </div>
+                                    <div class="tracking-step processing-step" id="track2">
+                                        <div class="tracking-dot">
+                                            <i class="fa-solid fa-box"></i>
+                                        </div>
+                                        <div class="tracking-label">Processing</div>
+                                    </div>
+                                    <div class="tracking-step inactive" id="track3">
+                                        <div class="tracking-dot">
+                                            <i class="fa-solid fa-truck"></i>
+                                        </div>
+                                        <div class="tracking-label">Shipped</div>
+                                    </div>
+                                    <div class="tracking-step inactive" id="track4">
+                                        <div class="tracking-dot">
+                                            <i class="fa-solid fa-map-marker-alt"></i>
+                                        </div>
+                                        <div class="tracking-label">Out for Delivery</div>
+                                    </div>
+                                    <div class="tracking-step inactive" id="track5">
+                                        <div class="tracking-dot">
+                                            <i class="fa-solid fa-home"></i>
+                                        </div>
+                                        <div class="tracking-label">Delivered</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="checkout-actions" style="border: none;">
+                                <button class="btn-ghost" onclick="downloadReceipt()">
+                                    <i class="fa-solid fa-download"></i>
+                                    Download PDF
+                                </button>
+                                <a class="btn-primary" onclick="finishCheckout()" href="./cart.html">
+                                    <i class="fa-solid fa-home"></i>
+                                    Back to Cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- paypal login modal -->
+        <div class="payment-modal payment-modal-paypal" id="paypalModal" role="dialog" aria-modal="true" aria-labelledby="paypalTitle">
+            <div class="payment-box">
+                <button type="button" class="modal-close" onclick="closePayPal()" aria-label="Close PayPal login">×</button>
+                <div class="brand-logo"><i class="fa-brands fa-paypal"></i></div>
+                <h3 id="paypalTitle">Log in to PayPal</h3>
+                <input type="email" id="paypalEmail" placeholder="Email or mobile number" autocomplete="username">
+                <input type="password" id="paypalPassword" placeholder="Password" autocomplete="current-password">
+                <div class="payment-actions">
+                    <button class="btn-ghost" type="button" onclick="closePayPal()">Cancel</button>
+                    <button class="btn-primary" type="button" id="paypalLoginBtn" onclick="confirmPayPal()">Log In</button>
+                </div>
+            </div>
+        </div>
+        <div class="payment-modal payment-modal-gcash" id="gcashModal" role="dialog" aria-modal="true" aria-labelledby="gcashTitle">
+            <div class="payment-box">
+                <button type="button" class="modal-close" onclick="closeGCash()" aria-label="Close GCash login">×</button>
+                <div class="brand-logo"><i class="fa-solid fa-wallet"></i></div>
+                <h3 id="gcashTitle">Log in to GCash</h3>
+                <input type="tel" id="gcashNumber" placeholder="Mobile number or account name" autocomplete="username">
+                <input type="password" id="gcashPassword" placeholder="MPIN / Password" autocomplete="current-password" maxlength="6">
+                <div class="payment-actions">
+                    <button class="btn-ghost" type="button" onclick="closeGCash()">Cancel</button>
+                    <button class="btn-primary" type="button" id="gcashLoginBtn" onclick="confirmGCash()">Log In</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="site-footer" id="footer">
+            <div class="footer-wave">
+                <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg"><path d="M0,40 C360,0 1080,80 1440,40 L1440,0 L0,0 Z" /></svg>
+            </div>
+            <div class="footer-inner">
+                <div class="footer-col brand-col">
+                    <div class="footer-logo"><i class="fa-solid fa-ship"></i><span>CSSP Garments Trading</span></div>
+                    <p>Your trusted maritime uniform supplier since 2024. Quality gear for every sailor, cook, and crew member.</p>
+                    <div class="social-icons">
+                        <a href="./contacts.html" title="Contacts"><i class="fa-regular fa-address-book"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="./index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                        <li><a href="./products.html"><i class="fa-solid fa-chevron-right"></i> Products</a></li>
+                        <li><a href="./aboutus.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="./index.html#reviews"><i class="fa-solid fa-chevron-right"></i> Reviews</a></li>
+                        <li><a href="./index.html#faq"><i class="fa-solid fa-chevron-right"></i> FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CSSP Garments Trading. All rights reserved.<br> Designed by Logmunch!</p>
+                <div class="legal-links">
+                    <a href="./policies.html#privacyPage">Privacy Policy</a>
+                    <a href="./policies.html#termsPage">Terms & Conditions</a>
+                    <a href="./policies.html#shippingPage">Shipping Policy</a>
+                </div>
+            </div>
+        </footer>
+
+        <button class="back-to-top" id="backToTop" title="Back to top" aria-label="Scroll to top">
+            <i class="fa-solid fa-anchor"></i>
+          </button>
+        
+        <script src="./JS Files/Cart_Script.js"></script>
+    </body>
+</html>
