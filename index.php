@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSSP Garments Trading</title>
+  <meta name="description" content="CSSP Garments Trading – premium maritime uniforms, PPE, coveralls, safety footwear and kitchen uniforms since 2024." />
+  <link rel="icon" href="./Assets/logo-light-text.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="./CSS Files/Index_Style.css">
+</head>
+<body>
+    <!-- PRE-HEADER INFINITE TICKER-->
+      <div class="pre-header" aria-label="Delivery and service info">
+        <div class="ticker-track" id="tickerTrack">
+            <span><i class="fa-solid fa-ship"></i> National Delivery: 3 Days</span>
+            <span><i class="fa-solid fa-map-location-dot"></i> Provincial Delivery: 5 Days</span>
+            <span><i class="fa-solid fa-globe"></i> International Shipping: 1 Week</span>
+            <span><i class="fa-solid fa-headset"></i> Customer Service: 7AM – 7PM</span>
+            <span><i class="fa-solid fa-shield-halved"></i> 100% Secure Checkout</span>
+            <span><i class="fa-solid fa-box-open"></i> Welcome Offer: Free Shipping</span>
+        </div>
+      </div>
+
+    <!-- HEADER/NAVIGATION -->
+      <header class="site-header" id="siteHeader">
+        <div class="header-inner">
+        <!-- LOGO -->
+          <a href="./index.html" class="logo-wrap" aria-label="CSSP Garments Trading homepage">
+            <div class="logo-icon">
+              <img src="./Assets/logo-light-text.png" class="logo-img light-logo" alt="CSSP Garments Trading logo, light version" />
+              <img src="./Assets/logo-dark-text.png" class="logo-img dark-logo" alt="CSSP Garments Trading logo, dark version" />
+            </div>
+            <div class="logo-text">CSSP<span>Garments&nbsp;Trading</span></div>
+          </a>
+            <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+              <ul class="nav-list">
+                <li class="nav-item has-mega" id="navProducts">
+                  <a href="#" class="nav-link" id="navProductsBtn" aria-haspopup="true" aria-expanded="false">
+                    Products <i class="fa-solid fa-chevron-down nav-caret"></i>
+                  </a>
+                    <div class="mega-menu" id="megaProducts" aria-hidden="true">
+                      <div class="mega-inner">
+                        <div class="mega-col">
+                          <span class="mega-label">Uniforms</span>
+                            <div class="mega-feature-card">
+                              <img src="./Assets/UNIFORM_MEGA MENU.png" />
+                                <p>Maritime &amp; Culinary Uniforms</p>
+                                <a href="products.html#uniforms" class="btn-sm">Gear Up</a>
+                            </div>
+                        </div>
+                          <div class="mega-divider"></div>
+                            <div class="mega-col">
+                              <span class="mega-label">Safety Footwear</span>
+                                <div class="mega-feature-card">
+                                <img src="./Assets/SAFETYFOOTWEAR_MEGA MENU.png" alt="Steel-toe safety shoe for deck and industrial use" />
+                                <p>Steel-toe Safety Shoe</p>
+                                <a href="products.html#safety-footwears" class="btn-sm">Secure Step</a>
+                                </div>
+                            </div>
+                    </div>
+                  </div>
+                </li>
+              <li class="nav-item has-mega" id="navAbout">
+                <a href="#" class="nav-link" id="navAboutBtn" aria-haspopup="true" aria-expanded="false">
+                  About Us <i class="fa-solid fa-chevron-down nav-caret"></i>
+                </a>
+                  <div class="mega-menu" id="megaAbout" aria-hidden="true">
+                    <div class="mega-inner">
+                      <div class="mega-col">
+                        <span class="mega-label">Company</span>
+                          <a href="./aboutus.html#history" class="mega-item text-only"><i class="fa-solid fa-anchor"></i> Our Story</a>
+                          <a href="./aboutus.html#people" class="mega-item text-only"><i class="fa-solid fa-users"></i> Our Team</a>
+                          <a href="./aboutus.html#tailor" class="mega-item text-only"><i class="fa-solid fa-house"></i> Location</a>
+                      </div>
+                        <div class="mega-divider"></div>
+                          <div class="mega-col">
+                            <span class="mega-label">Support</span>
+                            <a href="#faq" class="mega-item text-only"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+                            <a href="./contacts.html" class="mega-item text-only"><i class="fa-solid fa-envelope"></i> Contact Us</a>
+                            <a href="./policies.html" class="mega-item text-only"><i class="fa-solid fa-file-contract"></i> Policies</a>
+                          </div>
+                    </div>
+                  </div>
+              </li>
+              </ul>
+            </nav>
+
+    <!-- NAVBAR ICONS -->
+      <div class="header-actions">
+        <div class="currency-switcher" id="currencySwitcher">
+          <button class="currency-btn" id="currencyBtn" aria-label="Change currency" aria-expanded="false">
+            <i class="fa-solid fa-coins"></i>
+            <span id="activeCurrency">PHP</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+            <ul class="currency-dropdown" id="currencyDropdown">
+              <li data-currency="PHP" data-symbol="₱">🇵🇭 PHP</li>
+              <li data-currency="USD" data-symbol="$">🇺🇸 USD</li>
+              <li data-currency="GBP" data-symbol="£">🇬🇧 GBP</li>
+            </ul>
+        </div>
+
+          <button class="icon-btn" title="Cart" aria-label="View cart" id="cartIconBtn">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="badge" id="cartBadge">0</span>
+          </button>
+
+          <button class="icon-btn" id="searchToggle" title="Search" aria-label="Toggle search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+
+          <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle colour theme">
+            <i class="fa-solid fa-sun" id="themeIcon"></i>
+          </button>
+
+          <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+      </div>
+        </div>
+
+    <!-- SEARCH BAR -->
+      <div class="search-bar" id="searchBar" role="search">
+        <input type="search" id="searchInput" placeholder="Search uniforms, PPE, safety shoes…" autocomplete="off" aria-label="Search products" />
+        <button aria-label="Submit search"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <div class="search-results" id="searchResults" aria-live="polite"></div>
+      </div>
+      </header>
+
+    <!-- HERO SECTION -->
+      <section class="hero" id="home">
+            <div class="hero-inner">
+              <div class="hero-text">
+                <p class="hero-sub"><i class="fa-solid fa-water"></i> Maritime Grade Equipment</p>
+                  <h1 class="hero-title">Dressed for<br><span>The Deep.</span></h1>
+                    <p class="hero-desc">Premium coveralls, kitchen uniforms, PPE, and safety shoes built for sailors, cooks, and crew members who demand quality above sea level.</p>
+                      <div class="hero-btns">
+                      <a href="./products.html" class="btn-primary">View Products <i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="./aboutus.html" class="btn-ghost">Our Story <i class="fa-solid fa-compass"></i></a>
+                      </div>
+                      
+          <div class="hero-stats">
+            <div class="stat"><strong>500+</strong><span>Marine Clients</span></div>
+              <div class="stat"><strong>1K+</strong><span>Units Delivered</span></div>
+                <div class="stat"><strong>100%</strong><span>PPE Certified</span></div>
+                  </div>
+                  </div>
+      
+          <div class="hero-image-wrap">
+              <div class="hero-image-frame">
+                <img src="./Assets/Index/hero-image-one-hand stitch.JPG" class="hero-img-slide img-active" alt="Maritime Uniform 1" />
+                <img src="./Assets/Index/hero-image-two-tag.JPG" class="hero-img-slide" alt="Maritime Uniform 2" />
+                <img src="./Assets/Index/hero-image-three-staff.JPG" class="hero-img-slide" alt="Maritime Uniform 3" />
+                <img src="./Assets/Index/hero-image-four-machine sewing.JPG" class="hero-img-slide" alt="Maritime Uniform 4" />
+                <img src="./Assets/Index/hero-image-five-list.JPG" class="hero-img-slide" alt="Maritime Uniform 5" />
+                <img src="./Assets/Index/hero-image-six-shoeboxes.JPG" class="hero-img-slide" alt="Maritime Uniform 6" />
+  
+          <div class="hero-badge">
+            <i class="fa-solid fa-anchor"></i>Est. 2024
+          </div>
+              </div>
+          </div>
+            </div>
+
+    <!-- WAVE -->
+      <div class="hero-wave">
+        <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg"><path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" /></svg>
+      </div>
+      </section>
+
+
+    <!-- TICKER 1 -->
+      <div class="section-ticker" aria-hidden="true">
+        <div class="ticker2-track">
+          <span><i class="fa-solid fa-helmet-safety"></i> Safety-first construction</span>
+          <span><i class="fa-solid fa-cloud-showers-heavy"></i> All-weather resilience</span>
+          <span><i class="fa-solid fa-shield-halved"></i> PPE Standards</span>
+          <span><i class="fa-solid fa-water"></i> Built for the Sea</span>
+          <span><i class="fa-solid fa-ship"></i> Trusted by Crews</span>
+          <span><i class="fa-solid fa-link"></i> Triple-needle stitching</span>
+          <span><i class="fa-solid fa-hand-sparkles"></i> Easy-care maintenance</span>
+          <span><i class="fa-solid fa-anchor"></i> Maritime Grade</span>
+          <span><i class="fa-solid fa-shield-halved"></i> PPE Standards</span>
+          <span><i class="fa-solid fa-water"></i> Built for the Sea</span>
+          <span><i class="fa-solid fa-infinity"></i> Extended wear-life</span>
+          <span><i class="fa-solid fa-lock"></i> Secure-fit fasteners</span>
+        </div>
+      </div>
+
+    <!-- EXPLORE COLLECTION  -->
+      <section class="products" id="collection">
+        <div class="products-inner">
+          <div class="section-header">
+            <span class="section-label">What We Offer</span>
+            <h2 class="section-title">Explore The Collection</h2>
+          </div>
+
+    <!--FEATURE CARD -->
+      <div class="featured-grid">
+        <div class="featured-card" data-modal="modalUniforms" tabindex="0" role="button" aria-label="View Uniforms collection details">
+          <div class="fc-img">
+            <img src="./Assets/UNIFORM_MEGA MENU.png"
+            alt="CSSP maritime and culinary uniform collection including blue, orange and beige coveralls and chef tops" />
+              <div class="fc-overlay"><span>Explore Collection <i class="fa-solid fa-arrow-right"></i></span></div>
+          </div>
+            <div class="fc-body">
+              <span class="section-label">Maritime &amp; Culinary</span>
+              <h3 class="fc-title">Uniforms</h3>
+              <p>Durable PPE gear including safety shoes in low- and high-cut styles and weatherproof jackets designed for comfort, protection, and reliable performance in demanding environments.</p>
+            </div>
+        </div>
+
+        <div class="featured-card" data-modal="modalSafety" tabindex="0" role="button" aria-label="View Safety Gear collection details">
+          <div class="fc-img">
+            <img src="./Assets/SAFETYFOOTWEAR_MEGA MENU.png"
+            alt="CSSP safety gear collection including PPE kits, steel-toe boots, gloves, and high-visibility vests" />
+              <div class="fc-overlay"><span>Explore Collection <i class="fa-solid fa-arrow-right"></i></span></div>
+          </div>
+            <div class="fc-body">
+              <span class="section-label">PPE &amp; Footwear</span>
+              <h3 class="fc-title">Safety Gear</h3>
+              <p>Durable PPE gear including safety shoes in low- and high-cut styles and weatherproof jackets designed for comfort, protection, and reliable performance in demanding work environments.</p>
+            </div>
+        </div>
+
+      </div>
+        </div>
+          </div>
+      </section>
+
+    <!-- TICKER 2 -->
+      <div class="section-ticker reverse" aria-hidden="true">
+        <div class="ticker2-track reverse">
+          <span><i class="fa-solid fa-circle-check"></i> Made to Last</span>
+          <span><i class="fa-solid fa-scissors"></i> Precision Stitching</span>
+          <span><i class="fa-solid fa-truck"></i> Fast Nationwide Delivery</span>
+          <span><i class="fa-solid fa-compass"></i> Navigate Your Style</span>
+          <span><i class="fa-solid fa-layer-group"></i> High-Grade Materials</span>
+          <span><i class="fa-solid fa-eye"></i> Attention to Every Detail</span>
+          <span><i class="fa-solid fa-thumbs-up"></i> Designed for Comfort</span>
+          <span><i class="fa-solid fa-shield-heart"></i> Reliable Durability</span>
+          <span><i class="fa-solid fa-truck"></i> Fast Nationwide Delivery</span>
+          <span><i class="fa-solid fa-diamond"></i> Built to Last a Lifetime</span>
+          <span><i class="fa-solid fa-wind"></i> Weatherproof Designs</span>
+          <span><i class="fa-solid fa-award"></i> Unmatched Premium Quality</span>
+        </div>
+      </div>
+
+    <!-- OUR JOURNEY SECTION -->
+      <section class="journey-section reveal" id="journey" aria-labelledby="journeyHeading">
+        <div class="journey-inner">
+          <span class="journey-label">Est. 2024</span>
+          <h2 class="journey-heading" id="journeyHeading">
+            Our<br><em>Journey.</em>
+          </h2>
+
+        <div class="journey-layout"><div>
+        <p class="journey-body">
+          What started as a small family-run business supplying
+          <a class="img-chip" href="products.html#uniforms" aria-label="View coveralls">
+            <img src="Assets/Index/journeysection_coverall.png"
+            alt="Journey Section - Coverall" />Coveralls
+          </a>
+            to the maritime community. Today, we’ve grown into a trusted partner for crews and offshore rigs across the Philippines, 
+            but we still operate with the heart and hustle of a small shop that values real craftsmanship.
+        </p>
+        <p class="journey-body"> 
+          We are obsessed with the details, hand-selecting every raw material—from the high-grip soles of our
+          <a class="img-chip" href="products.html#safety-footwears" aria-label="View safety boots">
+            <img src="Assets/Index/journeysection_safety_shoes.png"
+            alt="Journey Section - Safety Shoes" />Safety Shoes
+          </a>
+            to the heat-resistant fabric of our
+          <a class="img-chip" href="products.html#uniforms" aria-label="View chef tops">
+            <img src="Assets/Index/journeysection_chef top.png"
+            alt="Journey Section - Chef Top" />Chef Tops.
+          </a>
+          Our team puts in the hard work to ensure every seam is strong and every fastener is secure, because we know that out at sea, there is no room for gear that fails.
+        </p>
+        <p class="journey-body">
+          We don’t just ship boxes; we provide a
+          <a class="img-chip" href="aboutus.html" aria-label="View About Us Page">
+            <img src="Assets/Index/journeysection_wroker.png"
+            alt="Journey Section - Worker" />Commitment
+          </a>
+            to the men and women working the decks. Having sailed those same waters ourselves, we understand the stakes, 
+            which is why we work tirelessly to deliver durable PPE that protects you through every storm and every shift.
+        </p>
+          <a href="./aboutus.html" class="btn-primary" style="margin-top: 8px;">
+            Read Full Story <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+
+    <!-- JOURNEY - STAT CARD -->
+      <div class="journey-aside">
+        <div class="journey-stat-card">
+          <strong>500+</strong>
+          <span>Marine clients across the Philippines</span>
+        </div>
+        <div class="journey-stat-card">
+          <strong>1K+</strong>
+          <span>Units shipped since founding</span>
+        </div>
+        <div class="journey-stat-card journey-accent">
+          <strong>100%</strong>
+          <span>Focus on quality &amp; reliability</span>
+        </div>
+        <div class="journey-stat-card">
+          <strong>24/7</strong>
+          <span>Customer service focused support</span>
+        </div>
+      </div>
+        </div>
+        </div>
+      </section>
+
+    <!-- TICKER 3 -->
+      <div class="section-ticker-three" aria-hidden="true">
+        <div class="ticker2-track3">
+          <span><i class="fa-solid fa-helmet-safety"></i> Safety-first construction</span>
+          <span><i class="fa-solid fa-cloud-showers-heavy"></i> All-weather resilience</span>
+          <span><i class="fa-solid fa-shield-halved"></i> PPE Standards</span>
+          <span><i class="fa-solid fa-water"></i> Built for the Sea</span>
+          <span><i class="fa-solid fa-ship"></i> Trusted by Crews</span>
+          <span><i class="fa-solid fa-link"></i> Triple-needle stitching</span>
+          <span><i class="fa-solid fa-hand-sparkles"></i> Easy-care maintenance</span>
+          <span><i class="fa-solid fa-anchor"></i> Maritime Grade</span>
+          <span><i class="fa-solid fa-shield-halved"></i> PPE Standards</span>
+          <span><i class="fa-solid fa-water"></i> Built for the Sea</span>
+          <span><i class="fa-solid fa-infinity"></i> Extended wear-life</span>
+          <span><i class="fa-solid fa-lock"></i> Secure-fit fasteners</span>
+        </div>
+      </div>
+
+    <!-- ABOUT SECTION -->
+      <section class="about" id="about">
+        <div class="about-inner">
+          <div class="about-image">
+            <img src="./Assets/Index/about image.JPG" alt="CSSP Garments team members inspecting finished uniforms in the workshop, ensuring quality standards" />
+              <div class="about-float-card" aria-hidden="true">
+                <i class="fa-solid fa-ship"></i>
+                <p>Supplying the Seas<br>Since <strong>2024</strong></p>
+              </div>
+          </div>
+            <div class="about-text">
+              <span class="section-label">Who We Are</span>
+              <h2 class="section-title">Built Tough.<br>Made for the Maritime World.</h2>
+              <p>CSSP Garments Trading has been the go-to supplier for maritime and commercial vessel uniforms since 2024. 
+              From the engine room to the galley, we outfit every crew member with durable, certified, and professional-grade gear.</p>
+                <ul class="about-list">
+                  <li><i class="fa-solid fa-check-circle"></i> Crafted with a focus on longevity</li>
+                  <li><i class="fa-solid fa-check-circle"></i> Professional fit for every crew member</li>
+                  <li><i class="fa-solid fa-check-circle"></i> Full uniform sets for kitchen and deck staff</li>
+                  <li><i class="fa-solid fa-check-circle"></i> Custom bulk orders for shipping companies</li>
+                </ul>
+                  <a href="./products.html" class="btn-primary">Browse Products <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+      </section>
+
+        <div class="between-wave" aria-hidden="true">
+          <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg"><path d="M0,40 C360,0 1080,80 1440,40 L1440,0 L0,0 Z"/></svg>
+        </div>
+
+          <!-- PRODUCT REVIEWS -->
+            <section class="reviews" id="reviews">
+              <div class="section-header">
+                <p class="section-sub">What Clients Say</p>
+                <h2 class="section-title">Crew Reviews</h2>
+              </div>
+
+          <!-- review slider -->
+            <div class="review-slider-wrap">
+              <div class="review-slider" id="reviewSlider">
+              
+                <div class="review-card active">
+                  <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"The coveralls held up for 6 months straight at sea without a single tear. The stitching is just incredible. CSSP is the only supplier we'll ever use."</p>
+                      <div class="reviewer">
+                        <img src="https://placehold.co/48x48/1a3a5c/f4d03f?text=JR" alt="Juan R." />
+                          <div><strong>Juan Reyes</strong><span>Chief Officer, MV Sampaguita</span></div>
+                      </div>
+                          </div>
+
+                <div class="review-card">
+                  <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"We ordered 200 kitchen uniforms for our cruise vessel. The quality was top-notch and delivery was right on schedule. Very professional team!"</p>
+                      <div class="reviewer">
+                        <img src="https://placehold.co/48x48/2d6a4f/ffffff?text=ML" alt="Maria L." />
+                          <div><strong>Maria Lim</strong><span>Fleet Manager, Oceanic Lines</span></div>
+                      </div>
+                          </div>
+
+                <div class="review-card">
+                  <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"The PPE kits are certified and the boots are super comfortable even after 12-hour shifts. My entire deck crew is now wearing CSSP gear."</p>
+                      <div class="reviewer">
+                        <img src="https://placehold.co/48x48/e63946/ffffff?text=RC" alt="Roberto C." />
+                          <div><strong>Roberto Cruz</strong><span>Safety Officer, Harbour Express</span></div>
+                      </div>
+                          </div>
+
+                <div class="review-card">
+                  <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Fast delivery and great customer support. Ordered from Cebu, arrived in 3 days. The jackets are perfect for cold-room operations on our vessel."</p>
+                      <div class="reviewer">
+                        <img src="https://placehold.co/48x48/f4d03f/1a3a5c?text=AT" alt="Ana T." />
+                          <div><strong>Ana Torres</strong><span>Procurement Head, SeaRoute Corp</span></div>
+                      </div>
+                        </div>
+                
+                <div class="slider-controls">
+                  <button class="slider-dot active" data-index="0"></button>
+                  <button class="slider-dot" data-index="1"></button>
+                  <button class="slider-dot" data-index="2"></button>
+                  <button class="slider-dot" data-index="3"></button>
+                </div>
+            </div>
+            </div>
+            
+            
+
+          <!-- review form -->
+          <div class="review-form-wrap">
+            <h3>Leave Your Review</h3>
+              <div class="star-picker" id="starPicker">
+                <span data-val="1">★</span><span data-val="2">★</span><span data-val="3">★</span><span data-val="4">★</span><span data-val="5">★</span>
+              </div>
+                <input type="text" id="reviewName" placeholder="Your name & company" />
+                <textarea id="reviewText" placeholder="Tell us about your experience..."></textarea>
+                <button class="btn-primary" id="submitReview">Submit Review <i class="fa-solid fa-paper-plane"></i></button>
+                <p class="review-success" id="reviewSuccess" style="display:none;"><i class="fa-solid fa-circle-check"></i> Thank you! Your review has been submitted.</p>
+              </div>
+        </section>
+
+    <!-- TICKER 3 -->
+      <div class="section-ticker" aria-hidden="true">
+        <div class="ticker2-track">
+          <span><i class="fa-solid fa-anchor"></i> Anchored in Quality</span>
+          <span><i class="fa-solid fa-wave-square"></i> Ride Every Wave</span>
+          <span><i class="fa-solid fa-person-walking-luggage"></i> Outfitted for Adventure</span>
+          <span><i class="fa-solid fa-life-ring"></i> Safety First Always</span>
+          <span><i class="fa-solid fa-binoculars"></i> See the Horizon Clearly</span>
+          <span><i class="fa-solid fa-flag"></i> Proud Maritime Brand</span>
+          <span><i class="fa-solid fa-anchor"></i> Anchored in Quality</span>
+          <span><i class="fa-solid fa-wave-square"></i> Ride Every Wave</span>
+          <span><i class="fa-solid fa-person-walking-luggage"></i> Outfitted for Adventure</span>
+          <span><i class="fa-solid fa-life-ring"></i> Safety First Always</span>
+          <span><i class="fa-solid fa-binoculars"></i> See the Horizon Clearly</span>
+          <span><i class="fa-solid fa-flag"></i> Proud Maritime Brand</span>
+        </div>
+      </div>
+
+    <!-- FAQ -->
+      <section class="faq" id="faq">
+        <div class="section-header">
+          <span class="section-label">Got Questions?</span>
+          <h2 class="section-title">Frequently Asked</h2>
+        </div>
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false">What is the minimum order for bulk purchases? <i class="fa-solid fa-plus faq-icon"></i></button>
+                <div class="faq-a"><p>For bulk orders, the minimum quantity is 50 pieces per item. Special pricing starts at 50+ units. Contact us via our form or email for a quotation.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false">Do you offer custom logo/branding on uniforms? <i class="fa-solid fa-plus faq-icon"></i></button>
+                <div class="faq-a"><p>Customers may reach out to the company if they want to personalize uniforms with embroidery or screen printing for their logos. 
+                                      Custom-made orders typically require a lead time of about 5–10 business days depending on how many items are ordered.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false">Can customers request larger sizes or customized sizing for PPE kits?<i class="fa-solid fa-plus faq-icon"></i></button>
+                <div class="faq-a"><p>Customers may contact the company to request custom or larger sizes depending on their needs.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false">What are your delivery timelines? <i class="fa-solid fa-plus faq-icon"></i></button>
+                <div class="faq-a"><p>If the user chooses Standard Shipping, the delivery will take around 4–7 days with the regular shipping fee. 
+                                      If the user upgrades to Express Shipping, the delivery time becomes 1–3 days with an additional fee added to the total payment.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false">How do I place an order or request a quote? <i class="fa-solid fa-plus faq-icon"></i></button>
+                <div class="faq-a"><p>You can use the Contact form below, email us at <strong>orders@csspgarments.com</strong>, or call us at <strong>+63 922 653 7181</strong> between 7AM – 7PM daily.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- FOOTER -->
+      <footer class="site-footer" id="footer">
+        <div class="footer-wave" aria-hidden="true">
+          <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg"><path d="M0,40 C360,0 1080,80 1440,40 L1440,0 L0,0 Z"/></svg>
+        </div>
+          <div class="footer-inner">
+            <div class="footer-col brand-col">
+              <div class="footer-logo"><i class="fa-solid fa-ship"></i><span>CSSP Garments Trading</span></div>
+              <p>Your trusted maritime uniform supplier since 2024. Quality gear for every sailor, cook, and crew member.</p>
+                <div class="social-icons">
+                  <a href="./contacts.html" title="Contact us" aria-label="Contact page"><i class="fa-regular fa-address-book"></i></a>
+                </div>
+            </div>
+    
+            <div class="footer-col">
+              <h4>Quick Links</h4>
+                <ul>
+                  <li><a href="./index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                  <li><a href="./products.html"><i class="fa-solid fa-chevron-right"></i> Products</a></li>
+                  <li><a href="./aboutus.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+                  <li><a href="#reviews"><i class="fa-solid fa-chevron-right"></i> Reviews</a></li>
+                  <li><a href="#faq"><i class="fa-solid fa-chevron-right"></i> FAQ</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+            
+            <div class="footer-bottom">
+              <p>&copy; 2024 CSSP Garments Trading. All rights reserved.<br>Designed by Logmunch!</p>
+                <div class="legal-links">
+                  <a href="./policies.html#privacyPage">Privacy Policy</a>
+                  <a href="./policies.html#termsPage">Terms &amp; Conditions</a>
+                  <a href="./policies.html#shippingPage">Shipping Policy</a>
+                </div>
+            </div>
+      </footer>
+
+          <button class="back-to-top" id="backToTop" title="Back to top" aria-label="Scroll to top">
+            <i class="fa-solid fa-anchor"></i>
+          </button>
+
+    <!-- TOAST -->
+      <div id="toastContainer" aria-live="polite"></div>
+      <!-- MODALS -->
+        <div class="c-modal-overlay" id="modalUniforms" role="dialog" aria-modal="true" aria-labelledby="muTitle" aria-hidden="true">
+          <div class="c-modal-box">
+            <button class="c-modal-close" data-close="modalUniforms" aria-label="Close uniforms modal"><i class="fa-solid fa-xmark"></i></button>
+              <div class="c-modal-inner">
+                <div class="c-modal-img">
+                  <img src="https://placehold.co/400x500/1a3a5c/f4d03f?text=Uniforms"
+                  alt="Full range of CSSP maritime and culinary uniforms displayed on mannequins" />
+                </div>
+                  <div class="c-modal-body">
+                    <span class="section-label">Maritime &amp; Culinary</span>
+                    <h2 id="muTitle">Uniforms Collection</h2>
+                    <p class="c-modal-tagline">"Precision-crafted for every role aboard."</p>
+                    <ul class="modal-feature-list">
+                      <li><i class="fa-solid fa-check-circle"></i> Blue, Orange &amp; Khaki Coveralls — rugged heavy-duty zip front protection.</li>
+                      <li><i class="fa-solid fa-check-circle"></i> Chef's White Tops — heatproof uniform designed for cooking environments</li>
+                      <li><i class="fa-solid fa-check-circle"></i> Checkered Chef Trousers — protective chef pants designed for high heat</li>
+                    </ul>
+                      <p class="size-guide-title">Size Guide</p>
+                    <table class="size-table">
+                      <thead>
+                        <tr>
+                          <th>Size</th>
+                          <th>Chest (cm)</th>
+                          <th>Waist (cm)</th>
+                          <th>Height (cm)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Small</td>
+                          <td>86–90</td>
+                          <td>72–76</td>
+                          <td>160–165</td>
+                        </tr>
+                        <tr>
+                          <td>Medium</td>
+                          <td>91–96</td>
+                          <td>77–82</td>
+                          <td>166–170</td>
+                        </tr>
+                        <tr>
+                          <td>Large</td>
+                          <td>97–102</td>
+                          <td>83–88</td>
+                          <td>171–176</td>
+                        </tr>
+                        <tr>
+                          <td>X-Large</td>
+                          <td>103–110</td>
+                          <td>89–96</td>
+                          <td>177–182</td>
+                        </tr>
+                        <tr>
+                          <td>XX-Large</td>
+                          <td>111–118</td>
+                          <td>97–104</td>
+                          <td>183–188</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                      <p class="size-guide-title">Materials</p>
+                        <div class="materials-grid">
+                        <div class="material-chip">100% Fine Cotton</div>
+                        <div class="material-chip">Durable zipper coverall</div>
+                        <div class="material-chip">High-visibility reflector</div>
+                        <div class="material-chip">UV-Protection Finish</div>
+                        </div>
+                        <a href="products.html#uniforms" class="btn-primary">View Full Product <i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+      <div class="c-modal-overlay" id="modalSafety" role="dialog" aria-modal="true" aria-labelledby="msTitle" aria-hidden="true">
+        <div class="c-modal-box">
+          <button class="c-modal-close" data-close="modalSafety" aria-label="Close safety gear modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="c-modal-inner">
+              <div class="c-modal-img">
+                <img src="https://placehold.co/400x500/e63946/ffffff?text=Safety+Gear"
+                alt="Full PPE kit, steel-toe safety boots, and high-visibility vest displayed against a dark background" />
+              </div>
+                <div class="c-modal-body">
+                  <span class="section-label">PPE &amp; Footwear</span>
+                  <h2 id="msTitle">Safety Gear Collection</h2>
+                  <p class="c-modal-tagline">"Where protection meets precision engineering."</p>
+                    <ul class="modal-feature-list">
+                      <li><i class="fa-solid fa-check-circle"></i> Protective visibility shoes for marine work</li>
+                      <li><i class="fa-solid fa-check-circle"></i> Insulated visibility jackets for harbor work</li>
+                      <li><i class="fa-solid fa-check-circle"></i> High-visibility jackets for deck and port operations</li>
+                    </ul>
+                  <p class="size-guide-title">Safety Boot Size Guide</p>
+                <table class="size-table">
+                  <thead>
+                    <tr>
+                      <th>PH Size</th>
+                      <th>EU Size</th>
+                      <th>Foot Length (cm)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>7</td>
+                      <td>41</td>
+                      <td>26.0</td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td>42</td>
+                      <td>26.7</td>
+                    </tr>
+                    <tr>
+                      <td>9</td>
+                      <td>43</td>
+                      <td>27.3</td>
+                    </tr>
+                    <tr>
+                      <td>10</td>
+                      <td>44</td>
+                      <td>28.0</td>
+                    </tr>
+                    <tr>
+                      <td>11</td>
+                      <td>45</td>
+                      <td>28.7</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="size-guide-title">Specifications</p>
+                <div class="materials-grid">
+                  <div class="material-chip">Slip-resistant high-visibility footwear</div>
+                    <div class="material-chip">High-visibility insulated safety jacket</div>
+                      <div class="material-chip">Weatherproof insulated work jacket</div>
+                      <div class="material-chip">Durable low-cut and high-cut footwear</div>
+                </div>
+                  <a href="products.html#safety-footwears" class="btn-primary">View Full Product <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+      </div>
+      <script src="./JS Files/Index_Script.js"></script>
+</body>
+</html>
