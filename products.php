@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"> 
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSSP Garments Trading</title>
+
+        <link rel="icon" type="image/png" href="Assets/logo-light-text.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="CSS Files/Products_Style.css">
+
+        <!-- FontAwesome for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    
+        <script src="https://kit.fontawesome.com/493ae0299a.js" crossorigin="anonymous"></script>
+        
+    </head>
+    <body>
+        
+        <!-- ===== PRE-HEADER TICKER ===== -->
+        <!-- Infinite scrolling -->
+        <div class="pre-header">
+            <div class="ticker-track" id="tickerTrack">
+                <span><i class="fa-solid fa-ship"></i> National Delivery: 3 Days</span>
+                <span><i class="fa-solid fa-map-location-dot"></i> Provincial Delivery: 5 Days</span>
+                <span><i class="fa-solid fa-globe"></i> International Shipping: 1 Week</span>
+                <span><i class="fa-solid fa-headset"></i> Customer Service: 7AM – 7PM</span>
+                <span><i class="fa-solid fa-shield-halved"></i> 100% Secure Checkout</span>
+                <span><i class="fa-solid fa-box-open"></i> Welcome Offer: Free Shipping</span>
+
+                <span><i class="fa-solid fa-percent"></i> Save 10% with code CSSP10</span>
+                <span><i class="fa-solid fa-tags"></i> FREESHIP (Free Delivery)</span>
+                <span><i class="fa-solid fa-gift"></i> Claims: FREESHIP for Free Delivery • CSSP10 for 10% Off</span>
+            </div>
+        </div>
+    
+        <!-- ===== HEADER / NAVIGATION ===== -->
+        <header class="site-header" id="siteHeader">
+            <div class="header-inner">
+            
+                <!-- Logo -->
+                <a href="index.html" class="logo-wrap" aria-label="CSSP Garments Trading homepage">
+                    <div class="logo-icon">
+                        <img src="Assets/logo-light-text.png" class="logo-img light-logo" alt="CSSP Garments Trading logo, light version">
+                        <img src="Assets/logo-dark-text.png" class="logo-img dark-logo" alt="CSSP Garments Trading logo, dark version">
+                    </div>
+                    <div class="logo-text">CSSP<span>Garments&nbsp;Trading</span></div>
+                </a>
+
+                <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+                    <ul class="nav-list">
+                        
+                        <!-- products mega menu -->
+                        <li class="nav-item has-mega" id="navProducts">
+                            <a href="#" class="nav-link" id="navProductsBtn" aria-haspopup="true" aria-expanded="false">Products <i class="fa-solid fa-chevron-down nav-caret"></i></a>
+                            <div class="mega-menu" id="megaProducts" aria-hidden="true">
+                                <div class="mega-inner">
+                            
+                                    <div class="mega-col">
+                                        <p class="mega-label">Uniforms</p>
+                                        <div class="mega-feature-card">
+                                            <img src="./Assets/UNIFORM_MEGA MENU.png" alt="Maritime and culinary uniform range including coveralls and chef tops" />
+                                            <p>Maritime &amp; Culinary Uniforms</p>
+                                            <a href="products.html#uniforms" class="btn-sm">Gear Up</a>
+                                        </div>
+                                    </div> 
+                                        
+                                    <div class="mega-divider"></div>
+                                        
+                                    <div class="mega-col">
+                                        <p class="mega-label">Safety Footwear</p>
+                                        <div class="mega-feature-card">
+                                            <img src="./Assets/SAFETYFOOTWEAR_MEGA MENU.png" alt="Steel-toe safety shoe for deck and industrial use" />
+                                            <p>Steel-toe Safety Shoe</p>
+                                            <a href="products.html#safety-footwears" class="btn-sm">Secure Step</a>
+                                        </div>
+                                    </div> 
+                                </div> 
+                            </div>  
+                        </li> 
+                    
+                        <!-- about Us mega menu -->
+                        <li class="nav-item has-mega" id="navAbout">
+                            <a href="#" class="nav-link" id="navAboutBtn" aria-haspopup="true" aria-expanded="false">About Us <i class="fa-solid fa-chevron-down nav-caret"></i></a>
+                            <div class="mega-menu" id="megaAbout" aria-hidden="true">
+                                <div class="mega-inner">
+                                    <div class="mega-col">
+                                        <p class="mega-label">Company</p>
+                                        <a href="./aboutus.html#history" class="mega-item text-only"><i class="fa-solid fa-anchor"></i> Our Story</a>
+                                        <a href="./aboutus.html#people" class="mega-item text-only"><i class="fa-solid fa-users"></i> Our Team</a>
+                                        <a href="./aboutus.html#tailor" class="mega-item text-only"><i class="fa-solid fa-house"></i> Location</a>
+                                    </div>
+
+                                    <div class="mega-divider"></div>
+
+                                    <div class="mega-col">
+                                        <p class="mega-label">Support</p>
+                                        <a href="./index.html#faq" class="mega-item text-only"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+                                        <a href="./contacts.html" class="mega-item text-only"><i class="fa-solid fa-envelope"></i> Contact Us</a>
+                                        <a href="./policies.html" class="mega-item text-only"><i class="fa-solid fa-file-contract"></i> Policies</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            
+                <!-- upper-right-side icon group -->
+                <div class="header-actions">
+            
+                    <!-- Currency switcher -->
+                    <div class="currency-switcher" id="currencySwitcher">
+                        <button class="currency-btn" id="currencyBtn" aria-label="Change currency" aria-expanded="false">
+                            <i class="fa-solid fa-coins"></i>
+                            <span id="activeCurrency">PHP</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <ul class="currency-dropdown" id="currencyDropdown">
+                            <li data-currency="PHP" data-symbol="₱">🇵🇭 PHP</li>
+                            <li data-currency="USD" data-symbol="$">🇺🇸 USD</li>
+                            <li data-currency="GBP" data-symbol="£">🇬🇧 GBP</li>
+                        </ul>
+                    </div>
+            
+                    <!-- cart icon -->
+                    <a class="icon-btn" title="Cart" aria-label="View cart" id="cartIconBtn" href="cart.html">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="badge" id="cartBadge">0</span>
+                    </a>
+            
+                    <!-- search icon -->
+                    <button class="icon-btn" id="searchToggle" title="Search" aria-label="Toggle search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+            
+                    <!-- light/dark mode toggle -->
+                    <button class="theme-toggle" id="themeToggle" title="Toggle Theme" aria-label="Toggle colour theme">
+                        <i class="fa-solid fa-sun" id="themeIcon"></i>
+                    </button>
+            
+                    <!-- Hamburger (mobile only) -->
+                    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        
+            <!-- Search bar (hidden until toggled) -->
+            <div class="search-bar" id="searchBar" role="search">
+                <input type="search" id="searchInput" placeholder="Search uniforms, PPE, safety shoes…" autocomplete="off" aria-label="Search products">
+                <button aria-label="Submit search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <div class="search-results" id="searchResults" aria-live="polite"></div>
+            </div>
+        </header>
+
+        <!-- ===== HERO SECTION ===== -->
+        <section class="hero-product">
+                <div class="hero-content">
+                    <span class="hero-label-product">TESTED BY THE OCEAN</span>
+                    <h1 class="hero-title">Chosen for <span>Excellence</span></h1>
+                    <p class="hero-desc-product">Choose gear that works as hard as you do. Our seaman clothing is carefully crafted to deliver unmatched comfort, lasting durability, and reliable performance—because at sea, every detail matters.</p>
+                </div>
+        </section>
+
+        <!-- ===== INFINITE TICKER 1 ===== -->
+        <div class="section-ticker">
+            <div class="ticker2-track">
+                <span><i class="fa-solid fa-helmet-safety"></i> Safety-first construction</span>
+                <span><i class="fa-solid fa-cloud-showers-heavy"></i> All-weather resilience</span>
+                <span><i class="fa-solid fa-shield-halved"></i> PPE Standards</span>
+                <span><i class="fa-solid fa-water"></i> Built for the Sea</span>
+                <span><i class="fa-solid fa-ship"></i> Trusted by Crews</span>
+                <span><i class="fa-solid fa-link"></i> Triple-needle stitching</span>
+                <span><i class="fa-solid fa-hand-sparkles"></i> Easy-care maintenance</span>
+                <span><i class="fa-solid fa-anchor"></i> Maritime Grade</span>
+                <span><i class="fa-solid fa-shield-halved"></i> PPE Standards</span>
+                <span><i class="fa-solid fa-water"></i> Built for the Sea</span>
+                <span><i class="fa-solid fa-infinity"></i> Extended wear-life</span>
+                <span><i class="fa-solid fa-lock"></i> Secure-fit fasteners</span>
+            </div>
+        </div>
+
+        <!-- ===== PRODUCTS ===== -->
+        <section class="products" id="uniforms">
+            <div class="section-header-product">
+                <span class="section-sub-product">Maritime & Culinary</span>
+                <h2 class="section-title-product">Uniforms</h2>
+            </div>
+
+            <div class="product-grid-product">
+                <div class="product-card" 
+                    data-type="Uniforms"
+                    data-name="Coveralls (Royal Blue)"
+                    data-extra1="Assets/Products/Modal/SizeGuide-Front and Back-Coverall.png"
+                    data-extra2="Assets/Products/Modal/SizeGuide-Measurements-Uniforms.png"
+                    data-front="Assets/Products/UNI-PR1-Front-Coverall (Blue).png"
+                    data-back="Assets/Products/UNI-PR1-Back-Coverall (Blue).png"
+                    data-price="1000.00"
+                    data-material="100% Cotton Twill, Reflectorized Tape">
+
+                    <div class="card-image-wrap"> 
+                        <img src="Assets/Products/UNI-PR1-Front-Coverall (Blue).png" class="img-front" alt="Front View">
+                        <img src="Assets/Products/UNI-PR1-Back-Coverall (Blue).png" class="img-back" alt="Back View">
+                        <div class="card-badges">
+                            <span class="badge-tag bestseller">Bestseller</span>
+                        </div>
+                        
+                    </div>
+                    <div class="card-info">
+                        <span class="card-category">Uniforms - Maritime</span>
+                        <h3 class="card-name">Coveralls (Royal Blue)</h3>
+                        <div class="card-price" data-base="1000.00">₱1,000.00</div>
+                        <!-- <div class="rating">★★★★★ <span>(137)</span></div> -->
+                        <div class="card-desc"><i class="fa-solid fa-circle-check"></i>  Stock Available</div>
+                        
+                        <button class="size-select add-to-cart-btn" onclick="openCartModal(this)">
+                            <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div> 
+
+                <div class="product-card" 
+                    data-type="Uniforms"
+                    data-name="Coveralls (Orange)"
+                    data-extra1="Assets/Products/Modal/SizeGuide-Front and Back-Coverall.png"
+                    data-extra2="Assets/Products/Modal/SizeGuide-Measurements-Uniforms.png"
+                    data-front="Assets/Products/UNI-PR2-Front-Coverall (Orange).png"
+                    data-back="Assets/Products/UNI-PR2-Back-Coverall (Orange).png"
+                    data-price="1000.00"
+                    data-material="100% Cotton Twill, Reflectorized Tape">
+
+                    <div class="card-image-wrap"> 
+                        <img src="Assets/Products/UNI-PR2-Front-Coverall (Orange).png" class="img-front" alt="Front View">
+                        <img src="Assets/Products/UNI-PR2-Back-Coverall (Orange).png" class="img-back" alt="Back View">
+                        <div class="card-badges">
+                            <span class="badge-tag new">New</span>
+                        </div>
+                        
+                    </div>
+                    <div class="card-info">
+                        <span class="card-category">Uniforms - Maritime</span>
+                        <h3 class="card-name">Coveralls (Orange)</h3>
+                        <div class="card-price" data-base="1000.00">₱1,000.00</div>
+                        <!-- <div class="rating">★★★★★ <span>(866)</span></div> -->
+                        <div class="card-desc"><i class="fa-solid fa-circle-check"></i>  Stock Available</div>
+                        
+                        <button class="size-select add-to-cart-btn" onclick="openCartModal(this)">
+                            <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div> 
+
+                <div class="product-card"
+                    data-type="Uniforms"
+                    data-name="Coveralls (Khaki)"
+                    data-extra1="Assets/Products/Modal/SizeGuide-Front and Back-Coverall.png"
+                    data-extra2="Assets/Products/Modal/SizeGuide-Measurements-Uniforms.png"
+                    data-front="Assets/Products/UNI-PR3-Front-Coverall (Khaki).png"
+                    data-back="Assets/Products/UNI-PR3-Back-Coverall (Khaki).png"
+                    data-price="1000.00"
+                    data-material="100% Cotton Twill, Reflectorized Tape">
+
+                    <div class="card-image-wrap"> 
+                        <img src="Assets/Products/UNI-PR3-Front-Coverall (Khaki).png" class="img-front" alt="Front View">
+                        <img src="Assets/Products/UNI-PR3-Back-Coverall (Khaki).png" class="img-back" alt="Back View">
+                        <div class="card-badges">
+                            <span class="badge-tag sale">Sale</span>
+                        </div>
+                        
+                    </div>
+                    <div class="card-info">
+                        <span class="card-category">Uniforms - Maritime</span>
+                        <h3 class="card-name">Coveralls (Khaki)</h3>
+                        <div class="card-price" data-base="1000.00">₱1,000.00</div>
+                        <!-- <div class="rating">★★★★★ <span>(39)</span></div> -->
+                        <div class="card-desc"><i class="fa-solid fa-circle-check"></i>  Stock Available</div>
+                        
+                        <button class="size-select add-to-cart-btn" onclick="openCartModal(this)">
+                            <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div> 
+
+                <div class="product-card"
+                    data-type="Uniforms"
+                    data-name="Chef's Polo Long Sleeve (Ver. 1)"
+                    data-extra1="Assets/Products/Modal/SizeGuide-Front and Back-Top (Long Sleeve).png"
+                    data-extra2="Assets/Products/Modal/SizeGuide-Measurements-Uniforms.png"
+                    data-front="Assets/Products/UNI-PR4-Front-Top1.png"
+                    data-back="Assets/Products/UNI-PR4-Back-Top1.png"
+                    data-price="800.00"
+                    data-material="Poly-Cotton Blend, Breathable Fabric">
+
+                    <div class="card-image-wrap"> 
+                        <img src="Assets/Products/UNI-PR4-Front-Top1.png" class="img-front" alt="Front View">
+                        <img src="Assets/Products/UNI-PR4-Back-Top1.png" class="img-back" alt="Back View">
+                        <div class="card-badges">
+                            <span class="badge-tag new">New</span>
+                        </div>
+                        
+                    </div>
+                    <div class="card-info">
+                        <span class="card-category">Uniforms - Kitchen</span>
+                        <h3 class="card-name">Chef's Polo Long Sleeve (Ver. 1)</h3>
+                        <div class="card-price" data-base="800.00">₱800.00</div>
+                        <!-- <div class="rating">★★★★★ <span>(214)</span></div> -->
+                        <div class="card-desc"><i class="fa-solid fa-circle-check"></i>  Stock Available</div>
+                        
+                        <button class="size-select add-to-cart-btn" onclick="openCartModal(this)">
+                            <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div> 
+
+                <div class="product-card"
+                    data-type="Uniforms"
+                    data-name="Chef's Polo Long Sleeve (Ver. 2)"
+                    data-extra1="Assets/Products/Modal/SizeGuide-Front and Back-Top (Long Sleeve).png"
+                    data-extra2="Assets/Products/Modal/SizeGuide-Measurements-Uniforms.png"
+                    data-front="Assets/Products/UNI-PR5-Front-Top2.png"
+                    data-back="Assets/Products/UNI-PR5-Back-Top2.png"
+                    data-price="950.00"
+                    data-material="100% Cotton Twill, Breathable Fabric">
+
+                    <div class="card-image-wrap"> 
+                        <img src="Assets/Products/UNI-PR5-Front-Top2.png" class="img-front" alt="Front View">
+                        <img src="Assets/Products/UNI-PR5-Back-Top2.png" class="img-back" alt="Back View">
+                        <div class="card-badges">
+                            <span class="badge-tag new">New</span>
+                        </div>
+                        
+                    </div>
+                    <div class="card-info">
+                        <span class="card-category">Uniforms - Kitchen</span>
+                        <h3 class="card-name">Chef's Polo Long Sleeve (Ver. 2)</h3>
+                        <div class="card-price" data-base="950.00">₱950.00</div>
+                        <!-- <div class="rating">★★★★★ <span>(79)</span></div> -->
+                         <div class="card-desc"><i class="fa-solid fa-circle-check"></i>  Stock Available</div>
+                        
+                        <button class="size-select add-to-cart-btn" onclick="openCartModal(this)">
+                            <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div> 
+
+                <div class="product-card"
+                    data-type="Uniforms"
+                    data-name="Kitchen Crew Polo"
+                    data-extra1="Assets/Products/Modal/SizeGuide-Front and Back-Top (Short Sleeve).png"
+                    data-extra2="Assets/Products/Modal/SizeGuide-Measurements-Uniforms.png"
+                    data-front="Assets/Products/UNI-PR6-Front-Top3.png"
+                    data-back="Assets/Products/UNI-PR6-Back-Top3.png"
+                    data-price="800.00"
+                    data-material="Poly-Cotton Blend, Breathable Fabric">
+
+                    <div class="card-image-wrap"> 
+                        <img src="Assets/Products/UNI-PR6-Front-Top3.png" class="img-front" alt="Front View">
+                        <img src="Assets/Products/UNI-PR6-Back-Top3.png" class="img-back" alt="Back View">
+                        <div class="card-badges">
+                            <span class="badge-tag bestseller">Bestseller</span>
+                        </div>
+                       
+                    </div>
+                    <div class="card-info">
+                        <span class="card-category">Uniforms - Kitchen</span>
+                        <h3 class="card-name">Kitchen Crew Polo</h3>
+                        <div class="card-price" data-base="800.00">₱800.00</div>
+                        <!-- <div class="rating">★★★★★ <span>(218)</span></div> -->
+                        <div class="card-desc"><i class="fa-solid fa-circle-check"></i>  Stock Available</div>
+                        
+                        <button class="size-select add-to-cart-btn" onclick="openCartModal(this)">
+                            <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div> 
+
+                <div class="product-card"
+                    data-type="Uniforms"
+                    data-name="Chef's Pants"
+                    data-extra1="Assets/Products/Modal/SizeGuide-Front and Back-Pants.png"
+                    data-extra2="Assets/Products/Modal/SizeGuide-Measurements-Uniforms.png"
+                    data-front="Assets/Products/UNI-PR7-Front-Pants1.png"
+                    data-back="Assets/Products/UNI-PR7-Back-Pants1.png"
+                    data-price="500.00"
+                    data-material="Poly-Cotton Blend, Breathable Fabric">
+
+                    <div class="card-image-wrap"> 
+                        <img src="Assets/Products/UNI-PR7-Front-Pants1.png" class="img-front" alt="Front View">
+                        <img src="Assets/Products/UNI-PR7-Back-Pants1.png" class="img-back" alt="Back View">
+                        <div class="card-badges">
+                            <span class="badge-tag sale">Sale</span>
+                        </div>
+                        
+                    </div>
+                    <div class="card-info">
+                        <span class="card-category">Uniforms - Kitchen</span>
+                        <h3 class="card-name">Chef's Pants</h3>
+                        <div class="card-price" data-base="500.00">₱500.00</div>
+                        <!-- <div class="rating">★★★★★ <span>(88)</span></div> -->
+                        <div class="card-desc"><i class="fa-solid fa-circle-check"></i>  Stock Available</div>
+                        
+                        <button class="size-select add-to-cart-btn" onclick="openCartModal(this)">
+                            <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div> 
+
+                <div class="product-card"
+                    data-type="Uniforms"
+                    data-name="Kitchen Crew Checkered Pants"
+                    data-extra1="Assets/Products/Modal/SizeGuide-Front and Back-Pants.png"
+                    data-extra2="Assets/Products/Modal/SizeGuide-Measurements-Uniforms.png"
+                    data-front="Assets/Products/UNI-PR8-Front-Pants2.png"
+                    data-back="Assets/Products/UNI-PR8-Back-Pants2.png"
+                    data-price="500.00"
+                    data-material="Poly-Cotton Blend, Breathable Fabric">
+
+                    <div class="card-image-wrap"> 
+                        <img src="Assets/Products/UNI-PR8-Front-Pants2.png" class="img-front" alt="Front View">
+                        <img src="Assets/Products/UNI-PR8-Back-Pants2.png" class="img-back" alt="Back View">
+                        <div class="card-badges">
+                            <span class="badge-tag bestseller">Bestseller</span>
+                        </div>
+                        
+                    </div>
+                    <div class="card-info">
+                        <span class="card-category">Uniforms - Kitchen</span>
+                        <h3 class="card-name">Kitchen Crew Checkered Pants</h3>
+                        <div class="card-price" data-base="500.00">₱500.00</div>
+                        <!-- <div class="rating">★★★★★ <span>(88)</span></div> -->
+                        <div class="card-desc"><i class="fa-solid fa-circle-check"></i>  Stock Available</div>
+                        
+                        <button class="size-select add-to-cart-btn" onclick="openCartModal(this)">
+                            <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div> 
+
+                <div class="product-card"
+                    data-type="Uniforms"
+                    data-name="Winter Jacket"
+                    data-extra1="Assets/Products/Modal/SizeGuide-Front and Back-Jackets.png"
+                    data-extra2="Assets/Products/Modal/SizeGuide-Measurements-Uniforms.png"
+                    data-front="Assets/Products/UNI-PR9-Front-Jacket1.png"
+                    data-back="Assets/Products/UNI-PR9-Back-Jacket1.png"
+                    data-price="1500.00"
+                    data-material="Polyester Outer Shell, Reflectorized Tape">
+
+                    <div class="card-image-wrap"> 
+                        <img src="Assets/Products/UNI-PR9-Front-Jacket1.png" class="img-front" alt="Front View">
+                        <img src="Assets/Products/UNI-PR9-Back-Jacket1.png" class="img-back" alt="Back View">
+                        <div class="card-badges">
+                            <span class="badge-tag new">New</span>
+                        </div>
+                        
+                    </div>
+                    <div class="card-info">
+                        <span class="card-category">Uniforms - Jackets</span>
+                        <h3 class="card-name">Winter Jacket</h3>
+                        <div class="card-price" data-base="1500.00">₱1,500.00</div>
+                        <!-- <div class="rating">★★★★★ <span>(305)</span></div> -->
+                        <div class="card-desc"><i class="fa-solid fa-circle-check"></i>  Stock Available</div>
+                        
+                        <button class="size-select add-to-cart-btn" onclick="openCartModal(this)">
+                            <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div> 
+
+                <div class="product-card"
+                    data-type="Uniforms"
+                    data-name="Ordinary Jacket"
+                    data-extra1="Assets/Products/Modal/SizeGuide-Front and Back-Jackets.png"
+                    data-extra2="Assets/Products/Modal/SizeGuide-Measurements-Uniforms.png"
+                    data-front="Assets/Products/UNI-PR10-Front-Jacket2.png"
+                    data-back="Assets/Products/UNI-PR10-Back-Jacket2.png"
+                    data-price="1500.00"
+                    data-material="Polyester Outer Shell, Reflectorized Tape">
+
+                    <div class="card-image-wrap"> 
+                        <img src="Assets/Products/UNI-PR10-Front-Jacket2.png" class="img-front" alt="Front View">
+                        <img src="Assets/Products/UNI-PR10-Back-Jacket2.png" class="img-back" alt="Back View">
+                        <div class="card-badges">
+                            <span class="badge-tag new">New</span>
+                        </div>
+                        
+                    </div>
+                    <div class="card-info">
+                        <span class="card-category">Uniforms - Jackets</span>
+                        <h3 class="card-name">Ordinary Jacket</h3>
+                        <div class="card-price" data-base="1500.00">₱1,500.00</div>
+                        <!-- <div class="rating">★★★★★ <span>(305)</span></div> -->
+                        <div class="card-desc"><i class="fa-solid fa-circle-check"></i>  Stock Available</div>
+                        
+                        <button class="size-select add-to-cart-btn" onclick="openCartModal(this)">
+                            <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div> 
+            </div> 
+        </section>
+
+        <section class="products" id="safety-footwears">
+            <div class="section-header-product">
+                <span class="section-sub-product">Personal Protective Equipment</span>
+                <h2 class="section-title-product">Safety Footwear</h2>
+            </div>
+
+            <div class="product-grid-product">
+                <div class="product-card"
+                    data-type="Shoes"
+                    data-name="MG Safety (High Cut)"
+                    data-extra1="Assets/Products/Modal/SizeGuide-Front and Back-Shoes.png"
+                    data-extra2="Assets/Products/Modal/SizeGuide-Measurements-Shoes.png"
+                    data-front="Assets/Products/SHO-PR1-Front-High Cut (MG Safety).png"
+                    data-back="Assets/Products/SHO-PR1-Back-High Cut (MG Safety).png"
+                    data-price="1500.00"
+                    data-material="Full-grain Leather, Carbon Steel Toe Cap">
+
+                    <div class="card-image-wrap"> 
+                        <img src="Assets/Products/SHO-PR1-Front-High Cut (MG Safety).png" class="img-front" alt="Front View">
+                        <img src="Assets/Products/SHO-PR1-Back-High Cut (MG Safety).png" class="img-back" alt="Back View">
+                        <div class="card-badges">
+                            <span class="badge-tag bestseller">Bestseller</span>
+                        </div>
+                        
+                    </div>
+                    <div class="card-info">
+                        <span class="card-category">PPE - Shoes</span>
+                        <h3 class="card-name">MG Safety (High Cut)</h3>
+                        <div class="card-price" data-base="1500.00">₱1,500.00</div>
+                        <!-- <div class="rating">★★★★★ <span>(125)</span></div> -->
+                        <div class="card-desc"><i class="fa-solid fa-circle-check"></i>  Stock Available</div>
+                        
+                        <button class="size-select add-to-cart-btn" onclick="openCartModal(this)">
+                            <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div> 
+
+                <div class="product-card"
+                    data-type="Shoes"
+                    data-name="Rockwinner (Low Cut)"
+                    data-extra1="Assets/Products/Modal/SizeGuide-Front and Back-Shoes.png"
+                    data-extra2="Assets/Products/Modal/SizeGuide-Measurements-Shoes.png"
+                    data-front="Assets/Products/SHO-PR2-Front-Low Cut (Rockwinner).png"
+                    data-back="Assets/Products/SHO-PR2-Back-Low Cut (Rockwinner).png"
+                    data-price="1200.00"
+                    data-material="Full-grain Leather, Carbon Steel Toe Cap">
+
+                    <div class="card-image-wrap"> 
+                        <img src="Assets/Products/SHO-PR2-Front-Low Cut (Rockwinner).png" class="img-front" alt="Front View">
+                        <img src="Assets/Products/SHO-PR2-Back-Low Cut (Rockwinner).png" class="img-back" alt="Back View">
+                        <div class="card-badges">
+                            <span class="badge-tag new">New</span>
+                        </div>
+                        
+                    </div>
+                    <div class="card-info">
+                        <span class="card-category">PPE - Shoes</span>
+                        <h3 class="card-name">Rockwinner (Low Cut)</h3>
+                        <div class="card-price" data-base="1200.00">₱1,200.00</div>
+                        <!-- <div class="rating">★★★★★ <span>(55)</span></div> -->
+                        <div class="card-desc"><i class="fa-solid fa-circle-check"></i>  Stock Available</div>
+                        
+                        <button class="size-select add-to-cart-btn" onclick="openCartModal(this)">
+                            <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div> 
+
+                <div class="product-card"
+                    data-type="Shoes"
+                    data-name="MG Safety (Low Cut)"
+                    data-extra1="Assets/Products/Modal/SizeGuide-Front and Back-Shoes.png"
+                    data-extra2="Assets/Products/Modal/SizeGuide-Measurements-Shoes.png"
+                    data-front="Assets/Products/SHO-PR3-Front-Low Cut (MG Safety).png"
+                    data-back="Assets/Products/SHO-PR3-Back-Low Cut (MG Safety).png"
+                    data-price="1200.00"
+                    data-material="Full-grain Leather, Carbon Steel Toe Cap">
+
+                    <div class="card-image-wrap"> 
+                        <img src="Assets/Products/SHO-PR3-Front-Low Cut (MG Safety).png" class="img-front" alt="Front View">
+                        <img src="Assets/Products/SHO-PR3-Back-Low Cut (MG Safety).png" class="img-back" alt="Back View">
+                        <div class="card-badges">
+                            <span class="badge-tag sale">Sale</span>
+                        </div>
+                        
+                    </div>
+                    <div class="card-info">
+                        <span class="card-category">PPE - Shoes</span>
+                        <h3 class="card-name">MG Safety (Low Cut)</h3>
+                        <div class="card-price" data-base="1200.00">₱1,200.00</div>
+                        <!-- <div class="rating">★★★★★ <span>(278)</span></div> -->
+                        <div class="card-desc"><i class="fa-solid fa-circle-check"></i>  Stock Available</div>
+                        
+                        <button class="size-select add-to-cart-btn" onclick="openCartModal(this)">
+                            <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div> 
+            </div> 
+        </section>
+
+        <!-- ===== INFINITE TICKER 2 ===== -->
+        <div class="section-ticker">
+            <div class="ticker2-track">
+                <span><i class="fa-solid fa-anchor"></i> Anchored in Quality</span>
+                <span><i class="fa-solid fa-wave-square"></i> Ride Every Wave</span>
+                <span><i class="fa-solid fa-person-walking-luggage"></i> Outfitted for Adventure</span>
+                <span><i class="fa-solid fa-life-ring"></i> Safety First Always</span>
+                <span><i class="fa-solid fa-binoculars"></i> See the Horizon Clearly</span>
+                <span><i class="fa-solid fa-flag"></i> Proud Maritime Brand</span>
+                <span><i class="fa-solid fa-anchor"></i> Anchored in Quality</span>
+                <span><i class="fa-solid fa-wave-square"></i> Ride Every Wave</span>
+                <span><i class="fa-solid fa-person-walking-luggage"></i> Outfitted for Adventure</span>
+                <span><i class="fa-solid fa-life-ring"></i> Safety First Always</span>
+                <span><i class="fa-solid fa-binoculars"></i> See the Horizon Clearly</span>
+                <span><i class="fa-solid fa-flag"></i> Proud Maritime Brand</span>
+            </div>
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="site-footer" id="footer">
+            <div class="footer-wave">
+                <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg"><path d="M0,40 C360,0 1080,80 1440,40 L1440,0 L0,0 Z" /></svg>
+            </div>
+            <div class="footer-inner">
+        
+                <!-- brand col -->
+                <div class="footer-col brand-col">
+                    <div class="footer-logo"><i class="fa-solid fa-ship"></i><span>CSSP Garments Trading</span></div>
+                    <p>Your trusted maritime uniform supplier since 2024. Quality gear for every sailor, cook, and crew member.</p>
+                    <div class="social-icons">
+                        <a href="./contacts.html" title="Contacts"><i class="fa-regular fa-address-book"></i></a>
+                    </div>
+                </div>
+        
+                <!-- quick links -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                    <li><a href="./index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                    <li><a href="./products.html"><i class="fa-solid fa-chevron-right"></i> Products</a></li>
+                    <li><a href="./aboutus.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+                    <li><a href="./index.html#reviews"><i class="fa-solid fa-chevron-right"></i> Reviews</a></li>
+                    <li><a href="./index.html#faq"><i class="fa-solid fa-chevron-right"></i> FAQ</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        
+                <div class="footer-bottom">
+                    <p>&copy; 2024 CSSP Garments Trading. All rights reserved.<br> Designed by Logmunch!</p>
+                    <div class="legal-links">
+                        <a href="./policies.html#privacyPage">Privacy Policy</a>
+                        <a href="./policies.html#termsPage">Terms & Conditions</a>
+                        <a href="./policies.html#shippingPage">Shipping Policy</a>
+                    </div>
+                </div>
+        </footer>
+
+        <button class="back-to-top" id="backToTop" title="Back to top" aria-label="Scroll to top">    
+            <i class="fa-solid fa-anchor"></i>
+        </button>
+
+        <!-- add to cart modal -->
+        <div class="cart-modal" id="cartModal">
+            <div class="cart-box">
+
+                <!-- LEFT: IMAGE -->
+                <div class="modal-left">
+                    <div class="modal-carousel">
+                        <button class="carousel-btn prev" onclick="prevImage()">❮</button>
+                        <img id="modalImage" src="" alt="Product Image">
+                        <button class="carousel-btn next" onclick="nextImage()">❯</button>
+                    </div>
+                </div>
+
+                <!-- RIGHT: DETAILS -->
+                <div class="modal-right">
+
+                    <button class="modal-close" onclick="closeCartModal()"><i class="fa-solid fa-xmark"></i></button>
+
+                    <h2 id="modalProductName">Product</h2>
+                    <div class="modal-price" id="modalProductPrice">₱0.00</div>
+
+                    <div class="modal-features" id="modalFeatures"><i class="fa-solid fa-circle-check"></i></div> 
+
+                    <div class="modal-material"><h4>Materials</h4><div id="modalMaterial"></div></div>
+
+                    <div class="modal-care"><h4>Care Instructions</h4><div id="modalCare"></div></div>
+
+                    <!-- 
+                    <label>Size</label>
+                    <select id="modalSize">
+                        <option value="" disabled selected>Select size</option>
+                    </select>
+
+                    <div class="size-notif" id="sizeNotif"></div>
+
+                    
+                    <label>Quantity</label>
+                    <input type="number" id="modalQty" value="1" min="1" max="50">
+
+                    <div class="qty-notif" id="qtyNotif"></div>
+
+                    <div class="modal-actions">
+                        <button onclick="confirmAddToCart()">Add to Cart</button>
+                    </div>
+                    -->
+
+                    <div class="modal-form-row">
+
+                        <!-- SIZE -->
+                        <div class="form-group">
+                            <label>Size</label>
+                            <select id="modalSize">
+                                <option value="" disabled selected>Select size</option>
+                            </select>
+
+                            <div class="size-notif" id="sizeNotif"></div>
+                        </div>
+
+                        <!-- QUANTITY -->
+                        <div class="form-group">
+                            <label>Quantity</label>
+                            <input type="number" id="modalQty" value="1" min="1" max="50">
+
+                            <div class="qty-notif" id="qtyNotif"></div>
+                        </div> 
+                        
+                        <!-- QUANTITY 
+                        <div class="form-group">
+                            <label>Quantity</label>
+
+                            <div class="qty-wrapper">
+                                <button type="button" class="qty-btn" onclick="document.getElementById('modalQty').stepDown()">−</button>
+                                <input type="number" id="modalQty" value="1" min="1" max="50">
+                                <button type="button" class="qty-btn" onclick="document.getElementById('modalQty').stepUp()">+</button>
+                            </div>
+
+                            <div class="qty-notif" id="qtyNotif"></div>
+                        </div> -->
+                </div>
+
+                <div class="modal-actions">
+                        <button onclick="confirmAddToCart()"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="toastContainer"></div>
+
+        <div class="success-modal" id="successModal">
+            <div class="success-box">
+                <i class="fa-solid fa-circle-check"></i>
+                <p>All aboard! Your product has joined your cart.</p>
+            </div>
+        </div>
+    
+        <script src="JS Files/Products_Script.js"></script>
+            
+    </body>
+</html>
