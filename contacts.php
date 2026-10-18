@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSSP Garments Trading</title>
+  <meta name="description" content="CSSP Garments Trading – premium maritime uniforms, PPE, coveralls, safety footwear and kitchen uniforms since 2024." />
+  <link rel="icon" href="./Assets/logo-light-text.png" />
+  <link rel="stylesheet" href="CSS Files/Contacts_Style.css">
+    
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <script src="https://kit.fontawesome.com/493ae0299a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- PRE-HEADER INFINITE TICKER-->
+    <div class="pre-header" aria-label="Delivery and service info">
+        <div class="ticker-track" id="tickerTrack">
+            <span><i class="fa-solid fa-ship"></i> National Delivery: 3 Days</span>
+            <span><i class="fa-solid fa-map-location-dot"></i> Provincial Delivery: 5 Days</span>
+            <span><i class="fa-solid fa-globe"></i> International Shipping: 1 Week</span>
+            <span><i class="fa-solid fa-headset"></i> Customer Service: 7AM – 7PM</span>
+            <span><i class="fa-solid fa-shield-halved"></i> 100% Secure Checkout</span>
+            <span><i class="fa-solid fa-box-open"></i> Welcome Offer: Free Shipping</span>
+          
+            <span><i class="fa-solid fa-percent"></i> Save 10% with code CSSP10</span>
+            <span><i class="fa-solid fa-tags"></i> FREESHIP (Free Delivery)</span>
+            <span><i class="fa-solid fa-gift"></i> Claims: FREESHIP for Free Delivery • CSSP10 for 10% Off</span>
+        </div>
+    </div>
+
+    <!-- HEADER/NAVIGATION -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-inner">
+            <!-- LOGO -->
+            <a href="./index.html" class="logo-wrap" aria-label="CSSP Garments Trading homepage">
+                <div class="logo-icon">
+                    <img src="./Assets/logo-light-text.png" class="logo-img light-logo" alt="CSSP Garments Trading logo, light version" />
+                    <img src="./Assets/logo-dark-text.png" class="logo-img dark-logo" alt="CSSP Garments Trading logo, dark version" />
+                </div>
+                <div class="logo-text">CSSP<span>Garments&nbsp;Trading</span></div>
+            </a>
+
+            <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+                <ul class="nav-list">
+
+                    <!-- products mega menu -->
+                    <li class="nav-item has-mega" id="navProducts">
+                        <a href="#" class="nav-link" id="navProductsBtn" aria-haspopup="true" aria-expanded="false">
+                            Products <i class="fa-solid fa-chevron-down nav-caret"></i>
+                        </a>
+
+                        <div class="mega-menu" id="megaProducts" aria-hidden="true">
+                            <div class="mega-inner">        
+                                <div class="mega-col">                         
+                                    <span class="mega-label">Uniforms</span>                        
+                                    <div class="mega-feature-card">                        
+                                        <img src="./Assets/UNIFORM_MEGA MENU.png" alt="Maritime and culinary uniform range including coveralls and chef tops" />                        
+                                        <p>Maritime &amp; Culinary Uniforms</p>                           
+                                        <a href="products.html#uniforms" class="btn-sm">Gear Up</a>                           
+                                    </div>                      
+                                </div>
+                          
+                                <div class="mega-divider"></div>
+                               
+                                <div class="mega-col">                              
+                                    <span class="mega-label">Safety Footwear</span>                              
+                                    <div class="mega-feature-card">                              
+                                        <img src="./Assets/SAFETYFOOTWEAR_MEGA MENU.png" alt="Steel-toe safety shoe for deck and industrial use" />                               
+                                        <p>Steel-toe Safety Shoe</p>                              
+                                        <a href="products.html#safety-footwears" class="btn-sm">Secure Step</a>                             
+                                    </div>                           
+                                </div>               
+                            </div>                 
+                        </div>               
+                    </li>
+              
+                    <!-- about Us mega menu -->
+                    <li class="nav-item has-mega" id="navAbout">              
+                        <a href="#" class="nav-link" id="navAboutBtn" aria-haspopup="true" aria-expanded="false">              
+                            About Us <i class="fa-solid fa-chevron-down nav-caret"></i>
+                        </a>
+
+                        <div class="mega-menu" id="megaAbout" aria-hidden="true">              
+                            <div class="mega-inner">              
+                                <div class="mega-col">              
+                                    <span class="mega-label">Company</span>            
+                                    <a href="./aboutus.html#history" class="mega-item text-only"><i class="fa-solid fa-anchor"></i> Our Story</a>            
+                                    <a href="./aboutus.html#people" class="mega-item text-only"><i class="fa-solid fa-users"></i> Our Team</a>
+                                    <a href="./aboutus.html#tailor" class="mega-item text-only"><i class="fa-solid fa-house"></i> Location</a>
+                                </div>
+              
+                                <div class="mega-divider"></div>             
+                                <div class="mega-col">             
+                                    <span class="mega-label">Support</span>              
+                                    <a href="./index.html#faq" class="mega-item text-only"><i class="fa-solid fa-circle-question"></i> FAQ</a>              
+                                    <a href="./contacts.html" class="mega-item text-only"><i class="fa-solid fa-envelope"></i> Contact Us</a>
+                                    <a href="./policies.html" class="mega-item text-only"><i class="fa-solid fa-file-contract"></i> Policies</a>
+                                </div>              
+                            </div>              
+                        </div>             
+                    </li>             
+                </ul>
+            </nav>
+
+            <!-- NAVBAR ICONS -->
+            <div class="header-actions">
+                <!-- Currency switcher -->
+                <div class="currency-switcher" id="currencySwitcher">        
+                    <button class="currency-btn" id="currencyBtn" aria-label="Change currency" aria-expanded="false">         
+                        <i class="fa-solid fa-coins"></i>         
+                        <span id="activeCurrency">PHP</span>           
+                        <i class="fa-solid fa-chevron-down"></i>         
+                    </button>           
+
+                    <ul class="currency-dropdown" id="currencyDropdown">           
+                        <li data-currency="PHP" data-symbol="₱">🇵🇭 PHP</li>
+                        <li data-currency="USD" data-symbol="$">🇺🇸 USD</li>
+                        <li data-currency="GBP" data-symbol="£">🇬🇧 GBP</li>          
+                    </ul>      
+                </div>
+        
+                <button class="icon-btn" title="Cart" aria-label="View cart" id="cartIconBtn" href="cart.html">           
+                    <i class="fa-solid fa-cart-shopping"></i>           
+                    <span class="badge" id="cartBadge">0</span>         
+                </button>
+        
+                <button class="icon-btn" id="searchToggle" title="Search" aria-label="Toggle search">         
+                    <i class="fa-solid fa-magnifying-glass"></i>         
+                </button>
+        
+                <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle colour theme">           
+                    <i class="fa-solid fa-sun" id="themeIcon"></i>      
+                </button>
+        
+                <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">          
+                    <span></span><span></span><span></span>         
+                </button>    
+            </div>
+        </div>
+
+        <!-- SEARCH BAR -->
+        <div class="search-bar" id="searchBar" role="search">
+            <input type="search" id="searchInput" placeholder="Search uniforms, PPE, safety shoes…" autocomplete="off" aria-label="Search products" />  
+            <button aria-label="Submit search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <div class="search-results" id="searchResults" aria-live="polite"></div> 
+        </div>
+    </header>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact-page" id="contactPage">  
+        <div class="contact-header">      
+            <span class="contact-subtitle">Get in Touch</span>      
+            <h2 class="contact-title">Contact Us</h2>  
+        </div>
+    
+        <div class="contact-grid"> 
+
+            <div class="info-card">      
+                <h3 class="card-title">CSSP Garments Trading</h3>       
+                <p class="card-text-intro">
+                    Feel free to visit us to see our high-quality materials and discuss your needs in person.
+                </p>
+
+                <div class="map-container">
+                    <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.104070094978!2d121.16463000991843!3d14.593145285833524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b8ad8e5ec59b%3A0xf89567f4251d0bb9!2s34%20Summerville%20Road%2C%20Antipolo%2C%201870%20Rizal!5e0!3m2!1sen!2sph!4v1777484145924!5m2!1sen!2sph" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div> 
+
+                <p class="card-text"><i class="fa-solid fa-location-dot"></i> <b>34 Summerville Road, Antipolo, 1870 Rizal</b></p>
+            </div>
+               
+            <div class="info-card">                    
+                <h3 class="card-title">Contact Details</h3>    
+                <p class="card-text-intro">
+                    We are ready to assist you with orders, inquiries, and concerns anytime to serve you. 
+                </p>
+
+                <div class="contact-info-list">
+                    <p class="card-text"><i class="fa-solid fa-square-phone"></i> 8559-8176</p>
+                    <p class="card-text"><i class="fa-solid fa-mobile-screen"></i> 0922 653 7181</p>
+                    <p class="card-text"><i class="fa-regular fa-envelope"></i> csspgarments@gmail.com</p>
+                </div>
+
+                <div class="operating-hours">
+                    <br><br><p class="card-text hours-title"><i class="fa-solid fa-clock"></i> Operating Hours:</p>
+                    <p class="card-text"><b>Mon-Fri:</b> 7AM – 7PM <br><b>Saturday:</b> 7AM – 12PM<br><b>Sunday:</b> Closed</p>
+                </div>
+            </div>        
+        
+            <div class="info-card">                       
+                <h3 class="card-title">Send Message</h3>                 
+                <form class="contact-form">   
+                    <p class="card-text-intro">
+                       Have questions or custom requests? Send us a message and we'll get back to you soon.
+                    </p>                          
+                    <div class="input-group">     
+                        <label class="input-label"><small>Name</small></label>
+                        <input type="text" id="contactName" placeholder="Your Name" required>              
+                        <small class="error-msg" id="nameError"></small>             
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label"><small>Email Address</small></label>        
+                        <input type="email" id="contactEmail" placeholder="yourname@gmail.com" required>                 
+                        <small class="error-msg" id="emailError"></small>               
+                    </div>
+  
+                    <div class="input-group"> 
+                        <label class="input-label"><small>Message</small></label>    
+                        <textarea id="contactMsg" placeholder="Please type your message." required></textarea>                   
+                        <small class="error-msg" id="msgError"></small>
+                    </div>
+                    
+                    <button type="submit" id="contactBtn" class="btn-primary">Send Message</button>             
+                </form>                 
+            </div>
+        </div> 
+    
+        <div id="toastContainer"></div> 
+    </section>
+
+    <!-- ===== INFINITE TICKER  ===== -->
+    <div class="section-ticker">  
+        <div class="ticker2-track">     
+            <span><i class="fa-solid fa-star"></i> ISO Certified Quality</span>    
+            <span><i class="fa-solid fa-anchor"></i> Maritime Grade</span>    
+            <span><i class="fa-solid fa-shield-halved"></i> PPE Standards</span> 
+            <span><i class="fa-solid fa-water"></i> Built for the Sea</span>   
+            <span><i class="fa-solid fa-ship"></i> Trusted by Crews</span>  
+            <span><i class="fa-solid fa-medal"></i> Award-Winning Design</span> 
+            <span><i class="fa-solid fa-star"></i> ISO Certified Quality</span>    
+            <span><i class="fa-solid fa-anchor"></i> Maritime Grade</span> 
+            <span><i class="fa-solid fa-shield-halved"></i> PPE Standards</span>   
+            <span><i class="fa-solid fa-water"></i> Built for the Sea</span>   
+            <span><i class="fa-solid fa-ship"></i> Trusted by Crews</span>   
+            <span><i class="fa-solid fa-medal"></i> Award-Winning Design</span>  
+        </div>
+    </div>
+    
+    <!-- FOOTER -->
+    <footer class="site-footer" id="footer">
+        <div class="footer-wave" aria-hidden="true"> 
+            <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg"><path d="M0,40 C360,0 1080,80 1440,40 L1440,0 L0,0 Z"/></svg>
+        </div>
+         
+        <div class="footer-inner">
+            <div class="footer-col brand-col">
+                <div class="footer-logo"><i class="fa-solid fa-ship"></i><span>CSSP Garments Trading</span></div>
+                
+                <p>Your trusted maritime uniform supplier since 2024. Quality gear for every sailor, cook, and crew member.</p>
+                
+                <div class="social-icons">  
+                    <a href="./contacts.html" title="Contact us" aria-label="Contact page"><i class="fa-regular fa-address-book"></i></a>
+                </div>
+            </div>
+    
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>                  
+                    <li><a href="./index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>               
+                    <li><a href="./products.html"><i class="fa-solid fa-chevron-right"></i> Products</a></li>               
+                    <li><a href="./aboutus.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>                
+                    <li><a href="./index.html#reviews"><i class="fa-solid fa-chevron-right"></i> Reviews</a></li>               
+                    <li><a href="./index.html#faq"><i class="fa-solid fa-chevron-right"></i> FAQ</a></li>            
+                </ul>            
+            </div>       
+        </div>   
+            
+            
+        <div class="footer-bottom">              
+            <p>&copy; 2024 CSSP Garments Trading. All rights reserved.<br>Designed by Logmunch!</p>              
+            <div class="legal-links">                
+                <a href="./policies.html#privacyPage">Privacy Policy</a>                
+                <a href="./policies.html#termsPage">Terms &amp; Conditions</a>                 
+                <a href="./policies.html#shippingPage">Shipping Policy</a>              
+            </div>           
+        </div>     
+    </footer>
+          
+    <button class="back-to-top" id="backToTop" title="Back to top" aria-label="Scroll to top">    
+        <i class="fa-solid fa-anchor"></i>
+    </button>
+
+    <script src="JS Files/Contacts_Script.js"></script>
+</body>
+</html>
