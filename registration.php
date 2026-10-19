@@ -120,7 +120,7 @@
                             <td class="half-width-cell right-cell">
                                 <div class="input-block-container">
                                     <label class="block-label" for="phone">PHONE NUMBER</label>
-                                    <input id="phone" name="phoneNumber" type="tel" placeholder="Enter phone number" required class="form-input">
+                                    <input class="form-input" id="phone" name="phoneNumber" type="tel" placeholder="Enter phone number" required>
                                 </div>
                             </td>
                         </tr>
@@ -129,7 +129,7 @@
                             <td colspan="2">
                                 <div class="input-block-container">
                                     <label class="block-label" for="email">EMAIL ADDRESS</label>
-                                    <input id="email" name="email" type="email" placeholder="Enter your email" required class="form-input">
+                                    <input class="form-input" id="email" name="email" type="email" placeholder="Enter your email" required>
                                 </div>
                             </td>
                         </tr>
@@ -138,7 +138,7 @@
                             <td colspan="2">
                                 <div class="input-block-container">
                                     <label class="block-label" for="address">COMPLETE ADDRESS</label>
-                                    <input id="address" name="address" type="text" placeholder="Enter house number, street, barangay, city, province" required class="form-input">
+                                    <input class="form-input" id="address" name="address" type="text" placeholder="Enter house number, street, barangay, city, province" required>
                                 </div>
                             </td>
                         </tr>
@@ -147,7 +147,7 @@
                             <td colspan="2">
                                 <div class="input-block-container password-field-container">
                                     <label class="block-label" for="password">PASSWORD</label>
-                                    <input id="password" name="password" type="password" placeholder="Create a password" required class="form-input">
+                                    <input class="form-input" id="password" name="password" type="password" placeholder="Create a password" required>
                                     <i class="fa-solid fa-eye-slash toggle-password" data-target="password"></i>
                                 </div>
                             </td>
@@ -157,7 +157,7 @@
                             <td colspan="2">
                                 <div class="input-block-container password-field-container">
                                     <label class="block-label" for="confirmPassword">CONFIRM PASSWORD</label>
-                                    <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm your password" required class="form-input" autocomplete="new-password">
+                                    <input class="form-input" id="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm your password" required>
                                     <i class="fa-solid fa-eye-slash toggle-password" data-target="confirmPassword"></i>
                                 </div>
                             </td>
