@@ -71,24 +71,6 @@
             </div>
         </div>
 
-        <script>
-            $(document).ready(function () {
-                $('.toggle-password').on('click', function () {
-                    const targetId = $(this).attr('data-target');
-                    const $targetInput = $('#' + targetId);
-
-                    if ($targetInput.length === 0) return;
-
-                    if ($targetInput.attr('type') === 'password') {
-                        $targetInput.attr('type', 'text');
-                        $(this).removeClass('fa-eye-slash').addClass('fa-eye');
-                    } else {
-                        $targetInput.attr('type', 'password');
-                        $(this).removeClass('fa-eye').addClass('fa-eye-slash');
-                    }
-                });
-            });
-        </script>
-
+       <script src="JS Files/Registration_Script.js"></script>
     </body>
 </html>
