@@ -201,9 +201,10 @@ body {
 }
 
 .primary-submit-btn:hover {
-  background-color: var(--yellow);
-  color: var(--navy);
-  border-color: var(--text);
+  background:var(--yellow);
+  color:var(--navy);
+  transform:translateY(-3px);
+  box-shadow:var(--shadow-lg)
 }
 
 .horizontal-separator {
@@ -282,6 +283,8 @@ body {
 .google-full-btn:hover {
   background-color: var(--navy);
   color: var(--yellow);
+  transform:translateY(-3px);
+  box-shadow:var(--shadow-lg)
 }
 
 .google-icon-svg {
