@@ -28,7 +28,7 @@
                             <td>
                                 <div class="input-block-container">
                                     <label class="block-label">EMAIL</label>
-                                    <input type="email" placeholder="Enter your email" required class="form-input" />
+                                    <input class="form-input" type="email" name="email" placeholder="Enter your email" required/>
                                 </div>
                             </td>
                         </tr>
@@ -37,7 +37,7 @@
                             <td>
                                 <div class="input-block-container password-field-container">
                                     <label class="block-label">PASSWORD</label>
-                                    <input type="password" placeholder="Enter your password" id="loginPassword" required class="form-input" />
+                                    <input class="form-input" id="loginPassword" type="password" name="password" placeholder="Enter your password" required />
                                     <i class="fas fa-eye-slash toggle-password" data-target="loginPassword"></i>
                                 </div>
 
