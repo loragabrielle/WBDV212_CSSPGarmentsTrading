@@ -28,7 +28,7 @@
                             <td>
                                 <div class="input-block-container">
                                     <label class="block-label">EMAIL</label>
-                                    <input class="form-input" type="email" name="email" placeholder="Enter your email" required/>
+                                    <input class="form-input" type="email" name="email" placeholder="Enter your email" required autocomplete="email">
                                 </div>
                             </td>
                         </tr>
@@ -37,7 +37,7 @@
                             <td>
                                 <div class="input-block-container password-field-container">
                                     <label class="block-label">PASSWORD</label>
-                                    <input class="form-input" id="loginPassword" type="password" name="password" placeholder="Enter your password" required />
+                                    <input class="form-input" id="loginPassword" type="password" name="password" placeholder="Enter your password" required>
                                     <i class="fas fa-eye-slash toggle-password" data-target="loginPassword"></i>
                                 </div>
 
@@ -70,7 +70,8 @@
                 </form>
             </div>
         </div>
+      
+        <script src="JS Files/Registration_Script.js"></script>
 
-       <script src="JS Files/Registration_Script.js"></script>
     </body>
 </html>
