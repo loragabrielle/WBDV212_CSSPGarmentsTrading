@@ -1,11 +1,5 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  background-color: var(--white);
+  background-color: var(--bg);
   font-family: 'Creato Display', sans-serif;
   min-height: 100vh;
   display: flex;
@@ -14,6 +8,25 @@ body {
   align-items: center;
   position: relative;
   padding: 20px;
+}
+
+/* subtle grid pattern background */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
 }
 
 .login-card-container {
@@ -201,8 +214,8 @@ body {
 }
 
 .primary-submit-btn:hover {
-  background:var(--yellow);
-  color:var(--navy);
+  background-color: var(--yellow);
+  color: var(--navy);
   transform:translateY(-3px);
   box-shadow:var(--shadow-lg)
 }
