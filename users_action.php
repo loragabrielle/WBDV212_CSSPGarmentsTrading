@@ -4,7 +4,7 @@ require 'database.php';
 require 'includes/guard.php';
 require_role(['admin']);
 require 'includes/admin_helpers.php';
-/* Creates user accounts and applies administrator account changes. */
+/* creates user accounts and applies administrator account changes. */
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     flash_redirect('error', 'Invalid request', 'Use the user management page.', 'users_security.php');
