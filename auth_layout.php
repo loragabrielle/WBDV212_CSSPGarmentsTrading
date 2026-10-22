@@ -1,7 +1,5 @@
 <?php
-/* includes/auth_layout.php - ONE layout holding BOTH forms.
-   login.php and registration.php set $mode ('login' or 'register') and include this file.
-   Variables they may set: $loginError, $registerError (text shown in the red alert box). */
+/* includes/auth_layout.php */
 $loginError    = $loginError    ?? '';
 $registerError = $registerError ?? '';
 $old           = $old           ?? [];   // re-fill the register form after an error, e.g. $old['first_name']
@@ -151,18 +149,18 @@ function old($k) { global $old; return htmlspecialchars($old[$k] ?? '', ENT_QUOT
       </div>
     </section>
 
-    <!-- ===================== SHOWCASE PANEL (photo + text on top) ===================== -->
+    <!-- showcase -->
     <aside class="panel panel-show" id="showPanel">
       <div class="show-bg" aria-hidden="true"></div>
 
-      <!-- LOGIN text -->
+      <!-- login text -->
       <div class="show-view show-login">
         <span class="pill">Maritime grade equipment</span>
         <h2>Gear up for the sea</h2>
         <p class="show-sub">Log in to track your orders and reorder your crew's uniforms in a few taps.</p>
       </div>
 
-      <!-- REGISTER text -->
+      <!-- register text -->
       <div class="show-view show-register">
         <span class="pill">Welcome to CSSP Garments</span>
         <h2>Create your account</h2>
