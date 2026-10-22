@@ -192,26 +192,145 @@ admin_layout_start('User Accounts & Logs', 'users');
 <?php endif; ?>
 
 <style>
-    .people-page-intro { display:flex; justify-content:space-between; align-items:end; gap:20px; margin-bottom:22px; }
-    .people-page-intro h2 { margin-bottom:6px; font-size:clamp(1.8rem,3vw,2.4rem); }
-    .people-page-intro p:not(.dashboard-eyebrow) { color:var(--text-muted); }
-    .account-summary-strip { display:flex; justify-content:space-between; align-items:center; gap:12px; margin:0 0 14px; color:var(--text-muted); font-size:.87rem; }
-    .role-chip { padding:8px 13px; color:var(--navy); background:var(--yellow); border-radius:22px; font-size:.75rem; font-weight:700; }
-    .account-person { display:flex; align-items:center; gap:10px; }
-    .account-person strong,.account-person small { display:block; }
-    .account-person small { margin-top:4px; color:var(--text-muted); }
-    .account-avatar { display:grid; place-items:center; width:40px; height:40px; flex:0 0 auto; color:var(--yellow); background:var(--navy); border-radius:50%; font:1.1rem 'Bebas Neue Custom',sans-serif; }
-    .role-label { display:inline-flex; padding:5px 10px; background:var(--bg); border-radius:20px; font-size:.75rem; font-weight:700; }
-    .role-admin { color:var(--navy); background:var(--yellow); }
-    .role-staff { color:var(--navy); background:#dce9f5; }
-    .role-customer { color:var(--green); background:#e4f0e9; }
-    [data-theme="dark"] .role-staff { color:#e7f2ff; background:#27425f; }
-    [data-theme="dark"] .role-customer { color:#a9e3bf; background:#244437; }
-    .account-status { display:inline-flex; padding:5px 10px; border-radius:20px; font-size:.75rem; font-weight:700; }
-    .account-active { color:var(--green); background:#e4f0e9; }
-    .account-inactive { color:#8e1d2a; background:#fbe4e6; }
-    [data-theme="dark"] .account-active { color:#a9e3bf; background:#244437; }
-    [data-theme="dark"] .account-inactive { color:#ffb7bf; background:#4c2831; }
-    @media(max-width:650px) { .people-page-intro { align-items:start; flex-direction:column; } .account-summary-strip { align-items:start; flex-direction:column; } }
+    css
+```
+
+.people-page-intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+.people-page-intro h2 {
+    margin-bottom: 6px;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+.people-page-intro p:not(.dashboard-eyebrow) {
+    color: var(--text-muted);
+}
+
+.account-summary-strip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 14px;
+    color: var(--text-muted);
+    font-size: 0.87rem;
+}
+
+.role-chip {
+    padding: 8px 13px;
+    color: var(--navy);
+    background: var(--yellow);
+    border-radius: 22px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.account-person {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.account-person strong,
+.account-person small {
+    display: block;
+}
+
+.account-person small {
+    margin-top: 4px;
+    color: var(--text-muted);
+}
+
+.account-avatar {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    flex: 0 0 auto;
+    color: var(--yellow);
+    background: var(--navy);
+    border-radius: 50%;
+    font: 1.1rem 'Bebas Neue Custom', sans-serif;
+}
+
+.role-label {
+    display: inline-flex;
+    padding: 5px 10px;
+    background: var(--bg);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.role-admin {
+    color: var(--navy);
+    background: var(--yellow);
+}
+
+.role-staff {
+    color: var(--navy);
+    background: #dce9f5;
+}
+
+.role-customer {
+    color: var(--green);
+    background: #e4f0e9;
+}
+
+[data-theme="dark"] .role-staff {
+    color: #e7f2ff;
+    background: #27425f;
+}
+
+[data-theme="dark"] .role-customer {
+    color: #a9e3bf;
+    background: #244437;
+}
+
+.account-status {
+    display: inline-flex;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.account-active {
+    color: var(--green);
+    background: #e4f0e9;
+}
+
+.account-inactive {
+    color: #8e1d2a;
+    background: #fbe4e6;
+}
+
+[data-theme="dark"] .account-active {
+    color: #a9e3bf;
+    background: #244437;
+}
+
+[data-theme="dark"] .account-inactive {
+    color: #ffb7bf;
+    background: #4c2831;
+}
+
+@media (max-width: 650px) {
+    .people-page-intro {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .account-summary-strip {
+        align-items: start;
+        flex-direction: column;
+    }
+}
 </style>
 <?php admin_layout_end(); ?>
