@@ -35,8 +35,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('cssp-theme') || 'light');</script>
 </head>
 <body class="auth-page">
-<?php $hideTicker = true; include 'includes/header.php'; ?>
-<?php include 'includes/auth_layout.php'; ?>
+<?php $hideTicker = true; include 'header.php'; ?>
+<?php include 'auth_layout.php'; ?>
 
 <script src="JS Files/auth.js"></script>
 <script src="JS Files/Nav_Script.js"></script> <!-- navbar: menus, hamburger, search, theme, currency -->
