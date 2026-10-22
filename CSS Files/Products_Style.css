@@ -1095,7 +1095,7 @@ body > * {
 }
 
 [data-theme="dark"] .card-desc i {
-  color: var(--red);
+  color: var(--green);
 }
 
 .add-to-cart-btn {
