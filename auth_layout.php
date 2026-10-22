@@ -19,9 +19,7 @@
                     <h1>Log in</h1>
                     <p class="auth-sub">Login to access your orders.</p>
 
-                    <div class="form-alert" role="alert" aria-live="assertive">
-                        <?= htmlspecialchars($loginError) ?>
-                    </div>
+                    <div class="form-alert" role="alert" aria-live="assertive"><?= htmlspecialchars($loginError) ?></div>
 
                     <div class="field">
                         <label for="l_email">Email</label>
@@ -50,9 +48,7 @@
                     </div>
 
                     <button type="submit" class="btn-primary btn-block">Login</button>
-                    <div class="divider">
-                        or
-                    </div>
+                    <div class="divider">or</div>
                     <a href="google-login.php" class="btn-ghost btn-block"><?php include __DIR__ . '/google_icon.php'; ?> Log in with Google</a>
 
                     <p class="switch-line">Don't have an account yet?
@@ -65,9 +61,7 @@
                     <h1>Sign up</h1>
                     <p class="auth-sub">Sign up to start setting up your team's uniforms.</p>
 
-                    <div class="form-alert" role="alert" aria-live="assertive">
-                        <?= htmlspecialchars($registerError) ?>
-                    </div>
+                    <div class="form-alert" role="alert" aria-live="assertive"><?= htmlspecialchars($registerError) ?></div>
 
                     <div class="row-2">
                         <div class="field">
@@ -174,9 +168,7 @@
                     </div>
 
                     <button type="submit" class="btn-primary btn-block">Create account</button>
-                    <div class="divider">
-                        or
-                    </div>
+                    <div class="divider">or</div>
                     <a href="google-login.php" class="btn-ghost btn-block"><?php include __DIR__ . '/google_icon.php'; ?> Sign up with Google</a>
 
                     <p class="switch-line">Already have an account?
@@ -189,26 +181,25 @@
             
         <!-- showcase -->
         <aside class="panel panel-show" id="showPanel">
-            <div class="show-bg" aria-hidden="true">
-                <!-- login text -->
-                <div class="show-view show-login">
-                    <span class="pill">Maritime grade equipment</span>
-                    <h2>Gear up for the sea</h2>
-                    <p class="show-sub">Log in to track your orders and reorder your crew's uniforms in a few taps.</p>
-                </div>
+            <div class="show-bg" aria-hidden="true"></div>
+            <!-- login text -->
+            <div class="show-view show-login">
+                <span class="pill">Maritime grade equipment</span>
+                <h2>Gear up for the sea</h2>
+                <p class="show-sub">Log in to track your orders and reorder your crew's uniforms in a few taps.</p>
+            </div>
 
-                <!-- register text -->
-                <div class="show-view show-register">
-                    <span class="pill">Welcome to CSSP Garments</span>
-                    <h2>Create your account</h2>
-                    <p class="show-sub">Explore CSSP's core features for corporate accounts and individuals.</p>
-                    <ul class="included">
-                        <li><i class="fa-solid fa-check"></i> Premium maritime coveralls</li>
-                        <li><i class="fa-solid fa-check"></i> Premium kitchen apparel</li>
-                        <li><i class="fa-solid fa-check"></i> Certified corporate PPE</li>
-                        <li><i class="fa-solid fa-check"></i> Maritime safety shoes</li>
-                    </ul>
-                </div>
+            <!-- register text -->
+            <div class="show-view show-register">
+                <span class="pill">Welcome to CSSP Garments</span>
+                <h2>Create your account</h2>
+                <p class="show-sub">Explore CSSP's core features for corporate accounts and individuals.</p>
+                <ul class="included">
+                    <li><i class="fa-solid fa-check"></i> Premium maritime coveralls</li>
+                    <li><i class="fa-solid fa-check"></i> Premium kitchen apparel</li>
+                    <li><i class="fa-solid fa-check"></i> Certified corporate PPE</li>
+                    <li><i class="fa-solid fa-check"></i> Maritime safety shoes</li>
+                </ul>
             </div>
         </aside>
     </div>
