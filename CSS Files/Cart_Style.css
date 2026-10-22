@@ -247,7 +247,7 @@ section {
 .ticker-track {
   display: inline-flex;
   gap: 60px;
-  animation: ticker 28s linear infinite;
+  animation: ticker 50s linear infinite;
 }
 
 .ticker-track span {
@@ -1419,7 +1419,7 @@ body > * {
 .ticker2-track {
   display: inline-flex;
   gap: 52px;
-  animation: ticker 24s linear infinite;
+  animation: ticker 40s linear infinite;
 }
 
 .ticker2-track span {

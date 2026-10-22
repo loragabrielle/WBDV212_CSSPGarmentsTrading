@@ -194,7 +194,7 @@
 .ticker2-track2 {
     display: inline-flex;
     gap: 48px;
-    animation: ticker 25s linear infinite;
+    animation: ticker 50s linear infinite;
 }
 
 .ticker2-track2 span {
@@ -221,7 +221,7 @@
 .ticker2-track3 {
     display: inline-flex;
     gap: 48px;
-    animation: ticker 25s linear infinite;
+    animation: ticker 40s linear infinite;
 }
 
 .ticker2-track3 span {
