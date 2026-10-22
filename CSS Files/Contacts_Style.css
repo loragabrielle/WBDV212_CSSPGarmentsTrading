@@ -774,7 +774,7 @@ h1, h2, h3, h4 {
 /* Subtle grid pattern background */
 .contact-page::before {
     content: '';
-    position: absolute;
+    position: fixed;
     inset: 0;
     background-image:
       linear-gradient(var(--border) 1px, transparent 1px),
