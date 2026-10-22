@@ -919,6 +919,11 @@ transform: rotate(180deg);
   gap: 8px;
 }
 
+.hero-sub-welcome {
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  letter-spacing: 0.12em;
+}
+
 .hero-title {
   font-size: clamp(3.5rem, 7vw, 6rem);
   color: var(--navy);
@@ -2012,6 +2017,51 @@ section.ticker2-track3 .ticker2-track span{
   z-index: 5;
 }
 
+.review-login-note p {
+  margin: 0 auto 18px;
+  color: rgba(255,255,255,.82);
+  line-height: 1.6;
+}
+
+.review-login-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 26px;
+  flex-wrap: wrap;
+}
+
+.review-login-actions .btn-primary,
+.review-login-actions .btn-ghost {
+  justify-content: center;
+  min-height: 52px;
+  padding: 14px 30px;
+  color: var(--yellow) !important;
+  border: 2px solid var(--yellow);
+  text-decoration: none;
+}
+
+.review-login-actions .btn-primary {
+  color: var(--navy) !important;
+  background: var(--yellow);
+}
+
+.review-login-actions .btn-primary:hover {
+  color: var(--yellow) !important;
+  background: transparent;
+}
+
+.review-login-actions .btn-ghost {
+  color: #fff !important;
+  border-color: #fff;
+}
+
+.review-login-actions .btn-ghost:hover {
+  color: var(--navy) !important;
+  background: #fff;
+}
+
 .review-form-wrap h3 {
   font-size: 1.8rem;
   color: var(--yellow);
@@ -2056,12 +2106,8 @@ section.ticker2-track3 .ticker2-track span{
 }
 
 .review-form-wrap textarea { 
-  resize: none;
-  overflow-y: hidden;
-  min-height: 100px;
-  box-sizing: border-box;
-  padding: 15px;
-  line-height: 1.5;
+  resize: vertical; 
+  min-height: 100px; 
 }
 
 .review-success {
@@ -2648,3 +2694,228 @@ section.ticker2-track3 .ticker2-track span{
   }
 }
 /* YEY */
+
+/* desktop account dropdown (first icon in the group) */
+.account-menu {
+    position: relative;
+    margin-right: 6px;
+}
+
+.account-btn {
+    width: auto;
+    min-width: 40px;
+    padding: 0 10px;
+    gap: 8px;
+}
+
+.account-btn .account-name {
+    font-size: 0.82rem;
+    font-weight: 700;
+    max-width: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.account-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    min-width: 180px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(4px);
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+    z-index: 950;
+}
+
+.account-dropdown.open {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+}
+
+.account-dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.account-dropdown a i {
+    width: 16px;
+    text-align: center;
+}
+
+.account-dropdown a:hover {
+    background: var(--bg);
+    color: var(--navy);
+}
+
+[data-theme="dark"] .account-dropdown a:hover {
+    background: var(--bg-alt);
+    color: var(--yellow);
+}
+
+.account-dropdown .logout-link {
+    color: var(--red);
+    border-top: 1px solid var(--border);
+}
+
+/* hide phone-only blocks on desktop */
+.nav-extra {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .header-actions .currency-switcher {
+        display: none;
+    }
+
+    .header-actions {
+        gap: 2px;
+    }
+
+    .header-actions .account-menu {
+        display: block;
+        margin-right: 0;
+    }
+
+    .header-actions .account-btn {
+        width: 40px;
+        min-width: 40px;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .header-actions .account-btn .account-name {
+        display: none;
+    }
+
+    .header-actions .account-dropdown {
+        top: calc(100% + 8px);
+        right: 0;
+        left: auto;
+    }
+
+    .main-nav {
+        top: var(--hdr-h, 78px);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+
+    .nav-list {
+        order: 2;
+    }
+
+    .nav-account-m {
+        order: 1;
+    }
+
+    .nav-currency-m {
+        order: 3;
+    }
+
+    .nav-extra {
+        display: block;
+        width: 100%;
+    }
+
+    .nav-account-m {
+        margin-bottom: 6px;
+    }
+
+    .nav-user {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 0 14px;
+        font-family: 'Bebas Neue Custom', sans-serif;
+        font-size: 1.6rem;
+    }
+
+    .nav-user i {
+        font-size: 1.9rem;
+        color: var(--navy);
+    }
+
+    [data-theme="dark"] .nav-user i {
+        color: var(--yellow);
+    }
+
+    .nav-extra-link {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 0;
+        border-bottom: 1px solid var(--border);
+        font-weight: 600;
+        font-size: 0.95rem;
+    }
+
+    .nav-extra-link i {
+        width: 18px;
+        text-align: center;
+        color: var(--text-muted);
+    }
+
+    .nav-extra-link.logout-link,
+    .nav-extra-link.logout-link i {
+        color: var(--red);
+    }
+
+    .nav-currency-m {
+        margin-top: 22px;
+    }
+
+    .nav-extra-label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 12px;
+        font-weight: 700;
+        font-size: 0.85rem;
+        color: var(--text-muted);
+    }
+
+    .cur-pills {
+        display: flex;
+        gap: 8px;
+    }
+
+    .cur-pills button {
+        flex: 1;
+        padding: 12px 6px;
+        border: 2px solid var(--border);
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 0.85rem;
+        color: var(--text);
+        transition: all 0.25s ease;
+    }
+
+    .cur-pills button.active {
+        background: var(--navy);
+        border-color: var(--navy);
+        color: var(--yellow);
+    }
+
+    [data-theme="dark"] .cur-pills button.active {
+        background: var(--yellow);
+        border-color: var(--yellow);
+        color: var(--navy);
+    }
+}
