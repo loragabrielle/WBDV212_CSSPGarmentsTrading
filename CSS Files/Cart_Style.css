@@ -1891,12 +1891,15 @@ body > * {
 }
 
 .checkbox-mark {
-  width: 10px;
-  height: 6px;
+  width: 6px;
+  height: 10px;
   border-right: 2px solid transparent;
   border-bottom: 2px solid transparent;
   transform: rotate(45deg);
   transition: border-color var(--transition);
+  position: relative;
+  top: -2px;                   
+  left: 1px;
 }
 
 .policy-checkbox input:checked + .checkbox-mark {
