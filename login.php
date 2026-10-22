@@ -1,77 +1,44 @@
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CSSP Garments Trading</title>
-        <meta name="description" content="CSSP Garments Trading – premium maritime uniforms, PPE, coveralls, safety footwear and kitchen uniforms since 2024." />
-        <link rel="icon" href="./Assets/logo-light-text.png" />
-        <link rel="stylesheet" href="CSS Files/Login_Style.css">
-        <link rel="stylesheet" href="CSS Files/AboutUs_Style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-        <script src="https://kit.fontawesome.com/493ae0299a.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    </head>
-    <body>
-        <div class="login-card-container">
-            <div class="login-box-body">
-                <form class="main-form" action="#" method="POST">
-                    <div class="cssp-header">
-                        <img src="Assets/logo-light-text.png" alt="Icon" class="cssp-icon">
-                        <span class="cssp-name">CSSP GARMENTS TRADING</span>
-                    </div>
+<?php
+/* login.php */
+session_start();
 
-                    <h1 class="form-title">LOG IN</h1>
-                    <p class="form-subtitle">Login to access your orders.</p>
+// Already logged in? Skip the login page.
+if (!empty($_SESSION['user_id'])) { header('Location: index.php'); exit; }
 
-                    <table class="form-table">
-                        <tr>
-                            <td>
-                                <div class="input-block-container">
-                                    <label class="block-label">EMAIL</label>
-                                    <input class="form-input" type="email" name="email" placeholder="Enter your email" required autocomplete="email">
-                                </div>
-                            </td>
-                        </tr>
+$mode = 'login';
+$loginError = '';
 
-                        <tr>
-                            <td>
-                                <div class="input-block-container password-field-container">
-                                    <label class="block-label">PASSWORD</label>
-                                    <input class="form-input" id="loginPassword" type="password" name="password" placeholder="Enter your password" required>
-                                    <i class="fas fa-eye-slash toggle-password" data-target="loginPassword"></i>
-                                </div>
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email    = trim($_POST['email'] ?? '');
+    $password = $_POST['password'] ?? '';
 
-                                <a href="#" class="forgot-password-link">Forgot Password?</a>
-                            </td>
-                        </tr>
-                    </table>
+    // TODO: DB query here
+    //   1. SELECT user_id, first_name, role, password_hash, status FROM users WHERE email = ?  (prepared statement)
+    //   2. if (!$user || !password_verify($password, $user['password_hash'])) { $loginError = 'Wrong email or password.'; }
+    //   3. else: session_regenerate_id(true);
+    //            $_SESSION['user_id'] = $user['user_id']; $_SESSION['first_name'] = $user['first_name']; $_SESSION['role'] = $user['role'];
+    //            update last_login_at, insert a login_logs row, then redirect by role (admin/staff/customer)
+}
+?>
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Log in | CSSP Garments Trading</title>
+  <link rel="icon" href="./Assets/logo-light-text.png">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="CSS Files/AboutUs_Style.css">
+  <link rel="stylesheet" href="CSS Files/Account_Menu.css">
+  <link rel="stylesheet" href="CSS Files/Auth_Style.css">
+  <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('cssp-theme') || 'light');</script>
+</head>
+<body class="auth-page">
+<?php $hideTicker = true; include 'includes/header.php'; ?>
+<?php include 'includes/auth_layout.php'; ?>
 
-                    <button type="submit" class="primary-submit-btn">Login</button>
-
-                    <div class="register-redirect-text">
-                        Don't have an account yet? <a href="registration.php">Sign up</a>
-                    </div>
-
-                    <div class="horizontal-separator">
-                        <span>Or</span>
-                    </div>
-
-                    <div class="google-row-container">
-                        <button type="button" class="google-full-btn">
-                            <svg class="google-icon-svg" viewBox="0 0 24 24" xmlns="http://w3.org">
-                                <path d="M23.494 12.275c0-.825-.069-1.613-.194-2.375H12v4.512h6.444c-.275 1.456-1.044 2.688-2.269 3.513v2.913h3.663c2.137-1.975 3.362-4.887 3.362-8.563z" fill="#4285F4"/>
-                                <path d="M12 24c3.24 0 5.956-1.075 7.944-2.912l-3.663-2.913c-1.013.675-2.313 1.088-4.281 1.088-3.288 0-6.075-2.225-7.063-5.225H1.113v3.013C3.094 20.813 7.219 24 12 24z" fill="#34A853"/>
-                                <path d="M4.938 14.038c-.238-.675-.375-1.4-.375-2.15s.138-1.475.375-2.15V6.725H1.113C.4 8.138 0 9.725 0 11.888c0 2.163.4 3.75 1.113 5.163l3.825-3.013z" fill="#FBBC05"/>
-                                <path d="M12 4.75c1.763 0 3.35.6 4.6 1.763l3.437-3.438C17.95 1.188 15.231 0 12 0 7.219 0 3.188 3.188 1.113 6.725l3.825 3.013c.988-3 3.775-5.225 7.063-5.225z" fill="#EA4335"/>
-                            </svg>
-                            <span class="google-text-center">Log in with Google</span>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-      
-        <script src="JS Files/Registration_Script.js"></script>
-
-    </body>
+<script src="JS Files/auth.js"></script>
+<script src="JS Files/Nav_Script.js"></script> <!-- navbar: menus, hamburger, search, theme, currency -->
+</body>
 </html>
