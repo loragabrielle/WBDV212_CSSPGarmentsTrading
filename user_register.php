@@ -1,6 +1,5 @@
 <?php
-/* user_register.php - saves the sign-up form into the database (same job as your class student_register.php).
-   registration.php (the form) sends everything here with method="POST". */
+/* saves the sign-up form into the database method="POST". */
 session_start();
 require("database.php");
 
@@ -20,13 +19,13 @@ $address  = trim($_POST['address'] ?? '');
 $password = $_POST['password'] ?? '';
 $confirm  = $_POST['confirm_password'] ?? '';
 
-/* If something is wrong: keep what they typed (not the passwords), show a notification, go back to the form */
+/* if error notif */
 function reg_fail($title, $msg) {
     $_SESSION['old'] = array_diff_key($_POST, ['password' => 1, 'confirm_password' => 1]);
     flash_redirect('error', $title, $msg, 'registration.php');
 }
 
-/* 2. Check again on the server. The browser checks can be skipped, so never trust them alone. */
+/* check again in server */
 if ($fname === '' || $lname === '' || $contact === '' || $address === '' || $gender === '') {
     reg_fail('Missing Information', 'Please fill in all fields.');
 }
@@ -49,7 +48,7 @@ if ($password !== $confirm) {
     reg_fail('Passwords Do Not Match', 'Please type the same password in both boxes.');
 }
 
-/* 3. Is the email already used? */
+/* is the email already used? */
 $check = $con->prepare("SELECT user_id FROM tbl_users WHERE email = ?");
 $check->bind_param("s", $email);
 $check->execute();
@@ -57,10 +56,6 @@ if ($check->get_result()->num_rows > 0) {
     flash_redirect('info', 'Email Already Registered', 'Please log in instead.', 'login.php');
 }
 
-/* 4. Save it.
-      Class version:  INSERT INTO tbl_students VALUES (NULL, '$fname', ...)
-      Here we name the columns, use "?" placeholders, and save password_hash() instead of the plain
-      password (or md5, which is easy to crack). user_id, role, stat and created_at fill themselves in. */
 $hash = password_hash($password, PASSWORD_DEFAULT);
 
 $query = $con->prepare("INSERT INTO tbl_users (first_name, last_name, birthday, gender, phone, email, address, password_hash)
