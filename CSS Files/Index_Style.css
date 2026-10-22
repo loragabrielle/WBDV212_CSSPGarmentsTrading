@@ -775,6 +775,7 @@ transform: rotate(180deg);
 
 /* HERO SECTION */
 .hero {
+  position: relative;
   padding-top: calc(var(--header-height) + 2rem);
   min-height: 100vh;
   display: flex;
