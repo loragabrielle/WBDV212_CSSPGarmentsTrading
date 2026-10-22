@@ -177,7 +177,7 @@
 
                     <div class="legal-notice">
                         <p class="legal-text">
-                            By signing up, you agree to our <a href="#">Terms &amp; Conditions</a>, and have read and understood our <a href="#">Privacy Policy</a>.
+                            By signing up, you agree to our <a href="./policies.php#termsPage">Terms &amp; Conditions</a>, and have read and understood our <a href="./policies.php#privacyPage">Privacy Policy</a>.
                         </p>
                     </div>
                 </form>
