@@ -26,7 +26,7 @@
       <header class="site-header" id="siteHeader">
         <div class="header-inner">
         <!-- LOGO -->
-          <a href="./index.html" class="logo-wrap" aria-label="CSSP Garments Trading homepage">
+          <a href="./index.php" class="logo-wrap" aria-label="CSSP Garments Trading homepage">
             <div class="logo-icon">
               <img src="./Assets/logo-light-text.png" class="logo-img light-logo" alt="CSSP Garments Trading logo, light version" />
               <img src="./Assets/logo-dark-text.png" class="logo-img dark-logo" alt="CSSP Garments Trading logo, dark version" />
@@ -69,16 +69,16 @@
                     <div class="mega-inner">
                       <div class="mega-col">
                         <span class="mega-label">Company</span>
-                          <a href="./aboutus.html#history" class="mega-item text-only"><i class="fa-solid fa-anchor"></i> Our Story</a>
-                          <a href="./aboutus.html#people" class="mega-item text-only"><i class="fa-solid fa-users"></i> Our Team</a>
-                          <a href="./aboutus.html#tailor" class="mega-item text-only"><i class="fa-solid fa-house"></i> Location</a>
+                          <a href="./aboutus.php#history" class="mega-item text-only"><i class="fa-solid fa-anchor"></i> Our Story</a>
+                          <a href="./aboutus.php#people" class="mega-item text-only"><i class="fa-solid fa-users"></i> Our Team</a>
+                          <a href="./aboutus.php#tailor" class="mega-item text-only"><i class="fa-solid fa-house"></i> Location</a>
                       </div>
                         <div class="mega-divider"></div>
                           <div class="mega-col">
                             <span class="mega-label">Support</span>
                             <a href="#faq" class="mega-item text-only"><i class="fa-solid fa-circle-question"></i> FAQ</a>
-                            <a href="./contacts.html" class="mega-item text-only"><i class="fa-solid fa-envelope"></i> Contact Us</a>
-                            <a href="./policies.html" class="mega-item text-only"><i class="fa-solid fa-file-contract"></i> Policies</a>
+                            <a href="./contacts.php" class="mega-item text-only"><i class="fa-solid fa-envelope"></i> Contact Us</a>
+                            <a href="./policies.php" class="mega-item text-only"><i class="fa-solid fa-file-contract"></i> Policies</a>
                           </div>
                     </div>
                   </div>
@@ -136,8 +136,8 @@
                   <h1 class="hero-title">Dressed for<br><span>The Deep.</span></h1>
                     <p class="hero-desc">Premium coveralls, kitchen uniforms, PPE, and safety shoes built for sailors, cooks, and crew members who demand quality above sea level.</p>
                       <div class="hero-btns">
-                      <a href="./products.html" class="btn-primary">View Products <i class="fa-solid fa-arrow-right"></i></a>
-                      <a href="./aboutus.html" class="btn-ghost">Our Story <i class="fa-solid fa-compass"></i></a>
+                      <a href="./products.php" class="btn-primary">View Products <i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="./aboutus.php" class="btn-ghost">Our Story <i class="fa-solid fa-compass"></i></a>
                       </div>
                       
           <div class="hero-stats">
@@ -258,7 +258,7 @@
         <div class="journey-layout"><div>
         <p class="journey-body">
           What started as a small family-run business supplying
-          <a class="img-chip" href="products.html#uniforms" aria-label="View coveralls">
+          <a class="img-chip" href="products.php#uniforms" aria-label="View coveralls">
             <img src="Assets/Index/journeysection_coverall.png"
             alt="Journey Section - Coverall" />Coveralls
           </a>
@@ -267,12 +267,12 @@
         </p>
         <p class="journey-body"> 
           We are obsessed with the details, hand-selecting every raw material—from the high-grip soles of our
-          <a class="img-chip" href="products.html#safety-footwears" aria-label="View safety boots">
+          <a class="img-chip" href="products.php#safety-footwears" aria-label="View safety boots">
             <img src="Assets/Index/journeysection_safety_shoes.png"
             alt="Journey Section - Safety Shoes" />Safety Shoes
           </a>
             to the heat-resistant fabric of our
-          <a class="img-chip" href="products.html#uniforms" aria-label="View chef tops">
+          <a class="img-chip" href="products.php#uniforms" aria-label="View chef tops">
             <img src="Assets/Index/journeysection_chef top.png"
             alt="Journey Section - Chef Top" />Chef Tops.
           </a>
@@ -280,14 +280,14 @@
         </p>
         <p class="journey-body">
           We don’t just ship boxes; we provide a
-          <a class="img-chip" href="aboutus.html" aria-label="View About Us Page">
+          <a class="img-chip" href="aboutus.php" aria-label="View About Us Page">
             <img src="Assets/Index/journeysection_wroker.png"
             alt="Journey Section - Worker" />Commitment
           </a>
             to the men and women working the decks. Having sailed those same waters ourselves, we understand the stakes, 
             which is why we work tirelessly to deliver durable PPE that protects you through every storm and every shift.
         </p>
-          <a href="./aboutus.html" class="btn-primary" style="margin-top: 8px;">
+          <a href="./aboutus.php" class="btn-primary" style="margin-top: 8px;">
             Read Full Story <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
           </a>
         </div>
@@ -354,7 +354,7 @@
                   <li><i class="fa-solid fa-check-circle"></i> Full uniform sets for kitchen and deck staff</li>
                   <li><i class="fa-solid fa-check-circle"></i> Custom bulk orders for shipping companies</li>
                 </ul>
-                  <a href="./products.html" class="btn-primary">Browse Products <i class="fa-solid fa-arrow-right"></i></a>
+                  <a href="./products.php" class="btn-primary">Browse Products <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
       </section>
@@ -495,16 +495,16 @@
               <div class="footer-logo"><i class="fa-solid fa-ship"></i><span>CSSP Garments Trading</span></div>
               <p>Your trusted maritime uniform supplier since 2024. Quality gear for every sailor, cook, and crew member.</p>
                 <div class="social-icons">
-                  <a href="./contacts.html" title="Contact us" aria-label="Contact page"><i class="fa-regular fa-address-book"></i></a>
+                  <a href="./contacts.php" title="Contact us" aria-label="Contact page"><i class="fa-regular fa-address-book"></i></a>
                 </div>
             </div>
     
             <div class="footer-col">
               <h4>Quick Links</h4>
                 <ul>
-                  <li><a href="./index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
-                  <li><a href="./products.html"><i class="fa-solid fa-chevron-right"></i> Products</a></li>
-                  <li><a href="./aboutus.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+                  <li><a href="./index.php"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                  <li><a href="./products.php"><i class="fa-solid fa-chevron-right"></i> Products</a></li>
+                  <li><a href="./aboutus.php"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
                   <li><a href="#reviews"><i class="fa-solid fa-chevron-right"></i> Reviews</a></li>
                   <li><a href="#faq"><i class="fa-solid fa-chevron-right"></i> FAQ</a></li>
                 </ul>
@@ -515,9 +515,9 @@
             <div class="footer-bottom">
               <p>&copy; 2024 CSSP Garments Trading. All rights reserved.<br>Designed by Logmunch!</p>
                 <div class="legal-links">
-                  <a href="./policies.html#privacyPage">Privacy Policy</a>
-                  <a href="./policies.html#termsPage">Terms &amp; Conditions</a>
-                  <a href="./policies.html#shippingPage">Shipping Policy</a>
+                  <a href="./policies.php#privacyPage">Privacy Policy</a>
+                  <a href="./policies.php#termsPage">Terms &amp; Conditions</a>
+                  <a href="./policies.php#shippingPage">Shipping Policy</a>
                 </div>
             </div>
       </footer>
@@ -596,7 +596,7 @@
                         <div class="material-chip">High-visibility reflector</div>
                         <div class="material-chip">UV-Protection Finish</div>
                         </div>
-                        <a href="products.html#uniforms" class="btn-primary">View Full Product <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="products.php#uniforms" class="btn-primary">View Full Product <i class="fa-solid fa-arrow-right"></i></a>
                   </div>
                 </div>
               </div>
@@ -663,7 +663,7 @@
                       <div class="material-chip">Weatherproof insulated work jacket</div>
                       <div class="material-chip">Durable low-cut and high-cut footwear</div>
                 </div>
-                  <a href="products.html#safety-footwears" class="btn-primary">View Full Product <i class="fa-solid fa-arrow-right"></i></a>
+                  <a href="products.php#safety-footwears" class="btn-primary">View Full Product <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
