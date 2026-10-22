@@ -119,10 +119,10 @@
                     </ul>      
                 </div>
         
-                <button class="icon-btn" title="Cart" aria-label="View cart" id="cartIconBtn" href="cart.php">           
-                    <i class="fa-solid fa-cart-shopping"></i>           
-                    <span class="badge" id="cartBadge">0</span>         
-                </button>
+                <a class="icon-btn" title="Cart" aria-label="View cart" id="cartIconBtn" href="cart.php">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="badge" id="cartBadge">0</span>
+                </a>
         
                 <button class="icon-btn" id="searchToggle" title="Search" aria-label="Toggle search">         
                     <i class="fa-solid fa-magnifying-glass"></i>         
