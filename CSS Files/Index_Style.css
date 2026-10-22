@@ -2056,8 +2056,12 @@ section.ticker2-track3 .ticker2-track span{
 }
 
 .review-form-wrap textarea { 
-  resize: vertical; 
-  min-height: 100px; 
+  resize: none;
+  overflow-y: hidden;
+  min-height: 100px;
+  box-sizing: border-box;
+  padding: 15px;
+  line-height: 1.5;
 }
 
 .review-success {
