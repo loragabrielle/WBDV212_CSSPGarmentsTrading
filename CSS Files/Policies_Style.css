@@ -19,6 +19,7 @@
       linear-gradient(var(--border) 1px, transparent 1px),
       linear-gradient(90deg, var(--border) 1px, transparent 1px);
     background-size: 48px 48px;
+    background-attachment: fixed; 
     opacity: 0.5;
     pointer-events: none;
     z-index: 0;
