@@ -45,7 +45,7 @@
             <div class="header-inner">
             
                 <!-- logo -->
-                <a href="index.html" class="logo-wrap" aria-label="CSSP Garments Trading homepage">
+                <a href="index.php" class="logo-wrap" aria-label="CSSP Garments Trading homepage">
                     <div class="logo-icon">
                         <img src="Assets/logo-light-text.png" class="logo-img light-logo" alt="CSSP Garments Trading logo, light version">
                         <img src="Assets/logo-dark-text.png" class="logo-img dark-logo" alt="CSSP Garments Trading logo, dark version">
@@ -67,7 +67,7 @@
                                         <div class="mega-feature-card">
                                             <img src="./Assets/UNIFORM_MEGA MENU.png" alt="Maritime and culinary uniform range including coveralls and chef tops" />
                                             <p>Maritime &amp; Culinary Uniforms</p>
-                                            <a href="products.html#uniforms" class="btn-sm">Gear Up</a>
+                                            <a href="products.php#uniforms" class="btn-sm">Gear Up</a>
                                         </div>
                                     </div> 
                                         
@@ -78,7 +78,7 @@
                                         <div class="mega-feature-card">
                                             <img src="./Assets/SAFETYFOOTWEAR_MEGA MENU.png" alt="Steel-toe safety shoe for deck and industrial use" />
                                             <p>Steel-toe Safety Shoe</p>
-                                            <a href="products.html#safety-footwears" class="btn-sm">Secure Step</a>
+                                            <a href="products.php#safety-footwears" class="btn-sm">Secure Step</a>
                                         </div>
                                     </div> 
                                 </div> 
@@ -92,18 +92,18 @@
                                 <div class="mega-inner">
                                     <div class="mega-col">
                                         <p class="mega-label">Company</p>
-                                        <a href="./aboutus.html#history" class="mega-item text-only"><i class="fa-solid fa-anchor"></i> Our Story</a>
-                                        <a href="./aboutus.html#people" class="mega-item text-only"><i class="fa-solid fa-users"></i> Our Team</a>
-                                        <a href="./aboutus.html#tailor" class="mega-item text-only"><i class="fa-solid fa-house"></i> Location</a>
+                                        <a href="./aboutus.php#history" class="mega-item text-only"><i class="fa-solid fa-anchor"></i> Our Story</a>
+                                        <a href="./aboutus.php#people" class="mega-item text-only"><i class="fa-solid fa-users"></i> Our Team</a>
+                                        <a href="./aboutus.php#tailor" class="mega-item text-only"><i class="fa-solid fa-house"></i> Location</a>
                                     </div>
 
                                     <div class="mega-divider"></div>
 
                                     <div class="mega-col">
                                         <p class="mega-label">Support</p>
-                                        <a href="./index.html#faq" class="mega-item text-only"><i class="fa-solid fa-circle-question"></i> FAQ</a>
-                                        <a href="./contacts.html" class="mega-item text-only"><i class="fa-solid fa-envelope"></i> Contact Us</a>
-                                        <a href="./policies.html" class="mega-item text-only"><i class="fa-solid fa-file-contract"></i> Policies</a>
+                                        <a href="./index.php#faq" class="mega-item text-only"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+                                        <a href="./contacts.php" class="mega-item text-only"><i class="fa-solid fa-envelope"></i> Contact Us</a>
+                                        <a href="./policies.php" class="mega-item text-only"><i class="fa-solid fa-file-contract"></i> Policies</a>
                                     </div>
                                 </div>
                             </div>
@@ -161,7 +161,7 @@
                     <p class="hero-desc-product">Nothing stands in your way.
                                                 Equip yourself with professional maritime gear designed for performance and durability.
                                                 Built to last through every voyage and every challenge at sea.</p>
-                    <a href="./products.html" class="btn-ghost hero-cta"><i class="fa-solid fa-arrow-left"></i>Explore the Shop</i>
+                    <a href="./products.php" class="btn-ghost hero-cta"><i class="fa-solid fa-arrow-left"></i>Explore the Shop</i>
                     </a>
                 </div>
         </section>
@@ -189,7 +189,7 @@
                 <i class="fa-solid fa-shopping-cart"></i>
                 <h3>Your cart is currently empty</h3>
                 <p>Browse our collection of premium uniforms and add your first item.</p>
-                <a href="./products.html" class="btn-primary">
+                <a href="./products.php" class="btn-primary">
                     Shop Our Collection
                 </a>
             </div>
@@ -241,7 +241,7 @@
                         <i class="fa-solid fa-lock"></i>
                         Proceed to Checkout
                     </button>
-                    <a href="./products.html" class="btn-ghost" style="margin-top: 12px; text-align: center;">
+                    <a href="./products.php" class="btn-ghost" style="margin-top: 12px; text-align: center;">
                         <i class="fa-solid fa-arrow-left"></i>
                         Continue Shopping
                     </a>
@@ -499,7 +499,7 @@
                                     <span class="checkbox-mark"></span>
                                 </span>
                                 <span class="policy-text">
-                                    I agree to the <a href="policies.html" class="policy-link">Shipping Policy</a>, <a href="policies.html" class="policy-link">Terms & Conditions</a>, and <a href="policies.html" class="policy-link">Privacy Policy</a>.
+                                    I agree to the <a href="policies.php" class="policy-link">Shipping Policy</a>, <a href="policies.php" class="policy-link">Terms & Conditions</a>, and <a href="policies.php" class="policy-link">Privacy Policy</a>.
                                 </span>
                             </label>
                             <div class="error-text" id="agreeError"></div>
@@ -576,7 +576,7 @@
                                     <i class="fa-solid fa-download"></i>
                                     Download PDF
                                 </button>
-                                <a class="btn-primary" onclick="finishCheckout()" href="./cart.html">
+                                <a class="btn-primary" onclick="finishCheckout()" href="./cart.php">
                                     <i class="fa-solid fa-home"></i>
                                     Back to Cart
                                 </a>
@@ -625,26 +625,26 @@
                     <div class="footer-logo"><i class="fa-solid fa-ship"></i><span>CSSP Garments Trading</span></div>
                     <p>Your trusted maritime uniform supplier since 2024. Quality gear for every sailor, cook, and crew member.</p>
                     <div class="social-icons">
-                        <a href="./contacts.html" title="Contacts"><i class="fa-regular fa-address-book"></i></a>
+                        <a href="./contacts.php" title="Contacts"><i class="fa-regular fa-address-book"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="./index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
-                        <li><a href="./products.html"><i class="fa-solid fa-chevron-right"></i> Products</a></li>
-                        <li><a href="./aboutus.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
-                        <li><a href="./index.html#reviews"><i class="fa-solid fa-chevron-right"></i> Reviews</a></li>
-                        <li><a href="./index.html#faq"><i class="fa-solid fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="./index.php"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                        <li><a href="./products.php"><i class="fa-solid fa-chevron-right"></i> Products</a></li>
+                        <li><a href="./aboutus.php"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="./index.php#reviews"><i class="fa-solid fa-chevron-right"></i> Reviews</a></li>
+                        <li><a href="./index.php#faq"><i class="fa-solid fa-chevron-right"></i> FAQ</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 CSSP Garments Trading. All rights reserved.<br> Designed by Logmunch!</p>
                 <div class="legal-links">
-                    <a href="./policies.html#privacyPage">Privacy Policy</a>
-                    <a href="./policies.html#termsPage">Terms & Conditions</a>
-                    <a href="./policies.html#shippingPage">Shipping Policy</a>
+                    <a href="./policies.php#privacyPage">Privacy Policy</a>
+                    <a href="./policies.php#termsPage">Terms & Conditions</a>
+                    <a href="./policies.php#shippingPage">Shipping Policy</a>
                 </div>
             </div>
         </footer>
