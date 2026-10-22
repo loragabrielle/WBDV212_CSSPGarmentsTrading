@@ -1095,8 +1095,8 @@ body > * {
 }
 
 [data-theme="dark"] .card-desc i {
-  color: var(--green);
-}
+  color: rgb(87, 145, 0);
+} 
 
 .add-to-cart-btn {
     width: 100%;
