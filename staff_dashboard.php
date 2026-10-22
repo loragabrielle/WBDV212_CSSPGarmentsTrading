@@ -123,60 +123,378 @@ admin_layout_start('Staff Workspace', 'dashboard');
 </section>
 
 <style>
-    .staff-intro { display:flex; align-items:end; justify-content:space-between; gap:20px; margin-bottom:25px; }
-    .staff-eyebrow { display:block; margin-bottom:6px; color:var(--text-muted); font-size:.75rem; font-weight:700; letter-spacing:.11em; text-transform:uppercase; }
-    .staff-intro h2 { margin-bottom:6px; font-size:clamp(1.8rem,3vw,2.5rem); }
-    .staff-intro p:not(.staff-eyebrow) { color:var(--text-muted); }
-    .staff-access-pill { display:inline-flex; align-items:center; gap:8px; padding:9px 14px; color:var(--navy); background:var(--yellow); border-radius:24px; font-size:.78rem; font-weight:700; white-space:nowrap; }
-    .staff-access-pill i { width:8px; height:8px; background:var(--green); border-radius:50%; }
-    .staff-error { margin-bottom:18px; padding:14px 16px; color:#610000; background:#fff0f0; border:1px solid #e6b6b6; border-radius:10px; }
-    [data-theme="dark"] .staff-error { color:#ffd7d7; background:#42252c; border-color:#78414b; }
-    .staff-stat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:15px; margin-bottom:20px; }
-    .staff-stat-card,.staff-panel { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); }
-    .staff-stat-card { position:relative; display:flex; flex-direction:column; min-height:150px; padding:20px; overflow:hidden; }
-    .staff-stat-icon { position:absolute; top:12px; right:16px; color:var(--navy); opacity:.13; font-size:2.8rem; }
-    [data-theme="dark"] .staff-stat-icon { color:var(--yellow); opacity:.2; }
-    .staff-stat-label { color:var(--text-muted); font-size:.86rem; font-weight:700; }
-    .staff-stat-card strong { margin:12px 0 4px; color:var(--navy); font-size:2rem; }
-    [data-theme="dark"] .staff-stat-card strong { color:var(--yellow); }
-    .staff-stat-card small { margin-top:auto; color:var(--text-muted); }
-    .staff-stat-alert strong { color:var(--red); }
-    .staff-panel-grid { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(250px,.8fr); gap:18px; }
-    .staff-panel { min-width:0; padding:clamp(19px,3vw,26px); }
-    .staff-panel-heading { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:17px; }
-    .staff-panel-heading h2 { margin:0; font-size:1.5rem; }
-    .staff-lock { padding:6px 10px; color:var(--text-muted); background:var(--bg); border-radius:18px; font-size:.72rem; font-weight:700; }
-    .staff-access-item { display:flex; gap:12px; padding:13px 0; border-top:1px solid var(--border); }
-    .staff-access-item strong { display:block; margin-bottom:3px; }
-    .staff-access-item p { color:var(--text-muted); font-size:.83rem; line-height:1.5; }
-    .staff-check,.staff-preview-icon { display:grid; place-items:center; width:27px; height:27px; flex:0 0 auto; color:var(--green); background:rgba(45,106,79,.12); border-radius:50%; font-weight:700; }
-    .staff-access-preview .staff-preview-icon { color:var(--navy); background:rgba(26,58,92,.1); }
-    [data-theme="dark"] .staff-access-preview .staff-preview-icon { color:var(--yellow); background:rgba(244,208,63,.12); }
-    .staff-main-link,.staff-secondary-link { display:inline-flex; align-items:center; gap:6px; min-height:42px; color:var(--navy); font-size:.84rem; font-weight:700; }
-    [data-theme="dark"] .staff-main-link,[data-theme="dark"] .staff-secondary-link { color:var(--yellow); }
-    .staff-main-link { margin-top:10px; padding:9px 14px; border:1px solid var(--border); border-radius:22px; }
-    .staff-main-link:hover { color:var(--yellow); background:var(--navy); }
-    .staff-profile-panel { display:flex; flex-direction:column; align-items:center; text-align:center; }
-    .staff-profile-panel .staff-eyebrow { align-self:flex-start; }
-    .staff-profile-avatar { display:grid; place-items:center; width:68px; height:68px; margin:8px 0 12px; color:var(--yellow); background:var(--navy); border-radius:50%; font:2rem 'Bebas Neue Custom',sans-serif; }
-    .staff-profile-panel h2 { margin:0; font-size:1.6rem; }
-    .staff-profile-role { margin:7px 0 13px; padding:5px 11px; color:var(--navy); background:var(--yellow); border-radius:20px; font-size:.74rem; font-weight:700; }
-    .staff-profile-panel p { color:var(--text-muted); font-size:.84rem; line-height:1.55; }
-    .staff-profile-panel .staff-secondary-link { margin-top:4px; }
-    .staff-recent-panel { grid-column:1/-1; }
-    .staff-login-list { display:grid; }
-    .staff-login-row { display:flex; align-items:center; gap:12px; min-height:60px; border-top:1px solid var(--border); }
-    .staff-login-dot { width:9px; height:9px; flex:0 0 auto; border-radius:50%; }
-    .staff-login-dot.success { background:var(--green); }
-    .staff-login-dot.failed { background:var(--red); }
-    .staff-login-row div { flex:1; min-width:0; }
-    .staff-login-row strong,.staff-login-row small { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-    .staff-login-row strong { font-size:.88rem; }
-    .staff-login-row small,.staff-login-row time { margin-top:3px; color:var(--text-muted); font-size:.76rem; }
-    .staff-empty { display:grid; justify-items:center; padding:25px; color:var(--text-muted); text-align:center; }
-    .staff-empty span { font-size:2rem; }
-    .staff-empty strong { margin:7px 0 4px; color:var(--text); }
-    @media(max-width:740px) { .staff-panel-grid { grid-template-columns:1fr; } .staff-recent-panel { grid-column:auto; } }
-    @media(max-width:560px) { .staff-intro { align-items:start; flex-direction:column; } .staff-login-row time { font-size:.68rem; text-align:right; } }
+Here’s your CSS cleaned up and formatted with each selector and property on separate lines for better readability.
+
+css
+```
+
+.staff-intro {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.staff-eyebrow {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+
+.staff-intro h2 {
+    margin-bottom: 6px;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.staff-intro p:not(.staff-eyebrow) {
+    color: var(--text-muted);
+}
+
+.staff-access-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 14px;
+    color: var(--navy);
+    background: var(--yellow);
+    border-radius: 24px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.staff-access-pill i {
+    width: 8px;
+    height: 8px;
+    background: var(--green);
+    border-radius: 50%;
+}
+
+.staff-error {
+    margin-bottom: 18px;
+    padding: 14px 16px;
+    color: #610000;
+    background: #fff0f0;
+    border: 1px solid #e6b6b6;
+    border-radius: 10px;
+}
+
+[data-theme="dark"] .staff-error {
+    color: #ffd7d7;
+    background: #42252c;
+    border-color: #78414b;
+}
+
+.staff-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.staff-stat-card,
+.staff-panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.staff-stat-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 150px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.staff-stat-icon {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    color: var(--navy);
+    opacity: 0.13;
+    font-size: 2.8rem;
+}
+
+[data-theme="dark"] .staff-stat-icon {
+    color: var(--yellow);
+    opacity: 0.2;
+}
+
+.staff-stat-label {
+    color: var(--text-muted);
+    font-size: 0.86rem;
+    font-weight: 700;
+}
+
+.staff-stat-card strong {
+    margin: 12px 0 4px;
+    color: var(--navy);
+    font-size: 2rem;
+}
+
+[data-theme="dark"] .staff-stat-card strong {
+    color: var(--yellow);
+}
+
+.staff-stat-card small {
+    margin-top: auto;
+    color: var(--text-muted);
+}
+
+.staff-stat-alert strong {
+    color: var(--red);
+}
+
+.staff-panel-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(250px, 0.8fr);
+    gap: 18px;
+}
+
+.staff-panel {
+    min-width: 0;
+    padding: clamp(19px, 3vw, 26px);
+}
+
+.staff-panel-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 17px;
+}
+
+.staff-panel-heading h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.staff-lock {
+    padding: 6px 10px;
+    color: var(--text-muted);
+    background: var(--bg);
+    border-radius: 18px;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.staff-access-item {
+    display: flex;
+    gap: 12px;
+    padding: 13px 0;
+    border-top: 1px solid var(--border);
+}
+
+.staff-access-item strong {
+    display: block;
+    margin-bottom: 3px;
+}
+
+.staff-access-item p {
+    color: var(--text-muted);
+    font-size: 0.83rem;
+    line-height: 1.5;
+}
+
+.staff-check,
+.staff-preview-icon {
+    display: grid;
+    place-items: center;
+    width: 27px;
+    height: 27px;
+    flex: 0 0 auto;
+    color: var(--green);
+    background: rgba(45, 106, 79, 0.12);
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+.staff-access-preview .staff-preview-icon {
+    color: var(--navy);
+    background: rgba(26, 58, 92, 0.1);
+}
+
+[data-theme="dark"] .staff-access-preview .staff-preview-icon {
+    color: var(--yellow);
+    background: rgba(244, 208, 63, 0.12);
+}
+
+.staff-main-link,
+.staff-secondary-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 42px;
+    color: var(--navy);
+    font-size: 0.84rem;
+    font-weight: 700;
+}
+
+[data-theme="dark"] .staff-main-link,
+[data-theme="dark"] .staff-secondary-link {
+    color: var(--yellow);
+}
+
+.staff-main-link {
+    margin-top: 10px;
+    padding: 9px 14px;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+}
+
+.staff-main-link:hover {
+    color: var(--yellow);
+    background: var(--navy);
+}
+
+.staff-profile-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.staff-profile-panel .staff-eyebrow {
+    align-self: flex-start;
+}
+
+.staff-profile-avatar {
+    display: grid;
+    place-items: center;
+    width: 68px;
+    height: 68px;
+    margin: 8px 0 12px;
+    color: var(--yellow);
+    background: var(--navy);
+    border-radius: 50%;
+    font: 2rem 'Bebas Neue Custom', sans-serif;
+}
+
+.staff-profile-panel h2 {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+.staff-profile-role {
+    margin: 7px 0 13px;
+    padding: 5px 11px;
+    color: var(--navy);
+    background: var(--yellow);
+    border-radius: 20px;
+    font-size: 0.74rem;
+    font-weight: 700;
+}
+
+.staff-profile-panel p {
+    color: var(--text-muted);
+    font-size: 0.84rem;
+    line-height: 1.55;
+}
+
+.staff-profile-panel .staff-secondary-link {
+    margin-top: 4px;
+}
+
+.staff-recent-panel {
+    grid-column: 1 / -1;
+}
+
+.staff-login-list {
+    display: grid;
+}
+
+.staff-login-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 60px;
+    border-top: 1px solid var(--border);
+}
+
+.staff-login-dot {
+    width: 9px;
+    height: 9px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+}
+
+.staff-login-dot.success {
+    background: var(--green);
+}
+
+.staff-login-dot.failed {
+    background: var(--red);
+}
+
+.staff-login-row div {
+    flex: 1;
+    min-width: 0;
+}
+
+.staff-login-row strong,
+.staff-login-row small {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.staff-login-row strong {
+    font-size: 0.88rem;
+}
+
+.staff-login-row small,
+.staff-login-row time {
+    margin-top: 3px;
+    color: var(--text-muted);
+    font-size: 0.76rem;
+}
+
+.staff-empty {
+    display: grid;
+    justify-items: center;
+    padding: 25px;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.staff-empty span {
+    font-size: 2rem;
+}
+
+.staff-empty strong {
+    margin: 7px 0 4px;
+    color: var(--text);
+}
+
+@media (max-width: 740px) {
+    .staff-panel-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .staff-recent-panel {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 560px) {
+    .staff-intro {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .staff-login-row time {
+        font-size: 0.68rem;
+        text-align: right;
+    }
+}
 </style>
 <?php admin_layout_end(); ?>
