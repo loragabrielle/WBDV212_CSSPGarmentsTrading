@@ -4,7 +4,7 @@ require 'database.php';
 require 'includes/guard.php';
 require_role(['admin']);
 require 'includes/admin_helpers.php';
-/* Updates customer status or marks a customer message as read. */
+/* updates customer status or marks a customer message as read. */
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     flash_redirect('error', 'Invalid request', 'Use the customer page to make changes.', 'customers_manage.php');
