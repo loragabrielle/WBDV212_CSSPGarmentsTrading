@@ -3,7 +3,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// Keep staff and administrators in their own dashboard.
+// Keep staff and administrators in their own dashboard. DEBUG PURPOSE 
 if (($_SESSION['role'] ?? '') === 'staff') {
     header('Location: staff_dashboard.php');
     exit;
@@ -24,7 +24,6 @@ require_role(['customer']);
   <title>My Account | CSSP Garments Trading</title>
 </head>
 <body>
-  <!-- placeholder: replace with your real dashboard -->
   <h1>My Account</h1>
   <p>Welcome, <?= htmlspecialchars($_SESSION['first_name']) ?> (<?= htmlspecialchars($_SESSION['role']) ?>)</p>
   <a href="index.php">Back to shop</a> | <a href="logout.php">Logout</a>
