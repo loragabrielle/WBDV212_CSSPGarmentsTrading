@@ -534,3 +534,55 @@ body {
     display: block !important;
   }
 }
+
+/* Account_Menu.css - navbar account dropdown.
+   Link this on EVERY page (or paste it at the bottom of your main stylesheet). */
+.account-menu { position: relative; }
+
+.account-btn { width: auto; min-width: 40px; padding: 0 10px; gap: 8px; }
+.account-btn .account-name {
+    font-size: 0.82rem;
+    font-weight: 700;
+    max-width: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.account-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 190px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(4px);
+    transition: var(--transition);
+    z-index: 950;
+}
+.account-dropdown.open { opacity: 1; pointer-events: all; transform: translateY(0); }
+
+.account-dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+.account-dropdown a i { width: 16px; text-align: center; }
+.account-dropdown a:hover { background: var(--bg); color: var(--navy); }
+[data-theme="dark"] .account-dropdown a:hover { background: var(--bg-alt); color: var(--yellow); }
+.account-dropdown .logout-link { color: var(--red); border-top: 1px solid var(--border); }
+
+/* phones: hide the name, keep the icon; dropdown stays inside the screen */
+@media (max-width: 768px) {
+    .account-btn .account-name { display: none; }
+    .account-dropdown { right: -40px; }
+}

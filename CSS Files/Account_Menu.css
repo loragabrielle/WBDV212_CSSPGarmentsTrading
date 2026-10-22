@@ -1,0 +1,86 @@
+/* Account_Menu.css - navbar additions: account dropdown (desktop) + phone hamburger layout.
+   Link it on EVERY page after your main stylesheet (or paste it at the bottom of that stylesheet). */
+
+/* ---------- desktop account dropdown (first icon in the group) ---------- */
+.account-menu { position: relative; margin-left: 4px; }
+.account-btn { width: auto; min-width: 40px; padding: 0 10px; gap: 8px; }
+.account-btn .account-name {
+    font-size: 0.82rem; font-weight: 700; max-width: 90px;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.account-dropdown {
+    position: absolute; top: calc(100% + 8px); right: 0; left: auto;   /* account is the right-most icon, so open toward the left */
+    min-width: 180px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    opacity: 0; pointer-events: none; transform: translateY(4px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    z-index: 950;
+}
+.account-dropdown.open { opacity: 1; pointer-events: all; transform: translateY(0); }
+.account-dropdown a {
+    display: flex; align-items: center; gap: 10px;
+    padding: 12px 16px; font-size: 0.88rem; font-weight: 600;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+.account-dropdown a i { width: 16px; text-align: center; }
+.account-dropdown a:hover { background: var(--bg); color: var(--navy); }
+[data-theme="dark"] .account-dropdown a:hover { background: var(--bg-alt); color: var(--yellow); }
+.account-dropdown .logout-link { color: var(--red); border-top: 1px solid var(--border); }
+
+/* phone-only block (currency inside the hamburger) is hidden on desktop */
+.nav-extra { display: none; }
+
+/* ---------- PHONE / SMALL SCREENS (<= 768px) ----------
+   Header icons on EVERY screen size, left to right: search, theme toggle, cart, account (+ hamburger on phones).
+   Hamburger menu:             Products, About Us, Currency. */
+@media (max-width: 768px) {
+    .header-actions .currency-switcher { display: none; }        /* moved into the hamburger */
+    .header-actions { gap: 2px; flex-shrink: 0; }
+
+    /* account dropdown drops from the right edge of the header */
+    .account-menu { position: static; margin-left: 0; }
+    .account-dropdown { position: absolute; top: calc(100% - 6px); left: auto; right: 4%; }
+    .account-btn { width: 40px; padding: 0; }
+    .account-btn .account-name { display: none; }
+
+    /* hamburger panel */
+    .main-nav {
+        top: var(--hdr-h, 70px);                  /* set by JS = real header height */
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+    .nav-extra { display: block; width: 100%; }
+    .nav-currency-m { margin-top: 22px; }
+    .nav-extra-label {
+        display: flex; align-items: center; gap: 8px;
+        margin-bottom: 12px; font-weight: 700; font-size: 0.85rem; color: var(--text-muted);
+    }
+    .cur-pills { display: flex; gap: 8px; }
+    .cur-pills button {
+        flex: 1; padding: 12px 6px;
+        border: 2px solid var(--border); border-radius: 50px;
+        font-weight: 700; font-size: 0.85rem; color: var(--text);
+        transition: all 0.25s ease;
+    }
+    .cur-pills button.active { background: var(--navy); border-color: var(--navy); color: var(--yellow); }
+    [data-theme="dark"] .cur-pills button.active { background: var(--yellow); border-color: var(--yellow); color: var(--navy); }
+}
+
+/* small phones: shrink the logo and icons so all five icons fit on one line */
+@media (max-width: 480px) {
+    .header-inner { padding: 10px 3%; gap: 6px; }
+    .logo-wrap { gap: 8px; min-width: 0; }
+    .logo-icon { width: 36px; height: 36px; }
+    .logo-text { font-size: 1.3rem; }
+    .logo-text span { font-size: 0.52rem; letter-spacing: 0.1em; }
+    .header-actions .icon-btn, .header-actions .theme-toggle, .header-actions .hamburger { width: 36px; height: 36px; padding: 0; justify-content: center; align-items: center; }
+    .account-btn { width: 36px; }
+}
+@media (max-width: 360px) {
+    .logo-text span { display: none; }            /* keep just "CSSP" on very narrow phones */
+}
