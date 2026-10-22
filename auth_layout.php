@@ -174,6 +174,12 @@
                     <p class="switch-line">Already have an account?
                         <a href="login.php" class="link-red" data-switch="login">Login</a>
                     </p>
+
+                    <div class="legal-notice">
+                        <p class="legal-text">
+                            By signing up, you agree to our <a href="#">Terms &amp; Conditions</a>, and have read and understood our <a href="#">Privacy Policy</a>.
+                        </p>
+                    </div>
                 </form>
             </div>
         </section>
