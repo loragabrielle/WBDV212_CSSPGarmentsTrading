@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-/* 1. Get the values from the form (the names match the name="" of each input) */
+/* get values from the form (the names match the name="" of each input) */
 $fname    = trim($_POST['first_name'] ?? '');
 $lname    = trim($_POST['last_name'] ?? '');
 $bday     = $_POST['birthday'] ?? '';
