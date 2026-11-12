@@ -1,3 +1,4 @@
+/* CSSP Garments Trading - Core Styles */
 body {
   background-color: var(--bg);
   font-family: 'Creato Display', sans-serif;
@@ -7,10 +8,11 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 20px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-/* subtle grid pattern background */
 body::before {
   content: '';
   position: fixed;
@@ -29,100 +31,75 @@ body > * {
   z-index: 1;
 }
 
-.login-card-container {
+/* Matching Main PHP Containers */
+main.auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.auth-card {
   background-color: var(--white);
   border-radius: 16px;
   box-shadow: 0 10px 40px var(--shadow);
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   max-width: 520px;
-  min-height: auto;
   overflow: hidden;
-  transition: all 0.3s ease;
 }
 
-.login-box-body {
+.panel-forms {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 40px 45px;
-  background-color: var(--white);
 }
 
-.main-form {
+.forms-stack {
+  width: 100%;
+}
+
+.auth-form {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.cssp-header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 12px;
-  margin-bottom: 15px;
-}
-
-.cssp-icon {
-  height: 32px;
-  width: auto;
-}
-
-.cssp-name {
-  font-family: 'Bebas Neue Custom', sans-serif;
-  font-weight: 500;
-  font-size: 24px;
-  letter-spacing: 0px;
-  color: var(--text);
-}
-
-.form-title {
+.auth-form h1 {
   font-family: 'Bebas Neue Custom', sans-serif;
   font-weight: 700;
   font-size: 36px;
   color: var(--text);
-  margin-bottom: 8px;
+  margin: 0 0 8px 0;
   text-align: left;
   letter-spacing: 0.5px;
 }
 
-.form-subtitle {
+.auth-sub {
   font-family: 'Creato Display', sans-serif;
   font-size: 13px;
   color: var(--text-muted);
   text-align: left;
   line-height: 1.5;
-  margin-bottom: 25px;
+  margin: 0 0 25px 0;
   letter-spacing: 0.5px;
 }
 
-
-/* Table Form Structure */
-.form-table {
+.form-alert {
   width: 100%;
-  border-collapse: separate;
+  box-sizing: border-box;
+  margin-bottom: 15px;
 }
 
-.form-table tr,
-.form-table td {
-  display: block !important;
-  width: 100% !important;
-  padding-bottom: 12px;
-}
-
-
-.input-block-container {
+/* Form Fields Styling */
+.field {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin: 0;
+  margin-bottom: 14px;
 }
 
-.block-label {
+.field label {
   font-family: 'Creato Display', sans-serif;
   font-size: 10px;
   color: var(--darkred);
@@ -132,12 +109,25 @@ body > * {
   text-transform: uppercase;
 }
 
-.form-input {
+.input {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.input i.lead {
+  position: absolute;
+  left: 18px;
+  color: #888888;
+}
+
+.input input {
   width: 100%;
   background-color: #e9e9e5;
   border: 1.8px solid transparent;
   border-radius: 8px;
-  padding: 16px 18px;
+  padding: 16px 18px 16px 45px;
   font-family: 'Creato Display', sans-serif;
   font-size: 14px;
   color: #888888;
@@ -148,57 +138,59 @@ body > * {
   transition: background-color .18s ease, border-color .18s ease, color .12s ease;
 }
 
-.form-input:not(:placeholder-shown) { 
-  color: var(--text); 
-}
-
-.form-input::placeholder {
-  color: #888888;
-  opacity: 1;
-}
-
-.form-input:focus {
+.input input:focus {
   border-color: var(--navy);
   background-color: #e2e2dd;
 }
 
-/* Password eye positioning */
-.password-field-container {
-  position: relative;
-}
-
-.password-field-container .form-input {
-  padding-right: 50px;
-}
-
-.toggle-password {
+.toggle-pw {
   position: absolute;
   right: 18px;
-  top: 62%;
-  transform: translateY(-50%);
+  background: none;
+  border: none;
   color: var(--text-muted);
   cursor: pointer;
   font-size: 15px;
   z-index: 10;
 }
 
-.forgot-password-link {
-  display: block;
-  text-align: right;
+.msg {
+  display: none;
+}
+
+/* Remember Me and Forgot Password row */
+.form-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.remember {
+  font-family: 'Creato Display', sans-serif;
+  font-size: 13px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.link-red {
   font-family: 'Creato Display', sans-serif;
   font-size: 13px;
   color: var(--red);
   text-decoration: none;
   font-weight: 700;
-  margin-top: 6px;
   letter-spacing: 0.5px;
 }
 
-.forgot-password-link:hover {
+.link-red:hover {
   text-decoration: underline;
 }
 
-.primary-submit-btn {
+/* Form Action Buttons */
+.btn-primary {
   width: 100%;
   background: var(--navy);
   border: 1px solid var(--navy);
@@ -207,74 +199,26 @@ body > * {
   color: var(--yellow);
   font-weight: 600;
   cursor: pointer;
-  margin-top: 5px;
   transition: all 0.3s ease;
   letter-spacing: 0.5px;
   font-size: 15px;
 }
 
-.primary-submit-btn:hover {
+.btn-primary:hover {
   background-color: var(--yellow);
   color: var(--navy);
-  transform:translateY(-3px);
-  box-shadow:var(--shadow-lg)
 }
 
-.horizontal-separator {
+.divider {
   width: 100%;
   text-align: center;
   position: relative;
-  margin: 20px 0 15px 0;
-}
-
-.horizontal-separator::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  height: 1px;
-  background-color: #e5e5e5;
-  z-index: 1;
-}
-
-.horizontal-separator span {
-  background-color: var(--white);
-  padding: 0 15px;
-  position: relative;
-  z-index: 2;
+  margin: 18px 0;
   color: #999999;
   font-size: 12px;
 }
 
-.register-redirect-text {
-  font-family: 'Creato Display', sans-serif;
-  font-size: 13px; 
-  color: var(--text-muted);
-  text-align: center;
-  margin-top: 14px;
-  width: 100%;
-}
-
-.register-redirect-text a {
-  color: var(--red);
-  text-decoration: none;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-}
-
-.register-redirect-text a:hover {
-  text-decoration: underline;
-}
-
-.google-row-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-top: 5px;
-}
-
-.google-full-btn {
+.btn-ghost {
   width: 100%;
   background-color: var(--white);
   border: 1px solid var(--navy);
@@ -284,79 +228,107 @@ body > * {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  gap: 10px;
   font-family: 'Creato Display', sans-serif;
   font-size: 15px;
   font-weight: 700;
   color: var(--navy);
+  text-decoration: none;
+  box-sizing: border-box;
   transition: all 0.3s ease;
-  letter-spacing: 0.5px;
 }
 
-.google-full-btn:hover {
+.btn-ghost:hover {
   background-color: var(--navy);
   color: var(--yellow);
-  transform:translateY(-3px);
-  box-shadow:var(--shadow-lg)
 }
 
-.google-icon-svg {
-  height: 20px;
-  width: 20px;
-  position: absolute;
-  left: 20px;
-}
-
-.google-text-center {
-  width: 100%;
+.switch-line {
+  font-family: 'Creato Display', sans-serif;
+  font-size: 13px; 
+  color: var(--text-muted);
   text-align: center;
-  display: block;
+  margin: 20px 0 0 0;
+  width: 100%;
 }
 
-@media (max-width: 900px) {
-  body {
-    min-height: 100vh;
-    padding: 40px 20px;
-    background-color: #f4f5f2;
-  }
-  
-  .login-card-container {
-    width: 100%;
-    max-width: 440px; 
-    margin: 0 auto;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
-    border: none;
-  }
-  
-  .login-box-body {
-    padding: 45px 35px; 
-  }
-}
-
+/* TARGET MOBILE LAYOUT (iPhone 15 Pro / Screens below 480px) */
 @media (max-width: 480px) {
-  .form-input {
-    padding: 12px 14px;
+  html, body {
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+  }
+
+  main.auth {
+    height: 100vh;
+    padding: 0;
+  }
+
+  .auth-card {
+    width: 92%;
+    max-height: 96vh;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    border: none;
+    border-radius: 12px;
+  }
+
+  .panel-forms {
+    padding: 24px 20px;
+  }
+
+  .auth-form h1 {
+    font-size: 30px;
+    margin-bottom: 4px;
+  }
+
+  .auth-sub {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+
+  .field {
+    margin-bottom: 10px;
+  }
+
+  .input input {
+    padding: 12px 14px 12px 42px;
     min-height: 40px;
+    font-size: 13px;
   }
 
-  .login-box-body {
-    padding: 40px 25px;
-  }
-  .cssp-name { 
-    font-size: 20px; 
+  .input i.lead {
+    left: 14px;
   }
 
-  .form-title { 
-    font-size: 32px; 
+  .form-meta {
+    margin-bottom: 14px;
   }
 
-  .form-subtitle { 
-    font-size: 12px; 
+  .btn-primary {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .divider {
+    margin: 10px 0;
+  }
+
+  .btn-ghost {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .switch-line {
+    margin-top: 14px;
   }
 }
 
-/* Account_Menu.css - navbar account dropdown.
-   Link this on EVERY page (or paste it at the bottom of your main stylesheet). */
+/* ======================================================== */
+/* ACCOUNT MENU DROPDOWN STYLES                             */
+/* ======================================================== */
 .account-menu { position: relative; }
 
 .account-btn { width: auto; min-width: 40px; padding: 0 10px; gap: 8px; }
@@ -401,7 +373,6 @@ body > * {
 [data-theme="dark"] .account-dropdown a:hover { background: var(--bg-alt); color: var(--yellow); }
 .account-dropdown .logout-link { color: var(--red); border-top: 1px solid var(--border); }
 
-/* phones: hide the name, keep the icon; dropdown stays inside the screen */
 @media (max-width: 768px) {
     .account-btn .account-name { display: none; }
     .account-dropdown { right: -40px; }
