@@ -149,8 +149,8 @@ admin_layout_start('People & Access', 'dashboard');
 </section>
 
 <style>
-    css
-```
+    /*css
+```*/
 .dashboard-intro {
     display: flex;
     justify-content: space-between;
@@ -379,8 +379,8 @@ admin_layout_start('People & Access', 'dashboard');
     color: var(--yellow);
 }
 
-   css
-```
+  /* css
+```*/
 .people-text-link:hover {
     text-decoration: underline;
 }
