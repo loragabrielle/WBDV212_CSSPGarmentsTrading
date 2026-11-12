@@ -179,7 +179,7 @@ h1, h2, h3, h4 {
 .ticker-track {
     display: inline-flex;
     gap: 60px;
-    animation: ticker 50s linear infinite;
+    animation: ticker 28s linear infinite;
 }
 
 .ticker-track span {
@@ -739,7 +739,7 @@ h1, h2, h3, h4 {
 .ticker2-track {
     display: inline-flex;
     gap: 48px;
-    animation: ticker 40s linear infinite;
+    animation: ticker 25s linear infinite;
 }
 
 .ticker2-track span {
@@ -774,11 +774,12 @@ h1, h2, h3, h4 {
 /* Subtle grid pattern background */
 .contact-page::before {
     content: '';
-    position: fixed;
+    position: absolute;
     inset: 0;
     background-image:
       linear-gradient(var(--border) 1px, transparent 1px),
       linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-attachment: fixed;
     background-size: 48px 48px;
     opacity: 0.5;
     pointer-events: none;
