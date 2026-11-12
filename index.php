@@ -240,8 +240,8 @@ $dashboardPage = $role === 'staff' ? 'staff_dashboard.php' : ($role === 'admin' 
                   <h1 class="hero-title">Dressed for<br><span>The Deep.</span></h1>
                     <p class="hero-desc">Premium coveralls, kitchen uniforms, PPE, and safety shoes built for sailors, cooks, and crew members who demand quality above sea level.</p>
                       <div class="hero-btns">
-                      <a href="./products.html" class="btn-primary">View Products <i class="fa-solid fa-arrow-right"></i></a>
-                      <a href="./aboutus.html" class="btn-ghost">Our Story <i class="fa-solid fa-compass"></i></a>
+                      <a href="./products.php" class="btn-primary">View Products <i class="fa-solid fa-arrow-right"></i></a>
+                      <a href="./aboutus.php" class="btn-ghost">Our Story <i class="fa-solid fa-compass"></i></a>
                       </div>
                       
           <div class="hero-stats">
@@ -351,7 +351,7 @@ $dashboardPage = $role === 'staff' ? 'staff_dashboard.php' : ($role === 'admin' 
         </div>
       </div>
 
-    <!-- OUR JOURNEY SECTION -->
+    <!-- OUR JOURNEY SECTION 
       <section class="journey-section reveal" id="journey" aria-labelledby="journeyHeading">
         <div class="journey-inner">
           <span class="journey-label">Est. 2024</span>
@@ -362,7 +362,7 @@ $dashboardPage = $role === 'staff' ? 'staff_dashboard.php' : ($role === 'admin' 
         <div class="journey-layout"><div>
         <p class="journey-body">
           What started as a small family-run business supplying
-          <a class="img-chip" href="products.html#uniforms" aria-label="View coveralls">
+          <a class="img-chip" href="products.php#uniforms" aria-label="View coveralls">
             <img src="Assets/Index/journeysection_coverall.png"
             alt="Journey Section - Coverall" />Coveralls
           </a>
@@ -371,12 +371,12 @@ $dashboardPage = $role === 'staff' ? 'staff_dashboard.php' : ($role === 'admin' 
         </p>
         <p class="journey-body"> 
           We are obsessed with the details, hand-selecting every raw material—from the high-grip soles of our
-          <a class="img-chip" href="products.html#safety-footwears" aria-label="View safety boots">
+          <a class="img-chip" href="products.php#safety-footwears" aria-label="View safety boots">
             <img src="Assets/Index/journeysection_safety_shoes.png"
             alt="Journey Section - Safety Shoes" />Safety Shoes
           </a>
             to the heat-resistant fabric of our
-          <a class="img-chip" href="products.html#uniforms" aria-label="View chef tops">
+          <a class="img-chip" href="products.php#uniforms" aria-label="View chef tops">
             <img src="Assets/Index/journeysection_chef top.png"
             alt="Journey Section - Chef Top" />Chef Tops.
           </a>
@@ -384,19 +384,19 @@ $dashboardPage = $role === 'staff' ? 'staff_dashboard.php' : ($role === 'admin' 
         </p>
         <p class="journey-body">
           We don’t just ship boxes; we provide a
-          <a class="img-chip" href="aboutus.html" aria-label="View About Us Page">
+          <a class="img-chip" href="aboutus.php" aria-label="View About Us Page">
             <img src="Assets/Index/journeysection_wroker.png"
             alt="Journey Section - Worker" />Commitment
           </a>
             to the men and women working the decks. Having sailed those same waters ourselves, we understand the stakes, 
             which is why we work tirelessly to deliver durable PPE that protects you through every storm and every shift.
         </p>
-          <a href="./aboutus.html" class="btn-primary" style="margin-top: 8px;">
+          <a href="./aboutus.php" class="btn-primary" style="margin-top: 8px;">
             Read Full Story <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
           </a>
         </div>
 
-    <!-- JOURNEY - STAT CARD -->
+    JOURNEY - STAT CARD 
       <div class="journey-aside">
         <div class="journey-stat-card">
           <strong>500+</strong>
@@ -417,9 +417,9 @@ $dashboardPage = $role === 'staff' ? 'staff_dashboard.php' : ($role === 'admin' 
       </div>
         </div>
         </div>
-      </section>
+      </section> 
 
-    <!-- TICKER 3 -->
+     TICKER 3 
       <div class="section-ticker-three" aria-hidden="true">
         <div class="ticker2-track3">
           <span><i class="fa-solid fa-helmet-safety"></i> Safety-first construction</span>
@@ -435,7 +435,7 @@ $dashboardPage = $role === 'staff' ? 'staff_dashboard.php' : ($role === 'admin' 
           <span><i class="fa-solid fa-infinity"></i> Extended wear-life</span>
           <span><i class="fa-solid fa-lock"></i> Secure-fit fasteners</span>
         </div>
-      </div>
+      </div> -->
 
     <!-- ABOUT SECTION -->
       <section class="about" id="about">
@@ -458,7 +458,7 @@ $dashboardPage = $role === 'staff' ? 'staff_dashboard.php' : ($role === 'admin' 
                   <li><i class="fa-solid fa-check-circle"></i> Full uniform sets for kitchen and deck staff</li>
                   <li><i class="fa-solid fa-check-circle"></i> Custom bulk orders for shipping companies</li>
                 </ul>
-                  <a href="./products.html" class="btn-primary">Browse Products <i class="fa-solid fa-arrow-right"></i></a>
+                  <a href="./products.php" class="btn-primary">Browse Products <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
       </section>
@@ -606,16 +606,16 @@ $dashboardPage = $role === 'staff' ? 'staff_dashboard.php' : ($role === 'admin' 
               <div class="footer-logo"><i class="fa-solid fa-ship"></i><span>CSSP Garments Trading</span></div>
               <p>Your trusted maritime uniform supplier since 2024. Quality gear for every sailor, cook, and crew member.</p>
                 <div class="social-icons">
-                  <a href="./contacts.html" title="Contact us" aria-label="Contact page"><i class="fa-regular fa-address-book"></i></a>
+                  <a href="./contacts.php" title="Contact us" aria-label="Contact page"><i class="fa-regular fa-address-book"></i></a>
                 </div>
             </div>
     
             <div class="footer-col">
               <h4>Quick Links</h4>
                 <ul>
-                  <li><a href="./index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
-                  <li><a href="./products.html"><i class="fa-solid fa-chevron-right"></i> Products</a></li>
-                  <li><a href="./aboutus.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+                  <li><a href="./index.php"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                  <li><a href="./products.php"><i class="fa-solid fa-chevron-right"></i> Products</a></li>
+                  <li><a href="./aboutus.php"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
                   <li><a href="#reviews"><i class="fa-solid fa-chevron-right"></i> Reviews</a></li>
                   <li><a href="#faq"><i class="fa-solid fa-chevron-right"></i> FAQ</a></li>
                 </ul>
@@ -626,9 +626,9 @@ $dashboardPage = $role === 'staff' ? 'staff_dashboard.php' : ($role === 'admin' 
             <div class="footer-bottom">
               <p>&copy; 2024 CSSP Garments Trading. All rights reserved.<br>Designed by Logmunch!</p>
                 <div class="legal-links">
-                  <a href="./policies.html#privacyPage">Privacy Policy</a>
-                  <a href="./policies.html#termsPage">Terms &amp; Conditions</a>
-                  <a href="./policies.html#shippingPage">Shipping Policy</a>
+                  <a href="./policies.php#privacyPage">Privacy Policy</a>
+                  <a href="./policies.php#termsPage">Terms &amp; Conditions</a>
+                  <a href="./policies.php#shippingPage">Shipping Policy</a>
                 </div>
             </div>
       </footer>
@@ -707,7 +707,7 @@ $dashboardPage = $role === 'staff' ? 'staff_dashboard.php' : ($role === 'admin' 
                         <div class="material-chip">High-visibility reflector</div>
                         <div class="material-chip">UV-Protection Finish</div>
                         </div>
-                        <a href="products.html#uniforms" class="btn-primary">View Full Product <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="products.php#uniforms" class="btn-primary">View Full Product <i class="fa-solid fa-arrow-right"></i></a>
                   </div>
                 </div>
               </div>
@@ -774,7 +774,7 @@ $dashboardPage = $role === 'staff' ? 'staff_dashboard.php' : ($role === 'admin' 
                       <div class="material-chip">Weatherproof insulated work jacket</div>
                       <div class="material-chip">Durable low-cut and high-cut footwear</div>
                 </div>
-                  <a href="products.html#safety-footwears" class="btn-primary">View Full Product <i class="fa-solid fa-arrow-right"></i></a>
+                  <a href="products.php#safety-footwears" class="btn-primary">View Full Product <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
