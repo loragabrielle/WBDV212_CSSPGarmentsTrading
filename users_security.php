@@ -192,8 +192,6 @@ admin_layout_start('User Accounts & Logs', 'users');
 <?php endif; ?>
 
 <style>
-    css
-```
 
 .people-page-intro {
     display: flex;
