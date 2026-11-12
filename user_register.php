@@ -57,18 +57,21 @@ if ($check->get_result()->num_rows > 0) {
 }
 
 $hash = password_hash($password, PASSWORD_DEFAULT);
+$role = 'customer';
+$status = 'active';
 
-$query = $con->prepare("INSERT INTO tbl_users (first_name, last_name, birthday, gender, phone, email, address, password_hash)
-                        VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-$query->bind_param("ssssssss", $fname, $lname, $bday, $gender, $contact, $email, $address, $hash);
-$exec = $query->execute();
+try {
+    $query = $con->prepare("INSERT INTO tbl_users (first_name, last_name, birthday, gender, phone, email, address, password_hash, role, stat)
+                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $query->bind_param("ssssssssss", $fname, $lname, $bday, $gender, $contact, $email, $address, $hash, $role, $status);
+    $query->execute();
+    $query->close();
 
-if ($exec) {
-    // No auto-login: after signing up the user must log in (security best practice).
+    // New customers sign in after account creation.
     unset($_SESSION['old']);
     flash_redirect('success', 'Account Created', 'Your account is ready. Please log in.', 'login.php');
-}
-else {
+} catch (mysqli_sql_exception $error) {
+    error_log('Registration failed: ' . $error->getMessage());
     reg_fail('Sign Up Failed', 'Something went wrong while creating your account. Please try again.');
 }
 ?>
